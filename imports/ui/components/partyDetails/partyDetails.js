@@ -2,6 +2,8 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 
+import { Meteor } from 'meteor/meteor';
+
 import './partyDetails.html';
 import { Parties } from '../../../api/parties';
 
@@ -13,29 +15,33 @@ class PartyDetails {
 
     this.partyId = $stateParams.partyId;
 
+    this.subscribe('parties');
+    this.subscribe('users');
+
     this.helpers({
       party() {
         return Parties.findOne({
           _id: $stateParams.partyId
         });
+      },
+      users() {
+        return Meteor.users.find({});
       }
     });
   }
 
   save() {
-      Parties.update({
-        _id: this.party._id
-      }, {
-        $set: {
-          name: this.party.name,
-          description: this.party.description
-        }
-      }, (error) => {
-        if (error) {
-          console.log('Oops, não foi possível realizar o update na Collection Parties');
-        } else {
-          console.log('Update Realizado na Collections Parties');
-        }
+      Parties.update(
+        {_id: this.party._id},
+        {
+          $set: {name: this.party.name, description: this.party.description, public: this.party.public}
+        },
+        (error) => {
+          if (error) {
+            console.log('Oops, não foi possível realizar o update na Collection Parties');
+          } else {
+            console.log('Update Realizado na Collections Parties');
+          }
       });
     }
 }
@@ -58,6 +64,15 @@ export default angular.module(name, [
 
   $stateProvider.state('partyDetails', {
     url: '/parties/:partyId',
-    template: '<party-details></party-details>'
+    template: '<party-details></party-details>',
+    resolve: {
+      currentUser($q) {
+        if (Meteor.userId() === null) {
+          return $q.reject('AUTH_REQUIRED');
+        } else {
+          return $q.resolve();
+        }
+      }
+    }
   });
 }
