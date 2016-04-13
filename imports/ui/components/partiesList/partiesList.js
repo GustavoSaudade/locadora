@@ -1,11 +1,13 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
+import utilsPagination from 'angular-utils-pagination';
 
 import { Counts } from 'meteor/tmeasday:publish-counts';
 
 import './partiesList.html';
 import { Parties } from '../../../api/parties';
+import { name as PartiesSort } from '../partiesSort/partiesSort';
 import { name as PartyAdd } from '../partyAdd/partyAdd';
 import { name as PartyRemove } from '../partyRemove/partyRemove';
 
@@ -42,6 +44,10 @@ class PartiesList {
   pageChanged(newPage) {
     this.page = newPage;
   }
+
+  sortChanged(sort) {
+    this.sort = sort;
+  }
 }
 
 const name = 'partiesList';
@@ -50,6 +56,8 @@ const name = 'partiesList';
 export default angular.module(name, [
   angularMeteor,
   uiRouter,
+  utilsPagination,
+  PartiesSort,
   PartyAdd,
   PartyRemove
 ]).component(name, {
