@@ -1,9 +1,10 @@
 import { Meteor } from 'meteor/meteor';
+import { Counts } from 'meteor/tmeasday:publish-counts';
 
 import { Parties } from './collection';
 
 if (Meteor.isServer) {
-  Meteor.publish('parties', function() {
+  Meteor.publish('parties', function(options) {
     const selector = {
       $or:
       [
@@ -26,6 +27,10 @@ if (Meteor.isServer) {
       ]
     };
 
-    return Parties.find(selector);
+    Counts.publish(this, 'numberOfParties', Parties.find(selector), {
+      noReady: true
+    });
+
+    return Parties.find(selector, options);
   });
 }

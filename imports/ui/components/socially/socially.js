@@ -1,6 +1,7 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
+import utilsPagination from 'angular-utils-pagination';
 
 import './socially.html';
 import { name as PartiesList } from '../partiesList/partiesList';
@@ -16,6 +17,7 @@ const name = 'socially';
 export default angular.module(name, [
   angularMeteor,
   uiRouter,
+  utilsPagination,
   PartiesList,
   PartyDetails,
   Navigation,
