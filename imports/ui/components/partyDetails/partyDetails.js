@@ -6,6 +6,7 @@ import { Meteor } from 'meteor/meteor';
 
 import './partyDetails.html';
 import { Parties } from '../../../api/parties';
+import { name as PartyUninvited } from '../partyUninvited/partyUninvited';
 
 class PartyDetails {
   constructor($stateParams, $scope, $reactive) {
@@ -51,7 +52,8 @@ const name = 'partyDetails';
 // create a module
 export default angular.module(name, [
   angularMeteor,
-  uiRouter
+  uiRouter,
+  PartyUninvited
 ]).component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,
   controllerAs: name,
@@ -70,7 +72,9 @@ export default angular.module(name, [
         if (Meteor.userId() === null) {
           return $q.reject('AUTH_REQUIRED');
         } else {
+          console.log(Meteor.users.find({}).fetch());
           return $q.resolve();
+
         }
       }
     }
