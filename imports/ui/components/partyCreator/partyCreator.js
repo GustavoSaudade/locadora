@@ -3,30 +3,41 @@ import angularMeteor from 'angular-meteor';
 
 import { Meteor } from 'meteor/meteor';
 
-import './partyUninvited.html';
-import { name as UninvitedFilter } from '../../filters/uninvitedFilter';
+import './partyCreator.html';
 import { name as DisplayNameFilter } from '../../filters/displayNameFilter';
 
-class PartyUninvited {
+/**
+ * PartyCreator component
+ */
+class PartyCreator {
   constructor($scope) {
     'ngInject';
 
     $scope.viewModel(this);
 
     this.helpers({
-      users() {
-        return Meteor.users.find({});
+      creator() {
+        if (!this.party) {
+          return '';
+        }
+
+        const owner = this.party.owner;
+
+        if (Meteor.userId() !== null && owner === Meteor.userId()) {
+          return 'me';
+        }
+
+        return Meteor.users.findOne(owner) || 'nobody';
       }
     });
   }
 }
 
-const name = 'partyUninvited';
+const name = 'partyCreator';
 
 // create a module
 export default angular.module(name, [
   angularMeteor,
-  UninvitedFilter,
   DisplayNameFilter
 ]).component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,
@@ -34,5 +45,5 @@ export default angular.module(name, [
   bindings: {
     party: '<'
   },
-  controller: PartyUninvited
+  controller: PartyCreator
 });
