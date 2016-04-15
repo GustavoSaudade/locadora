@@ -22,11 +22,11 @@ class PartyUninvited {
 
   invite(user) {
     Meteor.call('invite', this.party._id, user._id,
-      (error, result) => {
-        if(error) {
+      (error) => {
+        if (error) {
           console.log('Oops, unable to invite!');
         } else {
-          console.log('invited!!');
+          console.log('Invited!');
         }
       }
     );
