@@ -1,0 +1,59 @@
+.superContent {
+  position: absolute;
+  width: 95%;
+  height: 93%;
+  left: 2%;
+  border: solid 3px #000;
+}
+.menu {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  top: 85%;
+  border: solid 3px #000;
+}
+.news {
+  position: absolute;
+  height: 100%;
+  width: 33.3%;
+  border: solid 3px #000;
+}
+.favorites {
+  position: absolute;
+  height: 100%;
+  width: 33.3%;
+  left: 33.3%;
+  border: solid 3px #000;
+}
+.search {
+  position: absolute;
+  height: 100%;
+  width: 33.3%;
+  left: 66.6%;
+  border: solid 3px #000;
+}
+.btnMenu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.pacotesTopRanking {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  border: solid 3px red;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.caixinha {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30%;
+  height: 80%;
+  margin-left: 3%;
+  margin-top: 1%;
+  border-radius: 25px;
+  border: solid 3px #000;
+}

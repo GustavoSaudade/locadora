@@ -3,11 +3,11 @@ import angularMeteor from 'angular-meteor';
 
 import { Meteor } from 'meteor/meteor';
 
-import { name as Socially } from '../imports/ui/components/socially/socially';
+import { name as AppRotas } from '../imports/ui/components/socially/socially';
 
 function onReady() {
   angular.bootstrap(document, [
-    Socially
+    AppRotas
   ], {
     strictDi: true
   });

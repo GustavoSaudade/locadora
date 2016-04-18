@@ -1,22 +1,22 @@
 import { Meteor } from 'meteor/meteor';
-import { Parties } from '../api/parties';
+import { Rotas } from '../api/rotas';
 
 
 Meteor.startup(() => {
-  if (Parties.find().count() === 0) {
-    const parties = [{
-      'name': 'Dubstep-Free Zone',
-      'description': 'Fast just got faster with Nexus S.'
+  if (Rotas.find().count() === 0) {
+    const rotas = [{
+      'name': 'Rota Teste 1',
+      'description': 'Primeira rota de testes'
     }, {
-      'name': 'All dubstep all the time',
-      'description': 'Get it on!'
+      'name': 'Rota Teste 2',
+      'description': 'Segunda Rota de teste'
     }, {
-      'name': 'Savage lounging',
-      'description': 'Leisure suit required. And only fiercest manners.'
+      'name': 'Rota Teste 3',
+      'description': 'Terceira rota de teste'
     }];
 
-    parties.forEach((party) => {
-      Parties.insert(party)
+    rotas.forEach((rota) => {
+      Rotas.insert(rota)
     });
   }
 });

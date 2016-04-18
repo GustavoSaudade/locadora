@@ -4,9 +4,9 @@ import uiRouter from 'angular-ui-router';
 import utilsPagination from 'angular-utils-pagination';
 
 import './socially.html';
-import { name as PartiesList } from '../partiesList/partiesList';
-import { name as PartyDetails } from '../partyDetails/partyDetails';
-import { name as Navigation } from '../navigation/navigation';
+import { name as RotasList } from '../home/home';
+//import { name as PartyDetails } from '../partyDetails/partyDetails';
+//import { name as Navigation } from '../navigation/navigation';
 
 
 class Socially {}
@@ -18,9 +18,7 @@ export default angular.module(name, [
   angularMeteor,
   uiRouter,
   utilsPagination,
-  PartiesList,
-  PartyDetails,
-  Navigation,
+  RotasList,
   'accounts.ui'
 ])
   .component(name, {
@@ -34,7 +32,7 @@ export default angular.module(name, [
     function config($locationProvider, $urlRouterProvider) {
       'ngInject';
       $locationProvider.html5Mode(true);
-      $urlRouterProvider.otherwise('/parties');
+      $urlRouterProvider.otherwise('/home');
     }
 
     function run($rootScope, $state) {
@@ -43,7 +41,7 @@ export default angular.module(name, [
         (event, toState, toParams, fromState, fromParams, error) => {
           if (error === 'AUTH_REQUIRED') {
             alert('Você precisa logar no sistema para visualizar as Rotas');
-            $state.go('parties');
+            $state.go('home');
           }
         });
     }

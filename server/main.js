@@ -1,3 +1,3 @@
 import '../imports/startup/fixtures';
-import '../imports/api/parties';
+import '../imports/api/rotas';
 import '../imports/api/users';
