@@ -5,13 +5,17 @@ import { Meteor } from 'meteor/meteor';
 
 import { name as AppRotas } from '../imports/ui/components/socially/socially';
 
+
 function onReady() {
   angular.bootstrap(document, [
     AppRotas
   ], {
     strictDi: true
   });
+
 }
+
+
 
 if (Meteor.isCordova) {
   angular.element(document).on('deviceready', onReady);

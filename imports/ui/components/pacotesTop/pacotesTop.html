@@ -1,7 +1,8 @@
-
-
-<div class="pacotesTopRanking">
+<div id="wrapper" class="pacotesTopRanking">
   <div class="caixinha" ng-repeat="rota in pacotesTop.rotas">
-    {{rota.name}}
+    <div class="informacaoDaRota">
+      {{rota.name}}<br>
+      {{rota.description}}
+    </div>
   </div>
 </div>

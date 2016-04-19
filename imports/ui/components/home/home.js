@@ -14,6 +14,19 @@ class Home {
 
     Meteor.subscribe('users');
     Meteor.subscribe('rotas');
+
+    if (Meteor.isClient) {
+      $(function(){
+          var $pacotesTopRanking = $('.pacotesTopRanking');
+          var scrollTime = 0.5;
+          var scrollDistance = 640;
+          $pacotesTopRanking.on("mousewheel DOMMouseScroll", function(event){
+            var delta = event.originalEvent.wheelDelta;
+            this.scrollLeft -= (delta);
+            event.preventDefault();
+          });
+        });
+    }
   }
 }
 
