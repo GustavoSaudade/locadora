@@ -11,7 +11,8 @@ Meteor.startup(() => {
   if ( error ) {
     console.log( error );
   } else {
-    console.log( response.content);
+
+    console.log(typeof response.content);
 
 
     /*
