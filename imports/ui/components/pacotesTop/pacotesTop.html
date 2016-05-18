@@ -1,7 +1,9 @@
 <div id="wrapper" class="pacotesTopRanking">
-  <div class="caixinha" ng-repeat="rota in pacotesTop.rotas">
+  <div class="caixinha" ng-repeat="rota in pacotesTop.rotas" ng-init="pacotesTop.carregaImagem()">
     <div class="informacaoDaRota" align="center">
-      {{rota.name}}<br>
+      {{rota.name}}
     </div>
+    <img src="{{rota.urlImage}}" class="imagemRota"/>
+
   </div>
 </div>

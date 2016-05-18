@@ -14,6 +14,14 @@ class PacotesTop {
 
     this.subscribe('rotas');
 
+    this.carregaImagem = function() {
+      //$('.caixinha').css("background", "url('http://i67.tinypic.com/23hva8j.png') no-repeat center center");
+      //$('.caixinha').css("background-size", "100% 100%");
+      //$('.caixinha').css("-o-background-size", "100% 100%");
+      //$('.caixinha').css("-webkit-background-size", "100% 100%");
+      //$('.caixinha').css("-moz-background-size", "100% 100%");
+    }
+
     this.helpers({
       rotas() {
         return Rotas.find({});
