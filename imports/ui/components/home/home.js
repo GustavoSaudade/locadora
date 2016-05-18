@@ -16,6 +16,14 @@ class Home {
     Meteor.subscribe('users');
     Meteor.subscribe('rotas');
 
+    this.clickSearch = function() {
+      $('.modalSearch').css("visibility", "visible");
+    }
+
+    this.closeSearch = function() {
+      $('.modalSearch').css("visibility", "hidden");
+    }
+
     if (Meteor.isClient) {
       $(function(){
           var $pacotesTopRanking = $('.pacotesTopRanking');

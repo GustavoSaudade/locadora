@@ -4,10 +4,19 @@
         <button type="button" name="news" class="btnMenu"><img src="MenuHome.png" class="imgMenu" /></button>
     </div>
     <div class="favorites">
-        <button type="button" name="favorites" class="btnMenu"><img src="menuSearch.png" class="imgMenu" /></button>
+        <button type="button" name="favorites" class="btnMenu" ng-click="home.clickSearch()"><img src="menuSearch.png" class="imgMenu" /></button>
     </div>
     <div class="search">
       <button type="button" name="search" class="btnMenu"><img src="searchIcon.png" class="imgMenu" /></button>
+    </div>
+  </div>
+
+  <div class="modalSearch">
+    <div class="closeSearch" ng-click="home.closeSearch()">
+      <img src="http://i63.tinypic.com/hvox7t.jpg" alt="url do sitezin chinelo" id="fecharImagem" />
+    </div>
+    <div class="formSearch">
+      <input type="text" placeholder="O que você está buscando?">
     </div>
   </div>
 
