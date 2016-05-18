@@ -86,3 +86,24 @@ body {
   padding-top: 25%;
   color: #188b37;
 }
+
+.pacotesDefault {
+  position: absolute;
+  border: solid 3px #FFF;
+  width: 95%;
+  height: 60%;
+  top: 30%;
+  left: 3%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.caixinha2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 29%;
+  height: 80%;
+  margin-left: 3%;
+  margin-top: 1%;
+  border-radius: 25px;
+  border: solid 2px #646765;
+}

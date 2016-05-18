@@ -5,6 +5,7 @@ import utilsPagination from 'angular-utils-pagination';
 
 import './home.html';
 import { name as PacotesTop } from '../pacotesTop/pacotesTop';
+import { name as PacotesDefault } from '../pacotesDefault/pacotesDefault';
 
 class Home {
   constructor($scope, $reactive) {
@@ -26,6 +27,17 @@ class Home {
             event.preventDefault();
           });
         });
+
+        $(function(){
+            var $pacotesDefault = $('.pacotesDefault');
+            var scrollTime = 0.5;
+            var scrollDistance = 640;
+            $pacotesDefault.on("mousewheel DOMMouseScroll", function(event){
+              var delta = event.originalEvent.wheelDelta;
+              this.scrollTop -= (delta);
+              event.preventDefault();
+            });
+          });
     }
   }
 }
@@ -37,7 +49,8 @@ export default angular.module(name, [
   angularMeteor,
   uiRouter,
   utilsPagination,
-  PacotesTop
+  PacotesTop,
+  PacotesDefault
 ]).component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,
   controllerAs: name,
