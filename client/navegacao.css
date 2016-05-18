@@ -149,3 +149,85 @@ body {
   height: 100%;
   border-radius: 25px;
 }
+
+
+
+
+
+/** MEDIAS QUERY **/
+/* Galaxy Note 3 */
+@media screen and (width: 360px) {
+  .caixinha {
+    width: 55%;
+  }
+  .caixinha2 {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .formSearch {
+    left: 20%;
+    top: 40%;
+  }
+  .closeSearch {
+    width: 10%;
+    height: 10%;
+    left: 90%;
+  }
+}
+/* Iphone 5 */
+@media screen and (width: 320px) {
+  .caixinha {
+    width: 58%;
+  }
+  .caixinha2 {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .formSearch {
+    left: 20%;
+    top: 40%;
+  }
+  .closeSearch {
+    width: 10%;
+    height: 10%;
+    left: 90%;
+  }
+}
+/* Iphone 6 */
+@media screen and (width: 375px) {
+  .caixinha {
+    width: 58%;
+  }
+  .caixinha2 {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .formSearch {
+    left: 20%;
+    top: 40%;
+  }
+  .closeSearch {
+    width: 10%;
+    height: 10%;
+    left: 90%;
+  }
+}
+/* LG Optimus */
+@media screen and (width: 384px) {
+  .caixinha {
+    width: 58%;
+  }
+  .caixinha2 {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .formSearch {
+    left: 20%;
+    top: 40%;
+  }
+  .closeSearch {
+    width: 10%;
+    height: 10%;
+    left: 90%;
+  }
+}
