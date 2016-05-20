@@ -24,6 +24,11 @@ class Home {
       $('.modalSearch').css("visibility", "hidden");
     }
 
+    this.closeRotaDetail = function() {
+      $('.informacoesDaRota').css("visibility", "hidden");
+      $('.superContent').css("visibility", "visible");
+    }
+
     if (Meteor.isClient) {
       $(function(){
           var $pacotesTopRanking = $('.pacotesTopRanking');

@@ -14,8 +14,11 @@ class PacotesTop {
 
     this.subscribe('rotas');
 
-    this.clicaRota = function() {
+    this.clicaRota = function(rota) {
+      var rotaClicada = rota;
       $('.superContent').css("visibility", "hidden");
+      $('.informacoesDaRota').css("visibility", "visible");
+      $('.conteudoDaRota').html(rotaClicada.description);
     }
 
     this.helpers({
