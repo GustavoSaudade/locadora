@@ -29,6 +29,22 @@ class Home {
       $('.superContent').css("visibility", "visible");
     }
 
+    this.clicaComprar = function() {
+      alert('você clicou em COMPRAR!');
+    }
+
+    this.clicaCurtir = function() {
+      alert('Você clicou em CURTIR!');
+    }
+
+    this.clicaCompartilhar = function() {
+      alert('Você clicou em COMPARTILHAR!');
+    }
+
+    this.clicaFacebook = function() {
+      alert('Você clicou em facebook');
+    }
+
     if (Meteor.isClient) {
       $(function(){
           var $pacotesTopRanking = $('.pacotesTopRanking');
