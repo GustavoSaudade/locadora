@@ -11,6 +11,7 @@
     </div>
   </div>
 
+  <!-- MODAL -->
   <div class="modalSearch">
     <div class="closeSearch" ng-click="home.closeSearch()">
       <img src="http://i63.tinypic.com/hvox7t.jpg" alt="url do sitezin chinelo" id="fecharImagem" />
@@ -22,12 +23,35 @@
 
   <pacotes-top></pacotes-top>
   <pacotes-default></pacotes-default>
+
 </div>
 
+<!-- MODAL -->
 <div class="informacoesDaRota">
+  <!-- Botão fechar -->
   <div class="closeSearch" ng-click="home.closeRotaDetail()">
     <img src="http://i63.tinypic.com/hvox7t.jpg" alt="url do sitezin chinelo" id="fecharRotaDetail" />
   </div>
-  <h3>INFORMAÇÕES DA ROTA:</h3><br>
-  <div class="conteudoDaRota"></div>
+  <div class="tituloDaRota">
+      <h4>INFORMAÇÕES DA ROTA:</h4><br>
+      <div class="nomeDaRota"></div>
+  </div>
+  <div class="conteudoDaRota">
+    <h4>DESCRIÇÃO DA ROTA:</h4><br>
+    <div class="descricaoDaRota"></div>
+  </div>
+  <div class="botoesSociais">
+    <div class="botaoCurtir">
+      <img class="ImagensDosBotoes" src="coracao.png" alt="" />
+    </div>
+    <div class="botaoCompartilhar">
+      <img class="ImagensDosBotoes" src="compartilhar.png" alt="" />
+    </div>
+    <div class="botaoSeguir">
+      <img class="ImagensDosBotoes" src="face.png" alt="" />
+    </div>
+  </div>
+  <div class="botoesComprar">
+    <button type="button" id="btnComprar">COMPRAR</button>
+  </div>
 </div>

@@ -11,14 +11,14 @@ class PacotesTop {
     $reactive(this).attach($scope);
 
     this.subscribe('users');
-
     this.subscribe('rotas');
 
     this.clicaRota = function(rota) {
       var rotaClicada = rota;
       $('.superContent').css("visibility", "hidden");
       $('.informacoesDaRota').css("visibility", "visible");
-      $('.conteudoDaRota').html(rotaClicada.description);
+      $('.nomeDaRota').html(rotaClicada.name);
+      $('.descricaoDaRota').html(rotaClicada.description);
     }
 
     this.helpers({

@@ -21,7 +21,6 @@ body {
   width: 96.5%;
   height: 95%;
   left: 0.3%;
-
 }
 .menu {
   position: absolute;
@@ -31,21 +30,16 @@ body {
   left: 0;
   background-color: grey;
 }
-.imgMenu {
-
-}
 .news {
   position: absolute;
   height: 100%;
   width: 33.3%;
-
 }
 .favorites {
   position: absolute;
   height: 100%;
   width: 33.3%;
   left: 33.3%;
-
 }
 .search {
   position: absolute;
@@ -60,7 +54,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   border: solid 2px #646765;
 }
-
+/** ================ PACOTES TopRanking ==================== **/
 .pacotesTopRanking {
   position: absolute;
   width: 103%;
@@ -97,13 +91,14 @@ body {
   z-index: 90;
   border-radius: 25px;
 }
+/** ================ PACOTES TopRanking =END================ **/
 
+/** ================ PACOTES Default ======================= **/
 .pacotesDefault {
   position: absolute;
-  border: solid 3px #FFF;
   width: 95%;
-  height: 60%;
-  top: 30%;
+  height: 66%;
+  top: 25%;
   left: 3%;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -112,13 +107,15 @@ body {
   display: inline-block;
   vertical-align: middle;
   width: 29%;
-  height: 80%;
+  height: 55%;
   margin-left: 3%;
   margin-top: 1%;
   border-radius: 25px;
   border: solid 2px #646765;
 }
+/** ================ PACOTES Default =END=================== **/
 
+/** ================ MODAL Search ========================== **/
 .modalSearch {
   position: absolute;
   width: 103%;
@@ -149,15 +146,79 @@ body {
   height: 100%;
   border-radius: 25px;
 }
+/** ================ MODAL Search ========================== **/
+
+/** ================ MODAL RotaDetail ====================== **/
 #fecharRotaDetail {
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 25px;
 }
+.tituloDaRota {
+  position: absolute;
+  width: 90%;
+  height: 30%;
+  left: 5%;
+  top: 10%;
+}
+.conteudoDaRota {
+  position: absolute;
+  width: 90%;
+  height: 30%;
+  left: 5%;
+  top:40%;
+}
+.botoesSociais {
+  position: absolute;
+  width: 90%;
+  height: 15%;
+  left: 5%;
+  top:70%;
+}
+.botoesComprar {
+  position: absolute;
+  width: 90%;
+  height: 10%;
+  left: 5%;
+  top:85%;
+}
+.botaoCurtir {
+  position: absolute;
+  width: 33.3%;
+  height: 100%;
+}
+.ImagensDosBotoes {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+}
+.botaoCompartilhar {
+  position: absolute;
+  width: 33.3%;
+  height: 100%;
+  left: 33.3%;
+}
+.botaoSeguir {
+  position: absolute;
+  width: 33.3%;
+  height: 100%;
+  left: 66.6%;
+}
+#btnComprar {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 8%;
+  border-radius: 15px;
+  background-color: pink;
+}
+/** ================ MODAL RotaDetail =END================== **/
 
-
-/** Modal Detalhes da Rota **/
+/** =========== Modal Detalhes da Rota ============= **/
 .informacoesDaRota {
   position: absolute;
   width: 90%;
@@ -170,11 +231,11 @@ body {
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.8);
 }
+/** =========== Modal Detalhes da Rota =END========= **/
 
 
-
-/** MEDIAS QUERY **/
-/* Galaxy Note 3 */
+/** ============= MEDIAS QUERY ==================== **/
+/* APARELHO: Galaxy Note 3 */
 @media screen and (width: 360px) {
   .caixinha {
     width: 55%;
@@ -193,7 +254,7 @@ body {
     left: 90%;
   }
 }
-/* Iphone 5 */
+/* APARELHO: Iphone 5 */
 @media screen and (width: 320px) {
   .caixinha {
     width: 58%;
@@ -212,7 +273,7 @@ body {
     left: 90%;
   }
 }
-/* Iphone 6 */
+/* APARELHO: Iphone 6 */
 @media screen and (width: 375px) {
   .caixinha {
     width: 58%;
@@ -231,7 +292,7 @@ body {
     left: 90%;
   }
 }
-/* LG Optimus */
+/* APARELHO: LG Optimus */
 @media screen and (width: 384px) {
   .caixinha {
     width: 58%;
@@ -250,3 +311,4 @@ body {
     left: 90%;
   }
 }
+/** ============= MEDIAS QUERY =END================ **/
