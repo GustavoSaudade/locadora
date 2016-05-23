@@ -1,9 +1,13 @@
 body {
-  background: url(cidadeUrbano.jpg) no-repeat center center fixed;
+  background: url(cidadeUrbano3.jpg) no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  -webkit-transition:	all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 .login-link-text{
   color: #188b37;
@@ -59,7 +63,7 @@ body {
   position: absolute;
   width: 103%;
   height: 25%;
-  background-color: rgba(79, 79, 79, 0.7);;
+  background-color: rgba(79, 79, 79, 0.7);
   overflow-x: hidden;
   overflow-y: hidden;
   white-space: nowrap;
@@ -256,8 +260,18 @@ body {
 }
 /* APARELHO: Iphone 5 */
 @media screen and (width: 320px) {
+  .pacotesTopRanking {
+    height: 30%;
+  }
   .caixinha {
+    margin-top: 3%;
+    height: 83%;
     width: 58%;
+  }
+  .pacotesDefault {
+    height: 59%;
+    top: 33%;
+    left: 3%;
   }
   .caixinha2 {
     width: 80%;

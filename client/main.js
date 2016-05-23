@@ -13,6 +13,30 @@ function onReady() {
     strictDi: true
   });
 
+// =========== CARROSSEL IMAGENS DE FUNDO ============
+  (function() {
+    var bgCounter = 0,
+      backgrounds = [
+        "cidadeUrbano3.jpg",
+         "mochila1.jpg",
+         "mochila2.jpg",
+         "mochila3.jpeg",
+         "mochila4.jpg",
+         "mochila5.jpeg",
+         "mochila6.jpg",
+         "mochila7.jpg",
+         "mochila8.jpeg"
+      ];
+
+      function changeBackground() {
+        bgCounter = (bgCounter+1) % backgrounds.length;
+        $('body').css('background', '#000 url('+backgrounds[bgCounter]+') no-repeat center center fixed');
+        setTimeout(changeBackground, 10000);
+      }
+    changeBackground();
+  })();
+// =========== CARROSSEL IMAGENS DE FUNDO ============
+
 }
 
 

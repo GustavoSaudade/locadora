@@ -5,6 +5,8 @@ import utilsPagination from 'angular-utils-pagination';
 
 import './socially.html';
 import { name as Home } from '../home/home';
+import { name as Abertura } from '../abertura/abertura';
+
 //import { name as PartyDetails } from '../partyDetails/partyDetails';
 //import { name as Navigation } from '../navigation/navigation';
 
@@ -19,6 +21,7 @@ export default angular.module(name, [
   uiRouter,
   utilsPagination,
   Home,
+  Abertura,
   'accounts.ui'
 ])
   .component(name, {
@@ -32,7 +35,7 @@ export default angular.module(name, [
     function config($locationProvider, $urlRouterProvider) {
       'ngInject';
       $locationProvider.html5Mode(true);
-      $urlRouterProvider.otherwise('/home');
+      $urlRouterProvider.otherwise('/abertura');
     }
 
     function run($rootScope, $state) {
