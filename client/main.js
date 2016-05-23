@@ -13,6 +13,7 @@ function onReady() {
     strictDi: true
   });
 
+
 // =========== CARROSSEL IMAGENS DE FUNDO ============
   (function() {
     var bgCounter = 0,
@@ -30,7 +31,8 @@ function onReady() {
 
       function changeBackground() {
         bgCounter = (bgCounter+1) % backgrounds.length;
-        $('body').css('background', '#000 url('+backgrounds[bgCounter]+') no-repeat center center fixed');
+        $('body').css('background', '#000 url('+backgrounds[bgCounter]+') no-repeat center fixed');
+        $('body').css('background-size', 'cover');
         setTimeout(changeBackground, 10000);
       }
     changeBackground();
