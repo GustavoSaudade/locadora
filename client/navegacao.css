@@ -237,6 +237,28 @@ body {
 }
 /** =========== Modal Detalhes da Rota =END========= **/
 
+/** ================ Page: ABERTURA ================ **/
+.barra {
+  position: absolute;
+  width: 17%;
+  height: 80%;
+  top: 20%;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid 3px #FFF;
+}
+.titulo {
+  position: absolute;
+  width: 70%;
+  height: 20%;
+  left: 25%;
+  top: 0%;
+  text-align: center;
+  border: solid 3px #FFF;
+}
+/** ================ Page: ABERTURA =END============ **/
+
+
 
 /** ============= MEDIAS QUERY ==================== **/
 /* APARELHO: Galaxy Note 3 */
