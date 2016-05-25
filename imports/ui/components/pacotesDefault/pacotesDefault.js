@@ -10,7 +10,7 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 
 import './pacotesDefault.html';
-import { Rotas } from '../../../api/rotas/collection';
+import { RotasDefault } from '../../../api/rotasDefault/collection';
 
 class PacotesDefault {
   constructor($scope, $reactive) {
@@ -19,7 +19,7 @@ class PacotesDefault {
     $reactive(this).attach($scope);
 //============================= SUBSCRIBES =====================================
     this.subscribe('users');
-    this.subscribe('rotas');
+    this.subscribe('rotasDefault');
 //============================= SUBSCRIBES =END=================================
 //============================= METHODS ========================================
     this.initMouse2 = function(){
@@ -35,8 +35,8 @@ class PacotesDefault {
 //============================= METHODS ========================================
 //============================= HELPERS ========================================
     this.helpers({
-      rotas() {
-        return Rotas.find({});
+      rotasDefault() {
+        return RotasDefault.find({});
       },
       currentUserId() {
         return Meteor.userId();

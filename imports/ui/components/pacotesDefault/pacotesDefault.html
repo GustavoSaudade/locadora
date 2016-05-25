@@ -1,7 +1,8 @@
 <div class="pacotesDefault" ng-init="pacotesDefault.initMouse2()">
-  <div class="caixinha2" ng-repeat="rota in pacotesDefault.rotas">
+  <div class="caixinha2" ng-repeat="rotaDefault in pacotesDefault.rotasDefault">
     <div class="informacaoDaRota" align="center">
-      <strong>{{rota.name}}</strong>
+      <strong>{{rotaDefault.name}}</strong>
     </div>
+    <img src="{{rotaDefault.urlImage}}" class="imagemRota"/>
   </div>
 </div>

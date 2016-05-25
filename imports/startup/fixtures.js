@@ -10,6 +10,7 @@ import { Meteor } from 'meteor/meteor';
 import { HTTP } from 'meteor/http'
 
 import { Rotas } from '../api/rotas';
+import { RotasDefault } from '../api/rotasDefault';
 
 Meteor.startup(() => {
   if (Rotas.find().count() === 0) {
@@ -21,6 +22,19 @@ Meteor.startup(() => {
 
         rotas.forEach((rota) => {
           Rotas.insert(rota)
+        });
+      }
+    });
+  }
+  if (RotasDefault.find().count() === 0) {
+    HTTP.call( 'GET', 'http://www.mocky.io/v2/5745e4240f0000261ced3d93', {"Content-Type": "application/json"}, function( error, response ) {
+      if ( error ) {
+        console.log( error );
+      } else {
+        var rotasDefault = response.data.rotasDefault;
+
+        rotasDefault.forEach((rotaDefault) => {
+          RotasDefault.insert(rotaDefault)
         });
       }
     });
