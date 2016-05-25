@@ -30,12 +30,6 @@ class PacotesTop {
         this.scrollLeft -= (delta);
         event.preventDefault();
       });
-      $pacotesTopRanking.on("swipe", function(event){
-        var delta = event.originalEvent;
-        alert(delta);
-        this.scrollLeft -= (delta);
-        event.preventDefault();
-      });
     }
 
     this.helpers({
