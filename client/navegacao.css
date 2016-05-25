@@ -10,7 +10,7 @@ body {
 	transition: all 1s ease-in-out;
 }
 .login-link-text{
-  color: #188b37;
+  color: rgb(4, 174, 218);
 }
 .fundoOpaco{
   position: absolute;
@@ -240,12 +240,11 @@ body {
 /** ================ Page: ABERTURA ================ **/
 .barra {
   position: absolute;
-  width: 17%;
+  width: 20%;
   height: 80%;
   top: 20%;
   border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.5);
-  border: solid 3px #FFF;
 }
 .titulo {
   position: absolute;
@@ -254,7 +253,62 @@ body {
   left: 25%;
   top: 0%;
   text-align: center;
-  border: solid 3px #FFF;
+  color: rgb(4, 174, 218);
+}
+.feedWorld {
+  position: absolute;
+  width: 95%;
+  top: 5%;
+  height: 13.5%;
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.iconeAbertura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.friends {
+  position: absolute;
+  width: 95%;
+  top: 25%;
+  height: 13.5%;
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+.myRoutes {
+  position: absolute;
+  width: 95%;
+  top: 45%;
+  height: 13.5%;
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+.find {
+  position: absolute;
+  width: 95%;
+  top: 65%;
+  height: 13.5%;
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+}
+.backArrow {
+  position: absolute;
+  width: 95%;
+  top: 85%;
+  height: 13.5%;
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
 }
 /** ================ Page: ABERTURA =END============ **/
 
@@ -348,3 +402,75 @@ body {
   }
 }
 /** ============= MEDIAS QUERY =END================ **/
+
+
+
+/** ============= ANIMATIONS ====================== **/
+@-webkit-keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+/** ============= ANIMATIONS ==END================= **/
