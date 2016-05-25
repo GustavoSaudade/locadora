@@ -13,7 +13,6 @@ function onReady() {
     strictDi: true
   });
 
-
 // =========== CARROSSEL IMAGENS DE FUNDO ============
   (function() {
     var bgCounter = 0,
@@ -28,7 +27,6 @@ function onReady() {
          "mochila7.jpg",
          "mochila8.jpeg"
       ];
-
       function changeBackground() {
         bgCounter = (bgCounter+1) % backgrounds.length;
         $('body').css('background', '#000 url('+backgrounds[bgCounter]+') no-repeat center fixed');
@@ -38,10 +36,7 @@ function onReady() {
     changeBackground();
   })();
 // =========== CARROSSEL IMAGENS DE FUNDO ============
-
 }
-
-
 
 if (Meteor.isCordova) {
   angular.element(document).on('deviceready', onReady);

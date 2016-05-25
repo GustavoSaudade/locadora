@@ -1,3 +1,11 @@
+/** ***************************************************************************
+
+NAME: home.js
+DESCRIPTION: Arquivo que configura o modulo controller da pagina home
+AUTHOR: Gustavo Kluwe Saudade
+LAST MODIFICATION: 25/05/2016
+
+**************************************************************************** **/
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
@@ -12,10 +20,11 @@ class Home {
     'ngInject';
 
     $reactive(this).attach($scope);
-
+//============================= SUBSCRIBES =====================================
     Meteor.subscribe('users');
     Meteor.subscribe('rotas');
-
+//============================= SUBSCRIBES =END=================================
+//============================= METHODS ========================================
     this.clickSearch = function() {
       $('.modalSearch').css("visibility", "visible");
     }
@@ -44,12 +53,13 @@ class Home {
     this.clicaFacebook = function() {
       alert('Você clicou em facebook');
     }
+//============================= METHODS =END====================================
   }
 }
 
 const name = 'home';
 
-// create a module
+//============================ MODULE ==========================================
 export default angular.module(name, [
   angularMeteor,
   uiRouter,
@@ -62,7 +72,8 @@ export default angular.module(name, [
   controller: Home
 })
   .config(config);
-
+//============================ MODULE =END======================================
+//============================ CONFIG MODULE ===================================
   function config($stateProvider) {
   'ngInject';
   $stateProvider
@@ -71,3 +82,4 @@ export default angular.module(name, [
       template: '<home></home>'
     });
 }
+//============================ CONFIG MODULE =END===============================

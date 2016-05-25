@@ -1,3 +1,11 @@
+/** ***************************************************************************
+
+NAME: PacotesTop.js
+DESCRIPTION: Configura o modulo controller da diretiva pacotesTop
+AUTHOR: Gustavo Kluwe Saudade
+LAST MODIFICATION: 25/05/2016
+
+**************************************************************************** **/
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 
@@ -9,10 +17,11 @@ class PacotesTop {
     'ngInject';
 
     $reactive(this).attach($scope);
-
+//============================= SUBSCRIBES =====================================
     this.subscribe('users');
     this.subscribe('rotas');
-
+//============================= SUBSCRIBES =END=================================
+//============================= METHODS ========================================
     this.clicaRota = function(rota) {
       var rotaClicada = rota;
       $('.superContent').css("visibility", "hidden");
@@ -31,7 +40,8 @@ class PacotesTop {
         event.preventDefault();
       });
     }
-
+//============================= METHODS =END====================================
+//============================= HELPERS ========================================
     this.helpers({
       rotas() {
         return Rotas.find({});
@@ -40,13 +50,14 @@ class PacotesTop {
         return Meteor.userId();
       }
     });
+//============================= HELPERS =END====================================
   }
 }
 
 
 const name = 'pacotesTop';
 
-// create a module
+//============================ MODULE ==========================================
 export default angular.module(name, [
   angularMeteor
 ]).component(name, {
@@ -54,3 +65,4 @@ export default angular.module(name, [
   controllerAs: name,
   controller: PacotesTop
 });
+//============================ MODULE =END======================================

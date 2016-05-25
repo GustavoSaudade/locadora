@@ -1,3 +1,11 @@
+/** ***************************************************************************
+
+NAME: pacotesDefault.js
+DESCRIPTION: Configura o modulo controller da diretiva pacotesDefault
+AUTHOR: Gustavo Kluwe Saudade
+LAST MODIFICATION: 25/05/2016
+
+**************************************************************************** **/
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 
@@ -9,11 +17,11 @@ class PacotesDefault {
     'ngInject';
 
     $reactive(this).attach($scope);
-
+//============================= SUBSCRIBES =====================================
     this.subscribe('users');
-
     this.subscribe('rotas');
-
+//============================= SUBSCRIBES =END=================================
+//============================= METHODS ========================================
     this.initMouse2 = function(){
       var $pacotesDefault = $('.pacotesDefault');
       var scrollTime = 0.5;
@@ -24,7 +32,8 @@ class PacotesDefault {
         event.preventDefault();
       });
     }
-
+//============================= METHODS ========================================
+//============================= HELPERS ========================================
     this.helpers({
       rotas() {
         return Rotas.find({});
@@ -33,6 +42,7 @@ class PacotesDefault {
         return Meteor.userId();
       }
     });
+//============================= HELPERS =END====================================
   }
 
 }
@@ -40,7 +50,7 @@ class PacotesDefault {
 
 const name = 'pacotesDefault';
 
-// create a module
+//============================ MODULE ==========================================
 export default angular.module(name, [
   angularMeteor
 ]).component(name, {
@@ -48,3 +58,4 @@ export default angular.module(name, [
   controllerAs: name,
   controller: PacotesDefault
 });
+//============================ MODULE =END======================================

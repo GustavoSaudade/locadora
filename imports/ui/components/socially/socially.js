@@ -1,3 +1,12 @@
+/** ***************************************************************************
+
+NAME: socially.js
+DESCRIPTION: Modulo principal da Aplicação
+AUTHOR: Gustavo Kluwe Saudade
+LAST MODIFICATION: 25/05/2016
+
+**************************************************************************** **/
+
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
@@ -15,7 +24,7 @@ class Socially {}
 
 const name = 'socially';
 
-// create a module
+//============================ MODULE ==========================================
 export default angular.module(name, [
   angularMeteor,
   uiRouter,
@@ -31,7 +40,8 @@ export default angular.module(name, [
   })
     .config(config)
     .run(run);
-
+//============================ MODULE =END======================================
+//============================ CONFIG MODULE ===================================
     function config($locationProvider, $urlRouterProvider) {
       'ngInject';
       $locationProvider.html5Mode(true);
@@ -48,3 +58,4 @@ export default angular.module(name, [
           }
         });
     }
+//============================ CONFIG MODULE =END===============================

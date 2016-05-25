@@ -1,3 +1,12 @@
+/** ***************************************************************************
+
+NAME: abertura.js
+DESCRIPTION: Arquivos que configura o modulo controller da pagina abertura
+AUTHOR: Gustavo Kluwe Saudade
+LAST MODIFICATION: 25/05/2016
+
+**************************************************************************** **/
+
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
@@ -11,14 +20,19 @@ class Abertura {
 
     $reactive(this).attach($scope);
 
+//============================= SUBSCRIBES =====================================
     this.subscribe('users');
+//============================= SUBSCRIBES =END=================================
 
+//============================= HELPERS ========================================
     this.helpers({
       users() {
         return Meteor.users.find({});
       }
     });
+//============================= HELPERS =END====================================
 
+//============================= METHODS ========================================
     this.clicaWorld = function() {
       alert("Você clicou no mundo!");
     }
@@ -38,13 +52,13 @@ class Abertura {
     this.clicaBackArrow = function() {
       alert("Você clicou em Back Arrow!");
     }
-
+//============================= METHODS =END====================================
   }
 }
 
 const name = 'abertura';
 
-// create a module
+//============================ MODULE ==========================================
 export default angular.module(name, [
   angularMeteor,
   uiRouter
@@ -54,7 +68,8 @@ export default angular.module(name, [
   controller: Abertura
 })
   .config(config);
-
+//============================ MODULE =END======================================
+//============================ CONFIG MODULE ===================================
 function config($stateProvider) {
   'ngInject';
 
@@ -63,3 +78,4 @@ function config($stateProvider) {
     template: '<abertura></abertura>'
   });
 }
+//============================ CONFIG MODULE =END===============================
