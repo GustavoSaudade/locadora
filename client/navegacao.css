@@ -112,10 +112,10 @@ body {
 /** ================ PACOTES Default ======================= **/
 .pacotesDefault {
   position: absolute;
-  width: 95%;
-  height: 66%;
+  width: 90%;
+  height: 50%;
   top: 25%;
-  left: 3%;
+  left: 5%;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -271,6 +271,10 @@ body {
   top: 0%;
   text-align: center;
   color: rgb(4, 174, 218);
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
 }
 .feedWorld {
   position: absolute;
@@ -344,8 +348,10 @@ body {
     width: 55%;
   }
   .caixinha2 {
-    width: 80%;
-    margin-left: 10%;
+    width: 40%;
+    height: 30%;
+    margin-left: 8%;
+    margin-top: 3%;
   }
   .formSearch {
     left: 20%;
@@ -373,8 +379,10 @@ body {
     left: 3%;
   }
   .caixinha2 {
-    width: 80%;
-    margin-left: 10%;
+    width: 40%;
+    height: 30%;
+    margin-left: 8%;
+    margin-top: 3%;
   }
   .formSearch {
     left: 20%;
@@ -392,8 +400,10 @@ body {
     width: 58%;
   }
   .caixinha2 {
-    width: 80%;
-    margin-left: 10%;
+    width: 40%;
+    height: 30%;
+    margin-left: 8%;
+    margin-top: 3%;
   }
   .formSearch {
     left: 20%;
@@ -411,8 +421,11 @@ body {
     width: 58%;
   }
   .caixinha2 {
-    width: 80%;
-    margin-left: 10%;
+    border: solid 3px rgb(4, 174, 218);
+    width: 37%;
+    height: 28%;
+    margin-left: 8%;
+    margin-top: 3%;
   }
   .formSearch {
     left: 20%;

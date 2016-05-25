@@ -27,7 +27,7 @@ Meteor.startup(() => {
     });
   }
   if (RotasDefault.find().count() === 0) {
-    HTTP.call( 'GET', 'http://www.mocky.io/v2/5745e4240f0000261ced3d93', {"Content-Type": "application/json"}, function( error, response ) {
+    HTTP.call( 'GET', 'http://www.mocky.io/v2/574600540f0000601eed3dc5', {"Content-Type": "application/json"}, function( error, response ) {
       if ( error ) {
         console.log( error );
       } else {
