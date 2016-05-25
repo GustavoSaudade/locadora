@@ -1,3 +1,11 @@
+/** ***************************************************************************
+
+NAME: fixtures.js
+DESCRIPTION: Configura o startup da App. Faz http call para banco de dados
+AUTHOR: Gustavo Kluwe Saudade
+LAST MODIFICATION: 25/05/2016
+
+**************************************************************************** **/
 import { Meteor } from 'meteor/meteor';
 import { HTTP } from 'meteor/http'
 
