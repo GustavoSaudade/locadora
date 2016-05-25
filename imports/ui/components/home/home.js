@@ -44,30 +44,6 @@ class Home {
     this.clicaFacebook = function() {
       alert('Você clicou em facebook');
     }
-
-    if (Meteor.isClient) {
-      $(function(){
-          var $pacotesTopRanking = $('.pacotesTopRanking');
-          var scrollTime = 0.5;
-          var scrollDistance = 640;
-          $pacotesTopRanking.on("mousewheel DOMMouseScroll", function(event){
-            var delta = event.originalEvent.wheelDelta;
-            this.scrollLeft -= (delta);
-            event.preventDefault();
-          });
-        });
-
-        $(function(){
-            var $pacotesDefault = $('.pacotesDefault');
-            var scrollTime = 0.5;
-            var scrollDistance = 640;
-            $pacotesDefault.on("mousewheel DOMMouseScroll", function(event){
-              var delta = event.originalEvent.wheelDelta;
-              this.scrollTop -= (delta);
-              event.preventDefault();
-            });
-          });
-    }
   }
 }
 

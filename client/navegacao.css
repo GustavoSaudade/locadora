@@ -310,6 +310,12 @@ body {
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
 }
+#linkWorld {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 101;
+}
 /** ================ Page: ABERTURA =END============ **/
 
 

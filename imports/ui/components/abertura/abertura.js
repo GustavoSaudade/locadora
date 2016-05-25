@@ -18,6 +18,27 @@ class Abertura {
         return Meteor.users.find({});
       }
     });
+
+    this.clicaWorld = function() {
+      alert("Você clicou no mundo!");
+    }
+
+    this.clicaFriends = function() {
+      alert("Você clicou em Frinds!");
+    }
+
+    this.clicaMyRoutes = function() {
+      alert("Você clicou em My Routes!");
+    }
+
+    this.clicaFind = function() {
+      alert("Você clicou em Find!");
+    }
+
+    this.clicaBackArrow = function() {
+      alert("Você clicou em Back Arrow!");
+    }
+
   }
 }
 

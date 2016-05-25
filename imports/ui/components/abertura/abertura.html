@@ -4,18 +4,19 @@
 </div>
 <div class="barra">
   <div class="feedWorld">
+    <a ui-sref="home" id="linkWorld"></a>
     <img src="worldblue.png" class="iconeAbertura" />
   </div>
-  <div class="friends">
+  <div class="friends" ng-click="abertura.clicaFriends()">
     <img src="friends.png" class="iconeAbertura" />
   </div>
-  <div class="myRoutes">
+  <div class="myRoutes" ng-click="abertura.clicaMyRoutes()">
     <img src="myRoutes.png" class="iconeAbertura" />
   </div>
-  <div class="find">
+  <div class="find" ng-click="abertura.clicaFind()">
     <img src="find.png" class="iconeAbertura" />
   </div>
-  <div class="backArrow">
+  <div class="backArrow" ng-click="abertura.clicaBackArrow()">
     <img src="backArrow.png" class="iconeAbertura" />
   </div>
 </div>
