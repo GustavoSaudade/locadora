@@ -39,6 +39,12 @@ body {
   height: 100%;
   width: 33.3%;
 }
+#linkHome {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+}
 .favorites {
   position: absolute;
   height: 100%;
@@ -64,8 +70,10 @@ body {
   width: 103%;
   height: 25%;
   background-color: rgba(79, 79, 79, 0.7);
-  overflow-x: hidden;
+  overflow-x: scroll;
+  z-index: 0;
   overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   white-space: nowrap;
   padding-top: 1%;
   padding-left: 1%;
@@ -109,7 +117,8 @@ body {
   top: 25%;
   left: 3%;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
   -webkit-animation-duration: 1s;
