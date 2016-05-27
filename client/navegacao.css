@@ -420,11 +420,24 @@ body {
   .caixinha {
     width: 58%;
   }
+  .pacotesDefault {
+    margin-top: 30%;
+    height: 47%;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .seuHumor {
+    position: absolute;
+    margin-top: 42%;
+    color: rgb(4, 174, 218);
+    border-radius: 15px;
+    border: solid 3px #FFF;
+  }
   .caixinha2 {
     border: solid 3px rgb(4, 174, 218);
-    width: 37%;
+    width: 33%;
     height: 28%;
-    margin-left: 8%;
+    margin-left: 10%;
     margin-top: 3%;
   }
   .formSearch {
