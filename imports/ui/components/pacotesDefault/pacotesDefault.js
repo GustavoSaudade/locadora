@@ -32,6 +32,13 @@ class PacotesDefault {
         event.preventDefault();
       });
     }
+    this.clickSeuHumor = function () {
+      $('.seuHumor').css("visibility", "hidden");
+      $('.pacotesDefault').css("animation-name", "fadeOutRight");
+      $('.pacotesDefault').css("-webkit-animation-name", "fadeOutRight");
+      $('.pacotesDefault').css("visibility", "hidden");
+      $('.mapa').css("visibility", "visible");
+    }
 //============================= METHODS ========================================
 //============================= HELPERS ========================================
     this.helpers({

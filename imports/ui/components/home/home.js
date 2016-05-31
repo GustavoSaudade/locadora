@@ -14,6 +14,7 @@ import utilsPagination from 'angular-utils-pagination';
 import './home.html';
 import { name as PacotesTop } from '../pacotesTop/pacotesTop';
 import { name as PacotesDefault } from '../pacotesDefault/pacotesDefault';
+import { name as MapaLocation } from '../mapaLocation/mapaLocation';
 
 class Home {
   constructor($scope, $reactive) {
@@ -65,7 +66,8 @@ export default angular.module(name, [
   uiRouter,
   utilsPagination,
   PacotesTop,
-  PacotesDefault
+  PacotesDefault,
+  MapaLocation
 ]).component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,
   controllerAs: name,
