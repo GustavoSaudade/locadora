@@ -421,14 +421,16 @@ body {
     width: 58%;
   }
   .pacotesDefault {
-    margin-top: 30%;
-    height: 47%;
+    margin-top: 20%;
+    height: 54%;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.5);
   }
   .seuHumor {
     position: absolute;
     margin-top: 42%;
+    width: 100%;
+    text-align: center;
     color: rgb(4, 174, 218);
     border-radius: 15px;
     border: solid 3px #FFF;
