@@ -10,6 +10,7 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 
 import './mapaLocation.html';
+import { name as PartyMap } from '../partyMap/partyMap';
 
 class MapaLocation {
   constructor($scope, $reactive) {
@@ -36,7 +37,8 @@ const name = 'mapaLocation';
 
 //============================ MODULE ==========================================
 export default angular.module(name, [
-  angularMeteor
+  angularMeteor,
+  PartyMap
 ]).component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,
   controllerAs: name,

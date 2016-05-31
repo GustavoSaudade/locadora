@@ -38,6 +38,7 @@ class PacotesDefault {
       $('.pacotesDefault').css("-webkit-animation-name", "fadeOutRight");
       $('.pacotesDefault').css("visibility", "hidden");
       $('.mapa').css("visibility", "visible");
+      $('.mapaContent').css("visibility", "visible");
     }
 //============================= METHODS ========================================
 //============================= HELPERS ========================================

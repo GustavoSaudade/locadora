@@ -452,6 +452,33 @@ body {
     visibility: hidden;
     z-index: 200;
   }
+  .mapaContent {
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    top: 25%;
+    left: 5%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    margin-top: 20%;
+    height: 54%;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+
+  }
+  .angular-google-map-container {
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+    height: 95%;
+    width: 95%;
+  }
   .caixinha2 {
     border: solid 3px rgb(4, 174, 218);
     width: 33%;

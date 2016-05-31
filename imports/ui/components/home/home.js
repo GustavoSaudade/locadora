@@ -15,6 +15,7 @@ import './home.html';
 import { name as PacotesTop } from '../pacotesTop/pacotesTop';
 import { name as PacotesDefault } from '../pacotesDefault/pacotesDefault';
 import { name as MapaLocation } from '../mapaLocation/mapaLocation';
+import { name as PartyMap } from '../partyMap/partyMap';
 
 class Home {
   constructor($scope, $reactive) {
@@ -67,7 +68,8 @@ export default angular.module(name, [
   utilsPagination,
   PacotesTop,
   PacotesDefault,
-  MapaLocation
+  MapaLocation,
+  PartyMap
 ]).component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,
   controllerAs: name,
