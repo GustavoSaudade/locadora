@@ -472,7 +472,7 @@ body {
     visibility: hidden;
 
   }
-  .angular-google-map-container {
+  #map  {
     position: absolute;
     top: 2.5%;
     left: 2.5%;
