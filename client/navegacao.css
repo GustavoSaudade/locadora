@@ -450,7 +450,7 @@ body {
     border-radius: 15px;
     border: solid 3px #FFF;
     visibility: hidden;
-    z-index: 200;
+    z-index: 103;
   }
   .mapaContent {
     position: absolute;
@@ -460,17 +460,14 @@ body {
     left: 5%;
     overflow-x: hidden;
     overflow-y: scroll;
+    visibility: hidden;
     -webkit-overflow-scrolling: touch;
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     margin-top: 20%;
     height: 54%;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.5);
-    visibility: hidden;
-
   }
   #map  {
     position: absolute;
@@ -602,12 +599,14 @@ body {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
+    visibility: hidden;
   }
 
   to {
     opacity: 1;
     -webkit-transform: none;
     transform: none;
+    visibility: visible;
   }
 }
 
@@ -616,12 +615,14 @@ body {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
+    visibility: hidden;
   }
 
   to {
     opacity: 1;
     -webkit-transform: none;
     transform: none;
+    visibility: visible;
   }
 }
 

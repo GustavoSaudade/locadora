@@ -34,10 +34,12 @@ class PacotesDefault {
     }
     this.clickSeuHumor = function () {
       $('.seuHumor').css("visibility", "hidden");
+      $('.mapa').css("visibility", "visible");
       $('.pacotesDefault').css("animation-name", "fadeOutRight");
       $('.pacotesDefault').css("-webkit-animation-name", "fadeOutRight");
       $('.pacotesDefault').css("visibility", "hidden");
-      $('.mapa').css("visibility", "visible");
+      $('.mapaContent').css("animation-name", "fadeInRight");
+      $('.mapaContent').css("-webkit-animation-name", "fadeInRight");
       $('.mapaContent').css("visibility", "visible");
     }
 //============================= METHODS ========================================

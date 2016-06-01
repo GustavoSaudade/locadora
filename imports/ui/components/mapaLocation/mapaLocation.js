@@ -26,8 +26,10 @@ class MapaLocation {
       $('.pacotesDefault').css("animation-name", "fadeInRight");
       $('.pacotesDefault').css("-webkit-animation-name", "fadeInRight");
       $('.pacotesDefault').css("visibility", "visible");
+      $('.mapaContent').css("animation-name", "fadeOutRight");
+      $('.mapaContent').css("-webkit-animation-name", "fadeOutRight");
+      $('.mapaContent').css("visibility", "hidden");
     }
-
 //============================= METHODS =END====================================
   }
 }
