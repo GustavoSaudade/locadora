@@ -1,9 +1,9 @@
 /** ***************************************************************************
 
-NAME: pacotesDefault.js
-DESCRIPTION: Configura o modulo controller da diretiva pacotesDefault
-AUTHOR: Gustavo Kluwe Saudade
-LAST MODIFICATION: 25/05/2016
+@name: pacotesDefault.js
+@description: Configura o modulo controller da diretiva pacotesDefault
+@author: Gustavo Kluwe Saudade (https://github.com/GustavoSaudade)
+@since: 25/05/2016
 
 **************************************************************************** **/
 import angular from 'angular';

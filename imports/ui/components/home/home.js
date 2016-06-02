@@ -1,9 +1,9 @@
 /** ***************************************************************************
 
-NAME: home.js
-DESCRIPTION: Arquivo que configura o modulo controller da pagina home
-AUTHOR: Gustavo Kluwe Saudade
-LAST MODIFICATION: 25/05/2016
+@name: home.js
+@description: Arquivo que configura o modulo controller da pagina home
+@author: Gustavo Kluwe Saudade (https://github.com/GustavoSaudade)
+@since: 25/05/2016
 
 **************************************************************************** **/
 import angular from 'angular';

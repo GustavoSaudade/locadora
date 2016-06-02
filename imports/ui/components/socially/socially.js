@@ -1,9 +1,9 @@
 /** ***************************************************************************
 
-NAME: socially.js
-DESCRIPTION: Modulo principal da Aplicação
-AUTHOR: Gustavo Kluwe Saudade
-LAST MODIFICATION: 25/05/2016
+@name: socially.js
+@description: Modulo principal da Aplicação
+@author: Gustavo Kluwe Saudade (https://github.com/GustavoSaudade)
+@since: 25/05/2016
 
 **************************************************************************** **/
 
