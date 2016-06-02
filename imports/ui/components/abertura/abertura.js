@@ -1,9 +1,9 @@
 /** ***************************************************************************
 
-NAME: abertura.js
-DESCRIPTION: Arquivos que configura o modulo controller da pagina abertura
-AUTHOR: Gustavo Kluwe Saudade
-LAST MODIFICATION: 25/05/2016
+@name: abertura.js
+@description: Arquivos que configura o modulo controller da pagina abertura
+@author: Gustavo Kluwe Saudade (https://github.com/GustavoSaudade)
+@since: 25/05/2016
 
 **************************************************************************** **/
 

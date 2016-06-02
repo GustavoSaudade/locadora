@@ -54,7 +54,7 @@ export default angular.module(name, [
         (event, toState, toParams, fromState, fromParams, error) => {
           if (error === 'AUTH_REQUIRED') {
             alert('Você precisa logar no sistema para visualizar as Rotas');
-            $state.go('home');
+            $state.go('abertura');
           }
         });
     }

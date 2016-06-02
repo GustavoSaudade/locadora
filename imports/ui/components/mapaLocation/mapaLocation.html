@@ -1,17 +1,4 @@
-<script type="text/javascript">
-  var map;
-  function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 8
-    });
-  }
-</script>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQdtjapIftZ-9au5Vg2ULRHAAVC6lpd5w&callback=initMap">
-    </script>
-
-<div class="mapa" ng-click="mapaLocation.clicaMapa()">
+<div class="mapa" ng-click="mapaLocation.clicaMapa()" ng-init="mapaLocation.carregaMapa()">
   <h4>MAPA</h4>
 </div>
 <div class="mapaContent">
