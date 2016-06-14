@@ -441,7 +441,7 @@ body {
     height: 100%;
     z-index: 101;
   }
-  .mapa {
+  .atividadeDosAmigos {
     position: absolute;
     margin-top: 42%;
     width: 100%;
@@ -452,7 +452,7 @@ body {
     visibility: hidden;
     z-index: 103;
   }
-  .mapaContent {
+  .listaAtividadeDosAmigos {
     position: absolute;
     width: 90%;
     height: 50%;

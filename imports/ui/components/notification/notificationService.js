@@ -8,8 +8,6 @@
 **************************************************************************** **/
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
-import uiRouter from 'angular-ui-router';
-import utilsPagination from 'angular-utils-pagination';
 
 import './home.html';
 import { name as PacotesTop } from '../pacotesTop/pacotesTop';
@@ -69,15 +67,11 @@ class Home {
   }
 }
 
-const name = 'home';
+const name = 'notificationService';
 
 //============================ MODULE ==========================================
-export default angular.module(name, [
-  angularMeteor,
-  uiRouter,
-  utilsPagination,
-  PacotesTop,
-  PacotesDefault
+export default angular.factory(name, [
+  angularMeteor
 ]).component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,
   controllerAs: name,

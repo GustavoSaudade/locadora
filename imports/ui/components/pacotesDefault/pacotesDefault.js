@@ -22,6 +22,7 @@ class PacotesDefault {
     this.subscribe('rotasDefault');
 //============================= SUBSCRIBES =END=================================
 //============================= METHODS ========================================
+    //configura efeito de rolagem
     this.initMouse2 = function(){
       var $pacotesDefault = $('.pacotesDefault');
       var scrollTime = 0.5;
@@ -32,15 +33,27 @@ class PacotesDefault {
         event.preventDefault();
       });
     }
+
     this.clickSeuHumor = function () {
       $('.seuHumor').css("visibility", "hidden");
-      $('.mapa').css("visibility", "visible");
+      $('.atividadeDosAmigos').css("visibility", "visible");
       $('.pacotesDefault').css("animation-name", "fadeOutRight");
       $('.pacotesDefault').css("-webkit-animation-name", "fadeOutRight");
       $('.pacotesDefault').css("visibility", "hidden");
-      $('.mapaContent').css("animation-name", "fadeInRight");
-      $('.mapaContent').css("-webkit-animation-name", "fadeInRight");
-      $('.mapaContent').css("visibility", "visible");
+      $('.listaAtividadeDosAmigos').css("animation-name", "fadeInRight");
+      $('.listaAtividadeDosAmigos').css("-webkit-animation-name", "fadeInRight");
+      $('.listaAtividadeDosAmigos').css("visibility", "visible");
+    }
+
+    this.clicaMapa = function () {
+      $('.seuHumor').css("visibility", "visible");
+      $('.atividadeDosAmigos').css("visibility", "hidden");
+      $('.pacotesDefault').css("animation-name", "fadeInRight");
+      $('.pacotesDefault').css("-webkit-animation-name", "fadeInRight");
+      $('.pacotesDefault').css("visibility", "visible");
+      $('.listaAtividadeDosAmigos').css("animation-name", "fadeOutRight");
+      $('.listaAtividadeDosAmigos').css("-webkit-animation-name", "fadeOutRight");
+      $('.listaAtividadeDosAmigos').css("visibility", "hidden");
     }
 //============================= METHODS ========================================
 //============================= HELPERS ========================================

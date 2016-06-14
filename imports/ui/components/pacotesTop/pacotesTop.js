@@ -24,7 +24,7 @@ class PacotesTop {
 //============================= METHODS ========================================
     this.clicaRota = function(rota) {
       var rotaClicada = rota;
-      $('.superContent').css("visibility", "hidden");
+      $('.pacotesDefaultContent').css("visibility", "hidden");
       $('.informacoesDaRota').css("visibility", "visible");
       $('.nomeDaRota').html(rotaClicada.name);
       $('.descricaoDaRota').html(rotaClicada.description);
