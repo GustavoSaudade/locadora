@@ -15,6 +15,7 @@ import utilsPagination from 'angular-utils-pagination';
 import './socially.html';
 import '../../../Services/notificationAlertView.html';
 import '../../../Services/notificationPromptView.html';
+import '../../../Services/notificationPrompt2View.html'
 import { name as Home } from '../home/home';
 import { name as Abertura } from '../abertura/abertura';
 
@@ -46,6 +47,10 @@ export default angular.module(name, [
   })
     .config(config)
     .run(run)
+
+    /**
+    * Servico de notificacao do dispositivo.
+    */
     .factory('notificationService', ['$rootScope', function ($rootScope) {
 
       return {
@@ -187,7 +192,74 @@ export default angular.module(name, [
 
             promptDialog.show();
           });
-    }
+    },
+
+    /**
+    * Mostra um prompt epecífica para o detalhamento de Rotas.
+    * @params(Object)
+    *      + message(String): a mensagem a ser exibida para o usuário.
+    *      + callback(Function): uma função a ser executada quando confirmar.
+    *      + title(String): o titulo da mensagem.
+    *      + buttonLabels(Array): ['NomeBotaoCancelar', 'NomeBotaoOk'].
+    */
+    prompt2: function (params) {
+
+      $rootScope.invalidPrompt = false;
+
+      $rootScope.promptOptions = {
+        message: '',
+        title: 'Prompt',
+        messageValidation: '',
+        callback: function () {},
+        validators: [],
+        cancelable: true,
+        modifier: ''
+      };
+
+      angular.extend($rootScope.promptOptions, params);
+
+      $rootScope.ons.createAlertDialog('imports/Services/notificationPrompt2View.html').then(function(promptDialog) {
+
+        promptDialog.submit = function () {
+
+          var value = $rootScope.promptOptions.value;
+
+          if (!angular.isDefined(value) || value.trim().length < 1) {
+            $rootScope.invalidPrompt = true;
+            return;
+          }
+
+          var validators = $rootScope.promptOptions.validators;
+          var validated = true;
+
+          if (validators.length > 0) {
+            validators.forEach(function (validator){
+              if (!validator(value)) {
+                validated = false;
+                return;
+              }
+            });
+          }
+
+          if (!validated) {
+            $rootScope.invalidPrompt = true;
+            return;
+          }
+
+          $rootScope.invalidPrompt = false;
+
+          var callback = $rootScope.promptOptions.callback;
+
+          if (callback) {
+            callback(value);
+            promptDialog._cancel();
+            $rootScope.promptOptions = {};
+          }
+        };
+
+        promptDialog.show();
+      });
+}
     };
     }]);
 

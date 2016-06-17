@@ -13,7 +13,7 @@ import './pacotesTop.html';
 import { Rotas } from '../../../api/rotas/collection';
 
 class PacotesTop {
-  constructor($scope, $reactive) {
+  constructor($scope, $reactive, notificationService) {
     'ngInject';
 
     $reactive(this).attach($scope);
@@ -24,10 +24,21 @@ class PacotesTop {
 //============================= METHODS ========================================
     this.clicaRota = function(rota) {
       var rotaClicada = rota;
-      $('.pacotesDefaultContent').css("visibility", "hidden");
-      $('.informacoesDaRota').css("visibility", "visible");
-      $('.nomeDaRota').html(rotaClicada.name);
-      $('.descricaoDaRota').html(rotaClicada.description);
+
+      notificationService.prompt2({
+        title: "INFORMAÇÕES DA ROTA",
+        name: rotaClicada.name,
+        description: rotaClicada.description,
+        modifier: true,
+        callback: function() {
+          ons.notification.alert({
+            message: 'esse é o callback!',
+            modifier: true,
+            scope: $scope
+          });
+        }
+      });
+
     }
 
     this.initMouse = function(){
