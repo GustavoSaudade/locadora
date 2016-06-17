@@ -660,3 +660,35 @@ body {
 
 
 /** ============= ANIMATIONS ==END================= **/
+ .alert-dialog-mask {
+   background: rgba(0, 0, 0, 0.8);;
+ }
+
+.alert-dialog-prompt {
+  border-radius: 15px;
+  background-color: rgb(88, 97, 99);
+}
+.alert-dialog-title {
+  color: rgb(4, 174, 218);
+  font-weight: bold;
+  text-align: center;
+}
+.alert-dialog-content {
+  background-color: rgb(111, 124, 128);
+}
+.alert-message {
+  color: rgb(197, 209, 212);
+  text-align: center;
+}
+.button-small {
+  color: rgb(4, 174, 218);
+  background-color: rgb(88, 97, 99);
+  font-weight: bold;
+  width: 49%;
+}
+#btnModalBuscaCancelar {
+  border-right: 1px solid #FFF;
+}
+.alert-dialog-footer {
+
+}

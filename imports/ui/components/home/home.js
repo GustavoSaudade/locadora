@@ -16,7 +16,7 @@ import { name as PacotesTop } from '../pacotesTop/pacotesTop';
 import { name as PacotesDefault } from '../pacotesDefault/pacotesDefault';
 
 class Home {
-  constructor($scope, $reactive) {
+  constructor($scope, $reactive, notificationService) {
     'ngInject';
 
     $reactive(this).attach($scope);
@@ -26,11 +26,24 @@ class Home {
 //============================= SUBSCRIBES =END=================================
 //============================= METHODS ========================================
     this.clickSearch = function() {
-      $('.modalSearch').css("visibility", "visible");
+
+          notificationService.prompt({
+            title: "BUSCA",
+            message: "Digite um local, um amigo, um desejo...",
+            modifier: true,
+            callback: function(textoDigitado) {
+              ons.notification.alert({
+                message: 'Sua busca por ' + textoDigitado + ' não retornou nada pq o programador não implementou essa funcionalidade',
+                modifier: true,
+                scope: $scope
+              });
+            }
+          });
+
     }
 
     this.closeSearch = function() {
-      $('.modalSearch').css("visibility", "hidden");
+      alert("Heyyy");
     }
 
     this.clickLocale = function () {

@@ -12,6 +12,7 @@
     "angular-ui-router": "^0.2.18",
     "angular-utils-pagination": "^0.11.1",
     "meteor-node-stubs": "~0.2.0",
+    "onsenui": "^2.0.0-rc.11",
     "underscore": "^1.8.3"
   }
 }

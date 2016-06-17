@@ -1,0 +1,11 @@
+<ons-alert-dialog class="alert-dialog-alert" var="alert" animation="fade" cancelable="true">
+<div class="alert-dialog-title">
+  {{ ::alertOptions.title }}
+</div>
+<div class="alert-dialog-content">
+  <span hp-bind-html-compile="alertOptions.message"></span>
+</div>
+<div class="alert-dialog-footer dialog-button-container text-center box-sizing">
+  <button class="button button-small button-red" ng-click="alert.close()">OK</button>
+</div>
+</ons-alert-dialog>
