@@ -13,7 +13,7 @@ import './pacotesDefault.html';
 import { RotasDefault } from '../../../api/rotasDefault/collection';
 
 class PacotesDefault {
-  constructor($scope, $reactive) {
+  constructor($scope, $reactive, notificationService) {
     'ngInject';
 
     $reactive(this).attach($scope);
@@ -54,6 +54,19 @@ class PacotesDefault {
       $('.listaAtividadeDosAmigos').css("animation-name", "fadeOutRight");
       $('.listaAtividadeDosAmigos').css("-webkit-animation-name", "fadeOutRight");
       $('.listaAtividadeDosAmigos').css("visibility", "hidden");
+    }
+
+    this.clicaAtividadeAmigo = function () {
+      notificationService.prompt3({
+        title: "ATIVIDADE DO AMIGO",
+        modifier: true,
+        callback: function() {
+          ons.notification.alert({
+            message: 'esse é o callback!',
+            modifier: true
+          });
+        }
+      });
     }
 //============================= METHODS ========================================
 //============================= HELPERS ========================================

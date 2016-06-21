@@ -15,7 +15,8 @@ import utilsPagination from 'angular-utils-pagination';
 import './socially.html';
 import '../../../Services/notificationAlertView.html';
 import '../../../Services/notificationPromptView.html';
-import '../../../Services/notificationPrompt2View.html'
+import '../../../Services/notificationPrompt2View.html';
+import '../../../Services/notificationPrompt3View.html';
 import { name as Home } from '../home/home';
 import { name as Abertura } from '../abertura/abertura';
 
@@ -259,8 +260,47 @@ export default angular.module(name, [
 
         promptDialog.show();
       });
-}
-    };
+    },
+
+
+    /**
+    * Mostra um prompt epecífica para a Atividade do Amigo.
+    * @params(Object)
+    *      + message(String): a mensagem a ser exibida para o usuário.
+    *      + callback(Function): uma função a ser executada quando confirmar.
+    *      + title(String): o titulo da mensagem.
+    *      + buttonLabels(Array): ['NomeBotaoCancelar', 'NomeBotaoOk'].
+    */
+    prompt3: function (params) {
+
+      $rootScope.invalidPrompt = false;
+
+      $rootScope.promptOptions = {
+        message: '',
+        title: 'Prompt',
+        messageValidation: '',
+        callback: function () {},
+        validators: [],
+        cancelable: true,
+        modifier: ''
+      };
+
+      angular.extend($rootScope.promptOptions, params);
+
+      $rootScope.ons.createAlertDialog('imports/Services/notificationPrompt3View.html').then(function(promptDialog) {
+
+        promptDialog.submit = function () {
+          var callback = $rootScope.promptOptions.callback;
+          if (callback) {
+            callback(value);
+            promptDialog._cancel();
+            $rootScope.promptOptions = {};
+          }
+        };
+        promptDialog.show();
+      });
+    }
+  };
     }]);
 
 //============================ MODULE =END======================================

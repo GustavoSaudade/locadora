@@ -1,0 +1,12 @@
+<ons-alert-dialog class="alert-dialog-prompt" var="prompt" animation="fade" cancelable="promptOptions.cancelable">
+  <div class="alert-dialog-title">
+    {{ ::promptOptions.title }}
+  </div>
+  <div class="alert-dialog-content">
+    <h1>Ola Mundo!</h1>
+  </div>
+  <div class="alert-dialog-footer dialog-button-container text-center box-sizing">
+    <button ng-if="promptOptions.cancelable" id="btnModalBuscaCancelar" class="button button-small button-red" ng-click="prompt._cancel()">Cancelar</button>
+    <button class="button button-small button-red" ng-click="promptOptions.callback()">OK</button>
+  </div>
+</ons-alert-dialog>
