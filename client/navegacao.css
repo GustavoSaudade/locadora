@@ -65,7 +65,7 @@ body {
   border: solid 2px #646765;
 }
 
-/** ============= ALERT MODAL ===================== **/
+/** ========================== ALERT MODAL ================================= **/
 .alert-dialog-mask {
   background: rgba(0, 0, 0, 0.8);;
 }
@@ -155,9 +155,9 @@ body {
   border-radius: 15px;
   background-color: pink;
 }
-/** ============= ALERT MODAL =END================= **/
+/** ========================== ALERT MODAL ================================= **/
 
-/** ================ PACOTES TopRanking ==================== **/
+/** ========================== PACOTES TopRanking ========================== **/
 .pacotesTopRanking {
   position: absolute;
   width: 103%;
@@ -200,9 +200,9 @@ body {
   z-index: 90;
   border-radius: 25px;
 }
-/** ================ PACOTES TopRanking =END================ **/
+/** ========================== PACOTES TopRanking =END====================== **/
 
-/** ================ PACOTES Default ======================= **/
+/** ========================== PACOTES Default ============================= **/
 .pacotesDefaultContent {
   position: absolute;
   height: 57%;
@@ -330,9 +330,9 @@ body {
 /** ============= LIST FRIENDS =END=============== **/
 
 
-/** ================ PACOTES Default =END=================== **/
+/** ========================== PACOTES Default =END========================= **/
 
-/** ================ Page: ABERTURA ================ **/
+/** ========================== Page: ABERTURA ============================== **/
 .barra {
   position: absolute;
   width: 100%;
@@ -421,11 +421,11 @@ body {
   width: 100%;
   z-index: 101;
 }
-/** ================ Page: ABERTURA =END============ **/
+/** ========================== Page: ABERTURA =END========================== **/
 
 
 
-/** ============= MEDIAS QUERY ==================== **/
+/** ========================== MEDIAS QUERY ================================ **/
 /* APARELHO: Galaxy Note 3 */
 @media screen and (width: 360px) {
   .caixinha {
@@ -540,7 +540,7 @@ body {
  .imgAmigo {
    width: 20%;
    height: 100%;
-   margin-top: 3%;
+   margin-top: 12%;
    border-right: 0px;
  }
  .atividade {
@@ -729,11 +729,11 @@ body {
    border-left: solid 3px #fff;
  }
 }
-/** ============= MEDIAS QUERY =END================ **/
+/** ========================== MEDIAS QUERY =END============================ **/
 
 
 
-/** ============= ANIMATIONS ====================== **/
+/** ========================== ANIMATIONS ================================== **/
 @-webkit-keyframes bounceInLeft {
   from, 60%, 75%, 90%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -887,4 +887,4 @@ body {
   -webkit-animation-name: fadeOutRight;
   animation-name: fadeOutRight;
 }
-/** ============= ANIMATIONS ==END================= **/
+/** ========================== ANIMATIONS =END============================== **/
