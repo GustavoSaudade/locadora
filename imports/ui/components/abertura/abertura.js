@@ -75,7 +75,7 @@ class Abertura {
     this.clicaSearchOptionEstabelecimento = function() {
       $('#searchOptionLugar').css('background-color', 'transparent');
       $('#searchOptionEstabelecimento').css('background-color', 'rgba(0, 51, 102, 0.9)');
-      $('#searchOptionEstabelecimento').css('border-left', 'solid 3px #fff');
+      $('#searchOptionEstabelecimento').css('border-left', 'solid 3px #eee');
       $('#searchOptionRota').css('background-color', 'transparent');
       $('#searchOptionRota').css('border-left', '');
     }
@@ -85,7 +85,7 @@ class Abertura {
       $('#searchOptionEstabelecimento').css('background-color', 'transparent');
       $('#searchOptionEstabelecimento').css('border-left', '');
       $('#searchOptionRota').css('background-color', 'rgba(0, 51, 102, 0.9)');
-      $('#searchOptionRota').css('border-left', 'solid 3px #fff');
+      $('#searchOptionRota').css('border-left', 'solid 3px #eee');
     }
 //============================= METHODS =END====================================
   }
