@@ -344,10 +344,10 @@ body {
   border-radius: 95px;
   background: rgba(0, 109, 240, 0.8);
   opacity: 0;
-  -webkit-transition:	all 1.5s ease-in-out !important;
-	-moz-transition: all 1.5s ease-in-out !important;
-	-o-transition: all 1.5s ease-in-out !important;
-	transition: all 1.5s ease-in-out !important;
+  -webkit-transition:	all 0.9s ease-in-out !important;
+	-moz-transition: all 0.9s ease-in-out !important;
+	-o-transition: all 0.9s ease-in-out !important;
+	transition: all 0.9s ease-in-out !important;
 }
 .fecharSearchDialog {
   position: absolute;
@@ -444,8 +444,8 @@ body {
   top: 40%;
   border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: 1s!important; /* Safari */
-  transition: 1s!important;
+  -webkit-transition: 0.4s!important; /* Safari */
+  transition: 0.4s!important;
 }
 .titulo {
   position: absolute;
@@ -571,6 +571,33 @@ body {
 	-o-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
 }
+.linkFind {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 601;
+}
+.message4 {
+  visibility: hidden;
+  background:#ccc;
+  position:absolute;
+  top: 120%;
+  left: -30%;
+  height: 130%;
+  width: 170%;
+  z-index: 709;
+  color: #111;
+  text-align: center;
+  border-radius: 15px;
+}
+.linkFind:hover .message4{
+  visibility: visible !important;
+  -webkit-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
 .iconeAbertura {
   position: absolute;
   width: 100%;
