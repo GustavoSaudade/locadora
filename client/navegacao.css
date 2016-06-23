@@ -470,16 +470,22 @@ body {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
+.linkWorld {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 601;
+}
 .message{
     visibility: hidden;
-    background:#999;
+    background:#ccc;
     position:absolute;
-    top:-200%;
-    left: -20%;
-    height: 180%;
-    width: 150%;
+    top:-150%;
+    left: -40%;
+    height: 130%;
+    width: 170%;
     z-index: 709;
-    color: #eee;
+    color: #111;
     text-align: center;
     border-radius: 15px;
 }
@@ -489,6 +495,80 @@ body {
   animation-name: lightSpeedIn;
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
+}
+.linkFriends {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 601;
+}
+.message2 {
+  visibility: hidden;
+  background:#ccc;
+  position:absolute;
+  top:104%;
+  left: -10%;
+  height: 60%;
+  width: 0%;
+  z-index: 709;
+  color: #111;
+  text-align: center;
+  border-radius: 15px;
+}
+.message2 p {
+  opacity: 0;
+}
+.linkFriends:hover .message2{
+  visibility: visible !important;
+  width: 300%;
+  -webkit-transition:	all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.linkFriends:hover .message2 p{
+  opacity: 1!important;
+  -webkit-transition:	all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+.linkMyRoutes {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 601;
+}
+.message3 {
+  visibility: hidden;
+  background:#ccc;
+  position:absolute;
+  top:-70%;
+  left: -10%;
+  height: 60%;
+  width: 0%;
+  z-index: 709;
+  color: #111;
+  text-align: center;
+  border-radius: 15px;
+}
+.message3 p {
+  opacity: 0;
+}
+.linkMyRoutes:hover .message3{
+  visibility: visible !important;
+  width: 300%;
+  -webkit-transition:	all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.linkMyRoutes:hover .message3 p{
+  opacity: 1!important;
+  -webkit-transition:	all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 .iconeAbertura {
   position: absolute;
@@ -539,12 +619,6 @@ body {
   animation-name: bounceInLeft;
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
-}
-.linkWorld {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 601;
 }
 /** Barra Central END **/
 /** ========================== Page: ABERTURA =END========================== **/
