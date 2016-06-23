@@ -46,11 +46,46 @@ class Abertura {
     }
 
     this.clicaFind = function() {
-      alert("Você clicou em Find!");
+      $('.barra').css('top', '70%');
+      $('.find').css('background-color', 'rgba(0, 0, 0, 1)');
+      $('.searchDialog').css('opacity', '1');
+      $('#searchOptionLugar').css('background-color', 'rgba(0, 51, 102, 0.9)');
+      $('#searchOptionEstabelecimento').css('background-color', 'transparent');
+      $('#searchOptionRota').css('background-color', 'transparent');
+    }
+
+    this.clicaFecharSearchDialog = function() {
+      $('.barra').css('top', '40%');
+      $('.find').css('background-color', 'transparent');
+      $('.searchDialog').css('opacity', '0');
     }
 
     this.clicaBackArrow = function() {
       alert("Você clicou em Back Arrow!");
+    }
+
+    this.clicaSearchOptionLugar = function() {
+      $('#searchOptionLugar').css('background-color', 'rgba(0, 51, 102, 0.9)');
+      $('#searchOptionEstabelecimento').css('background-color', 'transparent');
+      $('#searchOptionEstabelecimento').css('border-left', '');
+      $('#searchOptionRota').css('background-color', 'transparent');
+      $('#searchOptionRota').css('border-left', '');
+    }
+
+    this.clicaSearchOptionEstabelecimento = function() {
+      $('#searchOptionLugar').css('background-color', 'transparent');
+      $('#searchOptionEstabelecimento').css('background-color', 'rgba(0, 51, 102, 0.9)');
+      $('#searchOptionEstabelecimento').css('border-left', 'solid 3px #fff');
+      $('#searchOptionRota').css('background-color', 'transparent');
+      $('#searchOptionRota').css('border-left', '');
+    }
+
+    this.clicaSearchOptionRota = function() {
+      $('#searchOptionLugar').css('background-color', 'transparent');
+      $('#searchOptionEstabelecimento').css('background-color', 'transparent');
+      $('#searchOptionEstabelecimento').css('border-left', '');
+      $('#searchOptionRota').css('background-color', 'rgba(0, 51, 102, 0.9)');
+      $('#searchOptionRota').css('border-left', 'solid 3px #fff');
     }
 //============================= METHODS =END====================================
   }

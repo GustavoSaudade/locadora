@@ -2,10 +2,31 @@
   <h3>APP ROTAS</h3>
   <h5>Encontre seus caminhos</h5>
 </div>
+<div class="searchDialog">
+  <div class="fecharSearchDialog" ng-click="abertura.clicaFecharSearchDialog()">X</div>
+  <div class="searchOptions">
+    <div id="searchOptionLugar" ng-click="abertura.clicaSearchOptionLugar()">
+      <span>Lugar</span>
+    </div>
+
+    <div id="searchOptionEstabelecimento" ng-click="abertura.clicaSearchOptionEstabelecimento()">
+      <span>Estabelecimento</span>
+    </div>
+
+    <div id="searchOptionRota" ng-click="abertura.clicaSearchOptionRota()">
+      <span>Rota</span>
+    </div>
+  </div>
+  <div class="searchInputDiv">
+    <button type="button" name="buttonSearch" class="buttonSearch"></button>
+    <input type="text" name="inputSearch" class="inputSearch" placeholder="Um local...">
+  </div>
+</div>
 <div class="barra">
   <div class="feedWorld">
-    <a ui-sref="home" id="linkWorld"></a>
+    <a ui-sref="home" class="linkWorld"><p class="message">is another message</p></a>
     <img src="worldblue.png" class="iconeAbertura" />
+
   </div>
   <div class="friends" ng-click="abertura.clicaFriends()">
     <img src="friends.png" class="iconeAbertura" />
