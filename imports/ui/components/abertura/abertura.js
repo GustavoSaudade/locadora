@@ -24,6 +24,8 @@ class Abertura {
     this.showInputDivEstabelecimento = false;
     this.showInputDivRota = false;
 
+    this.showMessages = true;
+
 //============================= SUBSCRIBES =====================================
     this.subscribe('users');
 //============================= SUBSCRIBES =END=================================
@@ -56,12 +58,14 @@ class Abertura {
       $('#searchOptionLugar').css('background-color', 'rgba(0, 51, 102, 0.9)');
       $('#searchOptionEstabelecimento').css('background-color', 'transparent');
       $('#searchOptionRota').css('background-color', 'transparent');
+      this.showMessages = false;
     }
 
     this.clicaFecharSearchDialog = function() {
       $('.barra').css('top', '40%');
       $('.find').css('background-color', 'transparent');
       $('.searchDialog').css('opacity', '0');
+      this.showMessages = true;
     }
 
     this.clicaBackArrow = function() {
@@ -82,7 +86,7 @@ class Abertura {
     this.clicaSearchOptionEstabelecimento = function() {
       $('#searchOptionLugar').css('background-color', 'transparent');
       $('#searchOptionEstabelecimento').css('background-color', 'rgba(0, 51, 102, 0.9)');
-      $('#searchOptionEstabelecimento').css('border-left', 'solid 3px #eee');
+      $('#searchOptionEstabelecimento').css('border-left', 'solid 1px #ddd');
       $('#searchOptionRota').css('background-color', 'transparent');
       $('#searchOptionRota').css('border-left', '');
       this.showInputDivLocal = false;
@@ -95,7 +99,7 @@ class Abertura {
       $('#searchOptionEstabelecimento').css('background-color', 'transparent');
       $('#searchOptionEstabelecimento').css('border-left', '');
       $('#searchOptionRota').css('background-color', 'rgba(0, 51, 102, 0.9)');
-      $('#searchOptionRota').css('border-left', 'solid 3px #eee');
+      $('#searchOptionRota').css('border-left', 'solid 1px #ddd');
       this.showInputDivLocal = false;
       this.showInputDivEstabelecimento = false;
       this.showInputDivRota = true;

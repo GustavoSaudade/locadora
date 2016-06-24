@@ -32,19 +32,25 @@
 <!-- =========================== BARRA NAVEGACAO =========================== -->
 <div class="barra">
   <div class="feedWorld">
-    <a ui-sref="home" class="linkWorld"><p class="message">is another message</p></a>
+    <a ui-sref="home" class="linkWorld">
+      <p class="message" ng-show="abertura.showMessages">
+        Fique por dentro das Rotas mais acessadas<br>
+        Acompanhe as atividades dos seus amigos<br>
+        COMECE AGORA!
+      </p>
+    </a>
     <img src="worldblue.png" class="iconeAbertura" />
   </div>
   <div class="friends" ng-click="abertura.clicaFriends()">
-    <a href="#" class="linkFriends"><div class="message2"><p>is another message</p></div></a>
+    <a href="#" class="linkFriends"><div class="message2" ng-show="abertura.showMessages"><p>is another message</p></div></a>
     <img src="friends.png" class="iconeAbertura" />
   </div>
   <div class="myRoutes" ng-click="abertura.clicaMyRoutes()">
-    <a href="#" class="linkMyRoutes"><div class="message3"><p>is another message</p></div></a>
+    <a href="#" class="linkMyRoutes"><div class="message3" ng-show="abertura.showMessages"><p>is another message</p></div></a>
     <img src="myRoutes.png" class="iconeAbertura" />
   </div>
   <div class="find" ng-click="abertura.clicaFind()">
-    <a href="#" class="linkFind"><div class="message4"><p>is another message</p></div></a>
+    <a href="#" class="linkFind"><div class="message4" ng-show="abertura.showMessages"><p>is another message</p></div></a>
     <img src="find.png" class="iconeAbertura" />
   </div>
   <div class="backArrow" ng-click="abertura.clicaBackArrow()">
