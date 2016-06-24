@@ -34,6 +34,24 @@ class PacotesDefault {
       $('.listaAtividadeDosAmigos').css("visibility", "visible");
     }
 
+    this.clicaHumor = function(rotaDefault){
+      var rotaClicada = rotaDefault;
+
+      notificationService.prompt2({
+        title: "INFORMAÇÕES DA ROTA",
+        name: rotaClicada.name,
+        description: rotaClicada.description,
+        modifier: true,
+        callback: function() {
+          ons.notification.alert({
+            message: 'esse é o callback!',
+            modifier: true,
+            scope: $scope
+          });
+        }
+      });
+    }
+
     this.clicaMapa = function () {
       $('.seuHumor').css("visibility", "visible");
       $('.atividadeDosAmigos').css("visibility", "hidden");
