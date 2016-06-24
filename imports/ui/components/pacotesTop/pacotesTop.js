@@ -43,11 +43,14 @@ class PacotesTop {
 
     this.initMouse = function(){
       var $pacotesTopRanking = $('.pacotesTopRanking');
-      var scrollTime = 0.5;
-      var scrollDistance = 640;
       $pacotesTopRanking.on("mousewheel DOMMouseScroll", function(event){
         var delta = event.originalEvent.wheelDelta;
-        this.scrollLeft -= (delta);
+        if(delta > 0){
+          this.scrollLeft -= (delta - 100);
+        }
+        if(delta < 0) {
+          this.scrollLeft -= (delta + 100);
+        }
         event.preventDefault();
       });
     }

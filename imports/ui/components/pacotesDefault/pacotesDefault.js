@@ -22,17 +22,6 @@ class PacotesDefault {
     this.subscribe('rotasDefault');
 //============================= SUBSCRIBES =END=================================
 //============================= METHODS ========================================
-    //configura efeito de rolagem
-    this.initMouse2 = function(){
-      var $pacotesDefault = $('.pacotesDefault');
-      var scrollTime = 0.5;
-      var scrollDistance = 640;
-      $pacotesDefault.on("mousewheel DOMMouseScroll", function(event){
-        var delta = event.originalEvent.wheelDelta;
-        this.scrollTop -= (delta);
-        event.preventDefault();
-      });
-    }
 
     this.clickSeuHumor = function () {
       $('.seuHumor').css("visibility", "hidden");
