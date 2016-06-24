@@ -20,6 +20,10 @@ class Abertura {
 
     $reactive(this).attach($scope);
 
+    this.showInputDivLocal = true;
+    this.showInputDivEstabelecimento = false;
+    this.showInputDivRota = false;
+
 //============================= SUBSCRIBES =====================================
     this.subscribe('users');
 //============================= SUBSCRIBES =END=================================
@@ -70,6 +74,9 @@ class Abertura {
       $('#searchOptionEstabelecimento').css('border-left', '');
       $('#searchOptionRota').css('background-color', 'transparent');
       $('#searchOptionRota').css('border-left', '');
+      this.showInputDivLocal = true;
+      this.showInputDivEstabelecimento = false;
+      this.showInputDivRota = false;
     }
 
     this.clicaSearchOptionEstabelecimento = function() {
@@ -78,6 +85,9 @@ class Abertura {
       $('#searchOptionEstabelecimento').css('border-left', 'solid 3px #eee');
       $('#searchOptionRota').css('background-color', 'transparent');
       $('#searchOptionRota').css('border-left', '');
+      this.showInputDivLocal = false;
+      this.showInputDivEstabelecimento = true;
+      this.showInputDivRota = false;
     }
 
     this.clicaSearchOptionRota = function() {
@@ -86,6 +96,9 @@ class Abertura {
       $('#searchOptionEstabelecimento').css('border-left', '');
       $('#searchOptionRota').css('background-color', 'rgba(0, 51, 102, 0.9)');
       $('#searchOptionRota').css('border-left', 'solid 3px #eee');
+      this.showInputDivLocal = false;
+      this.showInputDivEstabelecimento = false;
+      this.showInputDivRota = true;
     }
 //============================= METHODS =END====================================
   }
