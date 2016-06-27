@@ -675,6 +675,7 @@ body {
   top: 5%;
   height: 90%;
   left: 30%;
+  border-radius: 15px;
   -webkit-animation-name: bounceInLeft;
   animation-name: bounceInLeft;
   -webkit-animation-duration: 1.5s;
@@ -687,6 +688,7 @@ body {
   top: 5%;
   height: 90%;
   left: 45%;
+  border-radius: 15px;
   -webkit-animation-name: bounceInLeft;
   animation-name: bounceInLeft;
   -webkit-animation-duration: 2s;
@@ -698,10 +700,15 @@ body {
   top: 5%;
   height: 90%;
   left: 60%;
+  border-radius: 15px;
   -webkit-animation-name: bounceInLeft;
   animation-name: bounceInLeft;
   -webkit-animation-duration: 2.5s;
   animation-duration: 2.5s;
+  -webkit-transition:	background 1s ease-in-out;
+	-moz-transition: background 1s ease-in-out;
+	-o-transition: background 1s ease-in-out;
+	transition: background 1s ease-in-out;
 }
 .backArrow {
   position: absolute;
