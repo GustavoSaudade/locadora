@@ -2,6 +2,22 @@
 font-family: '28';
 src: url('/Fonts/28.ttf');
 }
+@font-face {
+font-family: 'urgh';
+src: url('/Fonts/URGH.otf');
+}
+@font-face {
+font-family: 'gymkhana';
+src: url('/Fonts/gymkhana.ttf');
+}
+@font-face {
+font-family: 'MaroonedOnMarsBB';
+src: url('/Fonts/MaroonedOnMarsBB.ttf');
+}
+@font-face {
+font-family: 'Kazmann';
+src: url('/Fonts/Kazmann.ttf');
+}
 
 body {
   background: url(mochila2.jpg) no-repeat center fixed;
@@ -516,8 +532,15 @@ body {
     height: 130%;
     width: 170%;
     z-index: 709;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
     color: #eee;
+    font-family: 'urgh';
+    font-size: 20px;
+    line-height: 1.25;
     text-align: center;
+    border: solid 2px rgb(16, 129, 224);
     border-radius: 15px;
 }
 .linkWorld:hover .message{
@@ -542,8 +565,12 @@ body {
   height: 60%;
   width: 0%;
   z-index: 709;
+  padding-top: 10%;
+  padding-left: 10%;
   color: #eee;
-  text-align: center;
+  font-family: 'gymkhana';
+  font-size: 20px;
+  border: solid 2px rgb(16, 129, 224);
   border-radius: 15px;
 }
 .message2 p {
@@ -579,8 +606,12 @@ body {
   height: 60%;
   width: 0%;
   z-index: 709;
+  padding-top: 10%;
+  padding-left: 10%;
   color: #eee;
-  text-align: center;
+  font-family: 'MaroonedOnMarsBB';
+  font-size: 25px;
+  border: solid 2px rgb(16, 129, 224);
   border-radius: 15px;
 }
 .message3 p {
@@ -616,8 +647,13 @@ body {
   height: 130%;
   width: 170%;
   z-index: 709;
+  padding-top: 10%;
+  padding-left: 10%;
   color: #eee;
-  text-align: center;
+  font-family: 'Kazmann';
+  font-size: 30px;
+  line-height: 1.25;
+  border: solid 2px rgb(16, 129, 224);
   border-radius: 15px;
 }
 .linkFind:hover .message4{
