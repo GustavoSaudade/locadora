@@ -17,6 +17,7 @@ class MapaLocation {
     'ngInject';
 
     $reactive(this).attach($scope);
+    this.disableLatitudeButton = true;
 //============================= SUBSCRIBES =====================================
     this.subscribe('users');
 //============================= SUBSCRIBES =END=================================
@@ -26,6 +27,14 @@ class MapaLocation {
       $('#map').css('left', '45%');
       $('.formInformarMeuLocal').css('opacity', '1');
     };
+
+    this.buscar = function() {
+      alert('buscar');
+    }
+
+    this.enableButton = function() {
+      this.disableLatitudeButton = false;
+    }
 
     this.carregaMapa = function() {
       var myLatLng = {lat: 40.7141667, lng: -74.0063889};
