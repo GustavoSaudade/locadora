@@ -46,18 +46,6 @@ class Home {
       alert("Heyyy");
     }
 
-    this.clickLocale = function () {
-      $('.seuHumor').css("visibility", "hidden");
-      $('.mapa').css("visibility", "visible");
-      $('.pacotesDefault').css("animation-name", "fadeOutRight");
-      $('.pacotesDefault').css("-webkit-animation-name", "fadeOutRight");
-      $('.pacotesDefault').css("visibility", "hidden");
-      $('.mapaContent').css("animation-name", "fadeInRight");
-      $('.mapaContent').css("-webkit-animation-name", "fadeInRight");
-      $('.mapaContent').css("visibility", "visible");
-      $('.pacotesTopRanking').css('visibility', 'hidden');
-    }
-
     this.closeRotaDetail = function() {
       $('.informacoesDaRota').css("visibility", "hidden");
       $('.pacotesDefaultContent').css("visibility", "visible");
