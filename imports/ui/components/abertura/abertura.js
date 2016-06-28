@@ -49,10 +49,6 @@ class Abertura {
       alert("Você clicou em Frinds!");
     }
 
-    this.clicaMyRoutes = function() {
-      alert("Você clicou em My Routes!");
-    }
-
     this.clicaFind = function() {
       $('.barra').css('top', '70%');
       $('.find').css('background-color', 'rgba(0, 0, 0, 1)');

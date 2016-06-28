@@ -1,7 +1,5 @@
 <div class="mapa" ng-init="mapaLocation.carregaMapa()">
-  <p>
-    Sua localização - Rotas próximas a você
-  </p>
+  <p>Sua localização - Rotas próximas a você</p>
   <div class="botaoInformarMeuLocal" ng-click="mapaLocation.informarMeuLocal()">
     Informar Meu Local
   </div>
@@ -11,6 +9,11 @@
 </div>
 <div id="map"></div>
 <div class="formInformarMeuLocal">
+  <div class="coberturaMeuLocal" ng-click="mapaLocation.openSearchMeuLocal()">
+    <p>
+      Meu Endereço
+    </p>
+  </div>
   <div class="formDiv">
     <form name="formInformarMeuLocal">
       <label id="labelRua">Rua: </label>
@@ -25,6 +28,11 @@
       <input id="inputBairro" type="text" name="bairro" ng-model="bairro">
     </form>
     <button ng-disabled="formInformarMeuLocal.$pristine || formInformarMeuLocal.$invalid" ng-class="{'diabled-class': formInformarMeuLocal.$pristine || formInformarMeuLocal.$invalid}" class="buttonBuscarMeuLocal" ng-click="mapaLocation.buscar()">LOGOTIPO ROTAS</button>
+  </div>
+  <div class="coberturaMeuLocalLatitude" ng-click="mapaLocation.coberturaMeuLocalLatitude()">
+    <p>
+      Minha posição atual
+    </p>
   </div>
   <div class="formDiv2">
     <form name="formInformarMeuLocalLatitude">

@@ -3,7 +3,7 @@
 @name: mapaLocation.js
 @description: Configura o modulo controller da diretiva pacotesTop
 @author: Gustavo Kluwe Saudade (https://github.com/GustavoSaudade)
-@since: MODIFICATION: 25/05/2016
+@since: MODIFICATION: 28/06/2016
 to use in html = <mapa-location></mapa-location>
 
 **************************************************************************** **/
@@ -32,8 +32,26 @@ class MapaLocation {
       alert('buscar');
     }
 
-    this.enableButton = function() {
-      this.disableLatitudeButton = false;
+    this.openSearchMeuLocal = function() {
+      $('.coberturaMeuLocal').css('-webkit-animation-name','fadeOutLeft');
+      $('.coberturaMeuLocal').css('animation-name','fadeOutLeft');
+      $('.coberturaMeuLocal').css('-webkit-animation-duration','1s');
+      $('.coberturaMeuLocal').css('animation-duration','1s');
+      $('.coberturaMeuLocal').css('opacity','0');
+      $('.coberturaMeuLocal').css('z-index','0');
+      $('.coberturaMeuLocalLatitude').css('opacity','1');
+      $('.coberturaMeuLocalLatitude').css('z-index','800');
+    }
+
+    this.coberturaMeuLocalLatitude = function() {
+      $('.coberturaMeuLocalLatitude').css('-webkit-animation-name','fadeOutLeft');
+      $('.coberturaMeuLocalLatitude').css('animation-name','fadeOutLeft');
+      $('.coberturaMeuLocalLatitude').css('-webkit-animation-duration','1s');
+      $('.coberturaMeuLocalLatitude').css('animation-duration','1s');
+      $('.coberturaMeuLocalLatitude').css('opacity','0');
+      $('.coberturaMeuLocalLatitude').css('z-index','0');
+      $('.coberturaMeuLocal').css('opacity','1');
+      $('.coberturaMeuLocal').css('z-index','800');
     }
 
     this.carregaMapa = function() {
