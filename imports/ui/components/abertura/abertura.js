@@ -11,6 +11,8 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 
+import { name as MapaLocation } from '../mapaLocation/mapaLocation';
+
 import './abertura.html';
 
 
@@ -113,7 +115,8 @@ const name = 'abertura';
 //============================ MODULE ==========================================
 export default angular.module(name, [
   angularMeteor,
-  uiRouter
+  uiRouter,
+  MapaLocation
 ]).component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,
   controllerAs: name,

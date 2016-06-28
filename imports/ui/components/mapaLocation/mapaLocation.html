@@ -1,6 +1,28 @@
-<div class="mapa" ng-click="mapaLocation.clicaMapa()" ng-init="mapaLocation.carregaMapa()">
-  <h4>MAPA</h4>
+<div class="mapa" ng-init="mapaLocation.carregaMapa()">
+  <p>
+    Sua localização - Rotas próximas a você
+  </p>
+  <div class="botaoInformarMeuLocal" ng-click="mapaLocation.informarMeuLocal()">
+    Informar Meu Local
+  </div>
+  <div class="botaoProcurarRotasProximas">
+    Procurar Rotas próximas
+  </div>
 </div>
-<div class="mapaContent">
-    <div id="map"></div>
+<div id="map"></div>
+<div class="formInformarMeuLocal">
+  <div class="formDiv">
+    <form class="" action="index.html" method="post">
+      <label id="labelRua">Rua: </label>
+      <input id="inputRua" type="text" name="rua">
+      <label id="labelNumero">Nº: </label>
+      <input id="inputNumero" type="text" name="numero">
+      <label id="labelCidade">Cidade: </label>
+      <input id="inputCidade" type="text" name="cidade">
+      <label id="labelEstado">Estado: </label>
+      <input id="inputEstado" type="text" name="cidade">
+      <label id="labelBairro">Bairro: </label>
+      <input id="inputBairro" type="text" name="cidade">
+    </form>
+  </div>
 </div>

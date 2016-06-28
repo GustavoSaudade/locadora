@@ -21,15 +21,10 @@ class MapaLocation {
     this.subscribe('users');
 //============================= SUBSCRIBES =END=================================
 //============================= METHODS ========================================
-    this.clicaMapa = function() {
-      $('.seuHumor').css("visibility", "visible");
-      $('.mapa').css("visibility", "hidden");
-      $('.pacotesDefault').css("animation-name", "fadeInRight");
-      $('.pacotesDefault').css("-webkit-animation-name", "fadeInRight");
-      $('.pacotesDefault').css("visibility", "visible");
-      $('.mapaContent').css("animation-name", "fadeOutRight");
-      $('.mapaContent').css("-webkit-animation-name", "fadeOutRight");
-      $('.mapaContent').css("visibility", "hidden");
+    this.informarMeuLocal = function() {
+      $('#map').css('width', '50%');
+      $('#map').css('left', '45%');
+      $('.formInformarMeuLocal').css('opacity', '1');
     };
 
     this.carregaMapa = function() {
@@ -60,5 +55,13 @@ export default angular.module(name, [
   templateUrl: `imports/ui/components/${name}/${name}.html`,
   controllerAs: name,
   controller: MapaLocation
-});
+}).config(config);
 //============================ MODULE =END======================================
+function config($stateProvider) {
+'ngInject';
+$stateProvider
+  .state('mapaLocation', {
+    url: '/mapaLocation',
+    template: '<mapa-location></mapa-location>'
+  });
+}
