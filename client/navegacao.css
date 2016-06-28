@@ -42,7 +42,7 @@
   position: absolute;
   height: 75%;
   width: 80%;
-  top: 25%;
+  top: 22.5%;
   left: 10%;
   opacity: 0.8;
   border: solid 2px rgb(16, 129, 224);
@@ -56,8 +56,8 @@
   opacity: 0;
   position: absolute;
   height: 75%;
-  width: 30%;
-  top: 25%;
+  width: 35%;
+  top: 22.5%;
   left: 5%;
   border: solid 2px rgb(16, 129, 224);
   border-radius: 15px;
@@ -76,53 +76,60 @@
   height: 60%;
 }
 .formDiv label {
+  position: absolute;
   font-size: 25px;
 }
 #labelRua {
-  position: absolute;
   width: 40%;
   top: 5%;
+  left: 5%;
 }
 #inputRua {
   position: absolute;
   top: 15%;
-  width: 40%;
+  width: 60%;
+  left: 5%;
 }
 #labelNumero{
-  position: absolute;
   width: 10%;
-  left: 45%;
+  left: 70%;
   top: 5%;
 }
 #inputNumero {
   position: absolute;
   top: 15%;
   width: 10%;
-  left: 45%;
+  left: 70%;
 }
 #labelCidade{
-  position: absolute;
   top:30%;
+  left: 5%;
 }
 #inputCidade{
   position: absolute;
   top: 40%;
+  left: 5%;
+  width: 60%;
 }
 #labelEstado{
-  position: absolute;
-  top: 55%;
+  top: 30%;
+  left: 70%;
 }
 #inputEstado{
   position: absolute;
-  top: 65%;
+  left: 70%;
+  top: 40%;
+  width: 10%;
 }
 #labelBairro{
-  position: absolute;
-  top: 80%;
+  top: 55%;
+  left: 5%;
 }
 #inputBairro{
   position: absolute;
-  top: 90%;
+  top: 65%;
+  left: 5%;
+  width: 75%;
 }
 
 @font-face {
