@@ -18,6 +18,7 @@ class MapaLocation {
 
     $reactive(this).attach($scope);
     this.disableLatitudeButton = true;
+    this.localizacao = {};
 //============================= SUBSCRIBES =====================================
     this.subscribe('users');
 //============================= SUBSCRIBES =END=================================
@@ -29,7 +30,21 @@ class MapaLocation {
     };
 
     this.buscar = function() {
-      alert('buscar');
+      var localizacaoAtual = this.localizacao;
+
+      var myLatLng = {lat: localizacaoAtual.latitude, lng: localizacaoAtual.longitude};
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: myLatLng
+      });
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!',
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
     }
 
     this.openSearchMeuLocal = function() {
@@ -58,16 +73,16 @@ class MapaLocation {
       var myLatLng = {lat: 40.7141667, lng: -74.0063889};
 
       var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 15,
-      center: myLatLng
-    });
+        zoom: 15,
+        center: myLatLng
+      });
 
-    var marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: 'Hello World!',
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    });
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!',
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
     }
 //============================= METHODS =END====================================
   }

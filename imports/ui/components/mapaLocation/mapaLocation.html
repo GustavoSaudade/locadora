@@ -37,9 +37,9 @@
   <div class="formDiv2">
     <form name="formInformarMeuLocalLatitude">
       <label id="labelLongitude">Longitude: </label>
-      <input id="inputLongitude" type="number" step="0.01" name="longitude" ng-model="longitude">
+      <input id="inputLongitude" type="number" step="0.00000001" name="longitude" ng-model="mapaLocation.localizacao.longitude">
       <label id="labelLatitude">Latitude: </label>
-      <input id="inputLatitude" type="number" step="0.01" name="latitude" ng-model="latitude">
+      <input id="inputLatitude" type="number" step="0.00000001" name="latitude" ng-model="mapaLocation.localizacao.latitude">
     </form>
     <button ng-disabled="formInformarMeuLocalLatitude.$pristine || formInformarMeuLocalLatitude.$invalid" ng-class="{'diabled-class': formInformarMeuLocalLatitude.$pristine || formInformarMeuLocalLatitude.$invalid}" class="buttonBuscarMeuLocal" ng-click="mapaLocation.buscar()">LOGOTIPO ROTAS</button>
   </div>
