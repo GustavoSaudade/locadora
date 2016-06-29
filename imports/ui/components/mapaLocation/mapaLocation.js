@@ -19,6 +19,7 @@ class MapaLocation {
     $reactive(this).attach($scope);
     this.disableLatitudeButton = true;
     this.localizacao = {};
+    this.adress;
 //============================= SUBSCRIBES =====================================
     this.subscribe('users');
 //============================= SUBSCRIBES =END=================================
@@ -45,6 +46,33 @@ class MapaLocation {
         title: 'Hello World!',
         mapTypeId: google.maps.MapTypeId.ROADMAP
       });
+    }
+
+    this.buscarEndereco = function() {
+      var geocoder;
+      var map;
+      var myLatLng = {lat: 40.7141667, lng: -74.0063889};
+
+      map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: myLatLng
+      });
+
+      geocoder = new google.maps.Geocoder();
+      var address = this.adress;
+
+      geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location
+        });
+      } else {
+        alert("Geocode was not successful for the following reason: " + status);
+      }
+    });
+
     }
 
     this.openSearchMeuLocal = function() {
