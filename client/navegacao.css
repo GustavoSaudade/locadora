@@ -400,6 +400,7 @@ body {
   height: 80%;
   top: 10%;
   border-right: solid 1px #ddd;
+  border-top-left-radius: 95px!important;
 }
 #searchOptionLugar span {
   color: #eee;
@@ -427,6 +428,7 @@ body {
   height: 80%;
   top: 10%;
   left: 66.66%;
+  border-top-right-radius: 95px!important;
 }
 #searchOptionRota span {
   color: #eee;

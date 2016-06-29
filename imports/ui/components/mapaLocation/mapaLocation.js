@@ -3,7 +3,7 @@
 @name: mapaLocation.js
 @description: Configura o modulo controller da diretiva pacotesTop
 @author: Gustavo Kluwe Saudade (https://github.com/GustavoSaudade)
-@since: MODIFICATION: 28/06/2016
+@since: MODIFICATION: 29/06/2016
 to use in html = <mapa-location></mapa-location>
 
 **************************************************************************** **/
