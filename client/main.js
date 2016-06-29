@@ -39,8 +39,10 @@ function onReady() {
 }
 
 if (Meteor.isCordova) {
+  alert('is cordovaaaaa');
   angular.element(document).on('deviceready', onReady);
 } else {
+  alert('is WEEEEB');
   angular.element(document).ready(onReady);
   console.log($( window ).width());
   console.log($( document ).width());

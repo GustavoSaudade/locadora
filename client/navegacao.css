@@ -1242,43 +1242,100 @@ body {
 @media screen and (width: 384px) {
   /** Page: ABERTURA **/
   .titulo{
-    font-size: 27px;
+    line-height: normal;
+    height: 40%;
+    top: 5%;
+    font-size: 32px;
+    border: solid 3px #fff;
   }
 
+  .searchDialog {
+    height: 49%;
+    width: 100%;
+    left: 0%;
+    top: 27%;
+  }
+
+  .searchOptions {
+    width: 97%;
+    height: 27%;
+    top: 0%;
+    left: 3%;
+  }
+  #searchOptionLugar {
+    width: 33.33%;
+    height: 80%;
+    top: 0;
+  }
+  #searchOptionEstabelecimento {
+    width: 33.33%;
+    height: 80%;
+    top: 0;
+    left: 33.3%;
+  }
+
+#searchOptionEstabelecimento span {
+  top: 36%;
+  left: 10%;
+}
+#searchOptionRota {
+width: 30.33%;
+height: 80%;
+top: 0%;
+left: 66.66%;
+}
   .barra {
     width: 20%;
-    height: 80%;
+    height: 78%;
     top: 20%;
+    border: solid 3px #fff;
   }
   .feedWorld {
     width: 95%;
     top: 5%;
     height: 13.5%;
     left: 0%;
+    border: solid 3px #fff;
   }
   .friends {
     width: 95%;
     top: 25%;
     height: 13.5%;
     left: 0%;
+    border: solid 3px #fff;
   }
   .myRoutes {
     width: 95%;
     top: 45%;
     height: 13.5%;
     left: 0%;
+    border: solid 3px #fff;
   }
   .find {
     width: 95%;
     top: 65%;
     height: 13.5%;
     left: 0%;
+    border: solid 3px #fff;
   }
   .backArrow {
     width: 95%;
     top: 85%;
     height: 13.5%;
     left: 0%;
+    border: solid 3px #fff;
+  }
+  .message {
+    display: none;
+  }
+  .message2 {
+    display: none;
+  }
+  .message3 {
+    display: none;
+  }
+  .message4 {
+    display: none;
   }
   /** Page: ABERTURA END **/
 

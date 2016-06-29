@@ -50,13 +50,24 @@ class Abertura {
     }
 
     this.clicaFind = function() {
-      $('.barra').css('top', '70%');
-      $('.find').css('background-color', 'rgba(0, 0, 0, 1)');
-      $('.searchDialog').css('opacity', '1');
-      $('#searchOptionLugar').css('background-color', 'rgba(0, 51, 102, 0.9)');
-      $('#searchOptionEstabelecimento').css('background-color', 'transparent');
-      $('#searchOptionRota').css('background-color', 'transparent');
-      this.showMessages = false;
+      var tamanhoDaTela = $( window ).width();
+      if(tamanhoDaTela == 384){
+        $('.titulo').css('display', 'none');
+        $('.barra').css('display', 'none');
+        $('.searchDialog').css('opacity', '1');
+        $('#searchOptionLugar').css('background-color', 'rgba(0, 51, 102, 0.9)');
+        $('#searchOptionEstabelecimento').css('background-color', 'transparent');
+        $('#searchOptionRota').css('background-color', 'transparent');
+        this.showMessages = false;
+      } else {
+        $('.barra').css('top', '70%');
+        $('.find').css('background-color', 'rgba(0, 0, 0, 1)');
+        $('.searchDialog').css('opacity', '1');
+        $('#searchOptionLugar').css('background-color', 'rgba(0, 51, 102, 0.9)');
+        $('#searchOptionEstabelecimento').css('background-color', 'transparent');
+        $('#searchOptionRota').css('background-color', 'transparent');
+        this.showMessages = false;
+      }
     }
 
     this.clicaFecharSearchDialog = function() {

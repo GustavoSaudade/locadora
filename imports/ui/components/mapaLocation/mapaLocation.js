@@ -37,6 +37,7 @@ class MapaLocation {
 
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
+        draggable: true,
         center: myLatLng
       });
 
@@ -75,6 +76,7 @@ class MapaLocation {
 
     }
 
+    //animação de abertura da cobertura da busca Meu Local
     this.openSearchMeuLocal = function() {
       $('.coberturaMeuLocal').css('-webkit-animation-name','fadeOutLeft');
       $('.coberturaMeuLocal').css('animation-name','fadeOutLeft');
@@ -85,7 +87,7 @@ class MapaLocation {
       $('.coberturaMeuLocalLatitude').css('opacity','1');
       $('.coberturaMeuLocalLatitude').css('z-index','800');
     }
-
+    //animação de abertura da cobertura da busca Meu Local latitude
     this.coberturaMeuLocalLatitude = function() {
       $('.coberturaMeuLocalLatitude').css('-webkit-animation-name','fadeOutLeft');
       $('.coberturaMeuLocalLatitude').css('animation-name','fadeOutLeft');
@@ -97,6 +99,7 @@ class MapaLocation {
       $('.coberturaMeuLocal').css('z-index','800');
     }
 
+    //carrega o mapa pela primeira vez
     this.carregaMapa = function() {
       var myLatLng = {lat: 40.7141667, lng: -74.0063889};
 
