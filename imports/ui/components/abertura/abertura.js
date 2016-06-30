@@ -71,10 +71,21 @@ class Abertura {
     }
 
     this.clicaFecharSearchDialog = function() {
-      $('.barra').css('top', '40%');
-      $('.find').css('background-color', 'transparent');
-      $('.searchDialog').css('opacity', '0');
-      this.showMessages = true;
+      var tamanhoDaTela = $( window ).width();
+      if(tamanhoDaTela == 384) {
+        $('.titulo').css('display', 'inline');
+        $('.barra').css('display', 'inline');
+        $('.searchDialog').css('opacity', '0');
+        $('#searchOptionLugar').css('background-color', 'rgba(0, 51, 102, 0.9)');
+        $('#searchOptionEstabelecimento').css('background-color', 'transparent');
+        $('#searchOptionRota').css('background-color', 'transparent');
+        this.showMessages = false;
+      } else {
+        $('.barra').css('top', '40%');
+        $('.find').css('background-color', 'transparent');
+        $('.searchDialog').css('opacity', '0');
+        this.showMessages = true;
+      }
     }
 
     this.clicaBackArrow = function() {
