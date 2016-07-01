@@ -1464,6 +1464,11 @@ body {
     left: 55%;
     padding-top: 0.5%;
   }
+  .formInformarMeuLocal {
+    height: 36%;
+    width: 90%;
+    top: 28.5%;
+  }
   /** MAPA LOCATION END **/
 }
 /** ========================== MEDIAS QUERY =END============================ **/
