@@ -89,7 +89,11 @@ class Abertura {
     }
 
     this.clicaBackArrow = function() {
-      alert("Você clicou em Back Arrow!");
+      $.gritter.add({
+                        title : "Sucesso!",
+                        text : "Você clicou nas configurações, mas isso não faz nada!",
+                        class_name : "gritter"
+                    });
     }
 
     this.clicaSearchOptionLugar = function() {

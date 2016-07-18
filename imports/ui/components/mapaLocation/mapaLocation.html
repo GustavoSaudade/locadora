@@ -16,16 +16,7 @@
   </div>
   <div class="formDiv">
     <form name="formInformarMeuLocal">
-      <label id="labelRua">Rua: </label>
-      <input id="inputRua" type="text" name="rua" ng-model="mapaLocation.adress">
-      <label id="labelNumero">Nº: </label>
-      <input id="inputNumero" type="text" name="numero" ng-model="numero">
-      <label id="labelCidade">Cidade: </label>
-      <input id="inputCidade" type="text" name="cidade" ng-model="cidade">
-      <label id="labelEstado">Estado: </label>
-      <input id="inputEstado" type="text" name="estado" ng-model="estado">
-      <label id="labelBairro">Bairro: </label>
-      <input id="inputBairro" type="text" name="bairro" ng-model="bairro">
+      <input id="inputRua" type="text" name="rua" ng-model="mapaLocation.adress" placeholder="Type your location...">
     </form>
     <button ng-disabled="formInformarMeuLocal.$pristine || formInformarMeuLocal.$invalid" ng-class="{'diabled-class': formInformarMeuLocal.$pristine || formInformarMeuLocal.$invalid}" class="buttonBuscarMeuLocal" ng-click="mapaLocation.buscarEndereco()">LOGOTIPO ROTAS</button>
   </div>

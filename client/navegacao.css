@@ -829,57 +829,39 @@ body {
   position: absolute;
   font-size: 25px;
 }
-#labelRua {
-  width: 40%;
-  top: 5%;
-  left: 10%;
-}
 #inputRua {
   position: absolute;
   top: 15%;
-  width: 60%;
+  width: 80%;
+  height: 40%;
   left: 10%;
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color:    #eee;
+  font-size: 25px;
+  opacity: 0.7;
 }
-#labelNumero{
-  width: 10%;
-  left: 80%;
-  top: 5%;
+#inputRua::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #eee!important;
+    font-size: 25px!important;
+    opacity: 0.7;
+    text-align: center!important;
 }
-#inputNumero {
-  position: absolute;
-  top: 15%;
-  width: 10%;
-  left: 80%;
+#inputRua:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #eee!important;
+   font-size: 25px!important;
+   opacity: 0.7;
+   text-align: center!important;
 }
-#labelCidade{
-  top:30%;
-  left: 10%;
+#inputRua::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #eee!important;
+   font-size: 25px!important;
+   opacity: 0.7;
+   text-align: center!important;
 }
-#inputCidade{
-  position: absolute;
-  top: 40%;
-  left: 10%;
-  width: 60%;
-}
-#labelEstado{
-  top: 30%;
-  left: 80%;
-}
-#inputEstado{
-  position: absolute;
-  left: 80%;
-  top: 40%;
-  width: 10%;
-}
-#labelBairro{
-  top: 55%;
-  left: 10%;
-}
-#inputBairro{
-  position: absolute;
-  top: 65%;
-  left: 10%;
-  width: 75%;
+#inputRua:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   font-size: 25px!important;
+   text-align: center!important;
 }
 .buttonBuscarMeuLocal {
   position: absolute;
@@ -957,7 +939,14 @@ body {
 /** ========================== MEDIAS QUERY ================================ **/
 
 /* WEB WEB WEB */
-@media screen and (width: 1366px){
+@media screen and (min-width: 1000px){
+
+  .gritter-item-wrapper {
+    background: rgba(0, 0, 0, 0.8)!important;
+  }
+
+
+
   .pacotesTopLabel {
     position: absolute;
     margin-top: 24%;
