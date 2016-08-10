@@ -1,71 +1,39 @@
 /** ***************************************************************************
 
 @name: home.js
-@description: Arquivo que configura o modulo controller da pagina home
+@description: Modulo controller da pagina home
 @author: Gustavo Kluwe Saudade (https://github.com/GustavoSaudade)
-@since: 25/05/2016
+@since: 10/08/2016
 
 **************************************************************************** **/
+
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
-import utilsPagination from 'angular-utils-pagination';
 
 import './home.html';
-import { name as PacotesTop } from '../pacotesTop/pacotesTop';
-import { name as PacotesDefault } from '../pacotesDefault/pacotesDefault';
+
 
 class Home {
-  constructor($scope, $reactive, notificationService) {
+  constructor($scope, $reactive) {
     'ngInject';
 
     $reactive(this).attach($scope);
+
 //============================= SUBSCRIBES =====================================
-    Meteor.subscribe('users');
-    Meteor.subscribe('rotas');
+    this.subscribe('users');
 //============================= SUBSCRIBES =END=================================
+
+//============================= HELPERS ========================================
+    this.helpers({
+      users() {
+        return Meteor.users.find({});
+      }
+    });
+//============================= HELPERS =END====================================
+
 //============================= METHODS ========================================
-    this.clickSearch = function() {
 
-          notificationService.prompt({
-            title: "BUSCA",
-            message: "Digite um local, um amigo, um desejo...",
-            modifier: true,
-            callback: function(textoDigitado) {
-              ons.notification.alert({
-                message: 'Sua busca por ' + textoDigitado + ' não retornou nada pq o programador não implementou essa funcionalidade',
-                modifier: true,
-                scope: $scope
-              });
-            }
-          });
-
-    }
-
-    this.closeSearch = function() {
-      alert("Heyyy");
-    }
-
-    this.closeRotaDetail = function() {
-      $('.informacoesDaRota').css("visibility", "hidden");
-      $('.pacotesDefaultContent').css("visibility", "visible");
-    }
-
-    this.clicaComprar = function() {
-      alert('você clicou em COMPRAR!');
-    }
-
-    this.clicaCurtir = function() {
-      alert('Você clicou em CURTIR!');
-    }
-
-    this.clicaCompartilhar = function() {
-      alert('Você clicou em COMPARTILHAR!');
-    }
-
-    this.clicaFacebook = function() {
-      alert('Você clicou em facebook');
-    }
 //============================= METHODS =END====================================
   }
 }
@@ -75,10 +43,7 @@ const name = 'home';
 //============================ MODULE ==========================================
 export default angular.module(name, [
   angularMeteor,
-  uiRouter,
-  utilsPagination,
-  PacotesTop,
-  PacotesDefault
+  uiRouter
 ]).component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,
   controllerAs: name,
@@ -87,12 +52,12 @@ export default angular.module(name, [
   .config(config);
 //============================ MODULE =END======================================
 //============================ CONFIG MODULE ===================================
-  function config($stateProvider) {
+function config($stateProvider) {
   'ngInject';
-  $stateProvider
-    .state('home', {
-      url: '/home',
-      template: '<home></home>'
-    });
+
+  $stateProvider.state('home', {
+    url: '/home',
+    template: '<home></home>'
+  });
 }
 //============================ CONFIG MODULE =END===============================
