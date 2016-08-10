@@ -10,6 +10,8 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
+import ngMaterial from 'angular-material';
+
 
 import './galvaoLocadora.html';
 import { name as Home } from '../home/home';
@@ -23,6 +25,7 @@ export default angular.module(name, [
   angularMeteor,
   uiRouter,
   Home,
+  ngMaterial,
   'accounts.ui'
 ])
   .component(name, {
@@ -31,13 +34,14 @@ export default angular.module(name, [
     controller: GalvaoLocadora
   })
     .config(config)
-    .run(run)
+    .run(run);
 //============================ MODULE =END======================================
 //============================ CONFIG MODULE ===================================
     function config($locationProvider, $urlRouterProvider) {
       'ngInject';
       $locationProvider.html5Mode(true);
       $urlRouterProvider.otherwise('/home');
+
     }
 
     function run($rootScope, $state) {
