@@ -1,6 +1,38 @@
 <!-- CSS do Angular Material -->
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
 
-<div class="imagemCentral" ng-init="home.metodo()">
-    <h1>Galvão Carros</h1>
+<div class="imagemCentral">
+  <div ng-cloak>
+    <md-content>
+      <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="TELA ABERTURA">
+          <md-content class="md-padding">
+            Nada
+          </md-content>
+        </md-tab>
+
+        <md-tab label="TELA BUSCA CARROS">
+          <md-content class="md-padding">
+            <div>
+              <md-input-container>
+                <label>Title</label>
+                <input ng-model="user.title">
+              </md-input-container>
+              <md-input-container>
+                <label>Email</label>
+                <input ng-model="user.email" type="email">
+              </md-input-container>
+            </div>
+          </md-content>
+        </md-tab>
+
+        <md-tab label="ACHE UM CARRO PERTO DE VOCÊ">
+          <md-content class="md-padding">
+            <h1 class="md-display-2">Tab Three</h1>
+            <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+          </md-content>
+        </md-tab>
+      </md-tabs>
+    </md-content>
+  </div>
 </div>
