@@ -10,7 +10,6 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
-import ngMaterial from 'angular-material';
 
 
 import './galvaoLocadora.html';
@@ -25,7 +24,6 @@ export default angular.module(name, [
   angularMeteor,
   uiRouter,
   Home,
-  ngMaterial,
   'accounts.ui'
 ])
   .component(name, {
