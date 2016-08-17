@@ -10,25 +10,22 @@
 }
 #botaoLogin {
   position: absolute;
-  width: 40%;
+  width: 98%;
   height: 15%;
   color: rgba(185, 185, 185, 1);;
   z-index: 99;
-  top: 5%;
-  left: 30%;
+  top: 0%;
+  left: 0%;
   border: solid 3px green;
   border-radius: 10px;
   background-color: green;
   font-size: 30px;
   text-align: center;
   vertical-align: middle;
-  opacity: 0.8;
 }
-.accounts-dialog {
-  position: absolute;
-  margin-left: -60%;
-  background-color: #999;
-}
+.login-link-text { color: none; }
+
+
 #fundoPreto {
   position: absolute;
   top: 0%;
@@ -49,6 +46,18 @@
   animation-name: fadeIn;
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
+}
+#textoBoasVindas {
+  position: absolute;
+  width: 90%;
+  height: 50%;
+  left: 5%;
+  top: 40%;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  border: solid 3px #000;
 }
 
 @-webkit-keyframes fadeOut {

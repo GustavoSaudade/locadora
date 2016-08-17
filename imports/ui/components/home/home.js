@@ -21,20 +21,22 @@ class Home {
 
     $reactive(this).attach($scope);
 
+    this.welcomeMessage = "Reserve seu carro rapidamente.";
+
 //============================= SUBSCRIBES =====================================
-    this.subscribe('users');
+    //Meteor.subscribe('users');
 //============================= SUBSCRIBES =END=================================
 
 //============================= HELPERS ========================================
     this.helpers({
       users() {
-        return Meteor.users.find({});
+        return Meteor.users.find();
       }
     });
 //============================= HELPERS =END====================================
 
 //============================= METHODS ========================================
-    
+
 //============================= METHODS =END====================================
   }
 }
