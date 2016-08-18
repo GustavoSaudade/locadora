@@ -24,19 +24,22 @@ class Home {
     this.welcomeMessage = "Reserve seu carro rapidamente.";
 
 //============================= SUBSCRIBES =====================================
-    //Meteor.subscribe('users');
+    this.subscribe('users');
 //============================= SUBSCRIBES =END=================================
 
 //============================= HELPERS ========================================
     this.helpers({
       users() {
-        return Meteor.users.find();
+        return Meteor.users.find().fetch();
       }
     });
 //============================= HELPERS =END====================================
 
 //============================= METHODS ========================================
-
+  this.teste = function() {
+    alert("ale");
+    console.log(Meteor.users.find().fetch());
+  }
 //============================= METHODS =END====================================
   }
 }

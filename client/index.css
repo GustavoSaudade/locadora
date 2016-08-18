@@ -1,3 +1,13 @@
+#login-dropdown-list {
+  position: absolute;
+    display: inline-block;
+    /* margin-right: 0.2px; */
+    line-height: 1;
+    left: 25%;
+    top: 80%;
+    background: rgba(100,100,100,0.8)!important;
+}
+
 #loginBox {
   position: absolute;
   height: 30%;
@@ -24,7 +34,6 @@
   vertical-align: middle;
 }
 .login-link-text { color: none; }
-
 
 #fundoPreto {
   position: absolute;
