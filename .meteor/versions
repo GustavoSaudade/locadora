@@ -2,8 +2,7 @@ accounts-base@1.2.10
 accounts-facebook@1.0.10
 accounts-oauth@1.1.13
 accounts-password@1.2.14
-accounts-ui@1.1.9
-accounts-ui-unstyled@1.1.12
+accounts-ui-unstyled@1.1.11
 allow-deny@1.0.5
 angular-templates@1.0.9
 autoupdate@1.2.11
@@ -27,7 +26,6 @@ ddp-rate-limiter@1.0.5
 ddp-server@1.2.10
 deps@1.0.12
 diff-sequence@1.0.6
-dotansimha:accounts-ui-angular@0.0.4
 ecmascript@0.5.7
 ecmascript-runtime@0.3.13
 ejson@1.0.12
@@ -44,7 +42,7 @@ id-map@1.0.8
 jquery@1.11.9
 lai:collection-extensions@0.1.4
 launch-screen@1.0.12
-less@2.6.5
+less@2.5.7
 livedata@1.0.18
 localstorage@1.0.11
 logging@1.1.14
@@ -85,9 +83,9 @@ spacebars-compiler@1.0.12
 srp@1.0.9
 standard-minifier-css@1.1.8
 standard-minifier-js@1.1.8
+tay:accounts-ui-unstyled-angular@0.0.4
 templating@1.1.14
 templating-tools@1.0.4
-tmeasday:check-npm-versions@0.1.1
 tmeasday:publish-counts@0.7.3
 tracker@1.1.0
 ui@1.0.11

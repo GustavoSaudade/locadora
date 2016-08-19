@@ -1,11 +1,12 @@
 #login-dropdown-list {
-  position: absolute;
-    display: inline-block;
-    /* margin-right: 0.2px; */
-    line-height: 1;
-    left: 25%;
-    top: 80%;
-    background: rgba(100,100,100,0.8)!important;
+position: absolute;
+width: 70%;
+top: 100%;
+left: 15%;
+
+background-color: #888;
+
+border: solid 3px #000;
 }
 
 #loginBox {
@@ -66,7 +67,6 @@
   font-size: 50px;
   font-weight: bold;
   text-align: center;
-  border: solid 3px #000;
 }
 
 @-webkit-keyframes fadeOut {
