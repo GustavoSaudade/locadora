@@ -31,7 +31,12 @@ class AdicionaFesta {
 
 //============================= METHODS ========================================
     this.submit = function() {
-      console.log('submit:', this.party);
+      Festas.insert(this.party);
+      this.reset();
+    }
+
+    this.reset = function() {
+      this.party = {};
     }
 //============================= METHODS =END====================================
   }
