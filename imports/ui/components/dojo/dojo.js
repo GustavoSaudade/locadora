@@ -15,6 +15,7 @@ import uiRouter from 'angular-ui-router';
 import './dojo.html';
 import { name as Home } from '../home/home';
 import { name as ListaFestas } from '../listaFestas/listaFestas';
+import { name as DetalhesFesta } from '../detalhesFesta/detalhesFesta';
 
 class Dojo {}
 
@@ -26,6 +27,7 @@ export default angular.module(name, [
   uiRouter,
   Home,
   ListaFestas,
+  DetalhesFesta,
   'accounts.ui'
 ])
   .component(name, {

@@ -31,9 +31,14 @@ class AdicionaFesta {
 
 //============================= METHODS ========================================
     this.submit = function() {
-      this.party.owner = Meteor.user()._id;
-      Festas.insert(this.party);
-      this.reset();
+      if(Meteor.user()){
+        this.party.owner = Meteor.user()._id;
+        Festas.insert(this.party);
+        this.reset();
+      } else {
+        alert("Você precisa estar logado para cadastrar festas!");
+      }
+
     }
 
     this.reset = function() {

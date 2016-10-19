@@ -1,7 +1,10 @@
 <adiciona-festa></adiciona-festa>
 <ul>
   <li ng-repeat="festa in listaFestas.festas">
-    {{festa.name}}
+    <a ui-sref="detalhesFesta({ festaId: festa._id })">
+      {{festa.name}}
+    </a>
+
     <p>{{festa.description}}</p>
     <remove-festa festa="festa"></remove-festa>
   </li>
