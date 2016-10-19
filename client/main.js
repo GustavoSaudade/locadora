@@ -3,7 +3,7 @@ import angularMeteor from 'angular-meteor';
 
 import { Meteor } from 'meteor/meteor';
 
-import { name as App } from '../imports/ui/components/galvaoLocadora/galvaoLocadora';
+import { name as App } from '../imports/ui/components/dojo/dojo';
 
 
 function onReady() {

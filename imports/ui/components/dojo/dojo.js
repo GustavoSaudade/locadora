@@ -1,9 +1,9 @@
 /** ***************************************************************************
 
-@name: galvaoLocadora.js
+@name: dojo.js
 @description: Modulo principal da Aplicação
 @author: Gustavo Kluwe Saudade (https://github.com/GustavoSaudade)
-@since: 10/08/2016
+@since: 17/10/2016
 
 **************************************************************************** **/
 
@@ -12,12 +12,12 @@ import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 
 
-import './galvaoLocadora.html';
+import './dojo.html';
 import { name as Home } from '../home/home';
 
-class GalvaoLocadora {}
+class Dojo {}
 
-const name = 'galvaoLocadora';
+const name = 'dojo';
 
 //============================ MODULE ==========================================
 export default angular.module(name, [
@@ -29,7 +29,7 @@ export default angular.module(name, [
   .component(name, {
     templateUrl: `imports/ui/components/${name}/${name}.html`,
     controllerAs: name,
-    controller: GalvaoLocadora
+    controller: Dojo
   })
     .config(config)
     .run(run);

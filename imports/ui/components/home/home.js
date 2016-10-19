@@ -3,17 +3,16 @@
 @name: home.js
 @description: Modulo controller da pagina home
 @author: Gustavo Kluwe Saudade (https://github.com/GustavoSaudade)
-@since: 10/08/2016
+@since: 17/10/2016
 
 **************************************************************************** **/
 
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
-import ngMaterial from 'angular-material';
+import { Festas } from '../../../api/festas/collection';
 
 import './home.html';
-
 
 class Home {
   constructor($scope, $reactive) {
@@ -21,25 +20,24 @@ class Home {
 
     $reactive(this).attach($scope);
 
-    this.welcomeMessage = "Reserve seu carro rapidamente.";
-
 //============================= SUBSCRIBES =====================================
     this.subscribe('users');
+    this.subscribe('festas');
 //============================= SUBSCRIBES =END=================================
 
 //============================= HELPERS ========================================
     this.helpers({
-      users() {
-        return Meteor.users.find().fetch();
+      festas() {
+        return Festas.find().fetch();
       }
     });
 //============================= HELPERS =END====================================
 
 //============================= METHODS ========================================
-  this.teste = function() {
-    alert("ale");
-    console.log(Meteor.users.find().fetch());
-  }
+    this.testaBinding = function() {
+      alert("Deu");
+      console.log(this.festas);
+    }
 //============================= METHODS =END====================================
   }
 }
@@ -49,8 +47,7 @@ const name = 'home';
 //============================ MODULE ==========================================
 export default angular.module(name, [
   angularMeteor,
-  uiRouter,
-  ngMaterial
+  uiRouter
 ])
 .component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,
