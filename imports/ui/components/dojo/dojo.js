@@ -14,6 +14,7 @@ import uiRouter from 'angular-ui-router';
 
 import './dojo.html';
 import { name as Home } from '../home/home';
+import { name as ListaFestas } from '../listaFestas/listaFestas';
 
 class Dojo {}
 
@@ -24,6 +25,7 @@ export default angular.module(name, [
   angularMeteor,
   uiRouter,
   Home,
+  ListaFestas,
   'accounts.ui'
 ])
   .component(name, {

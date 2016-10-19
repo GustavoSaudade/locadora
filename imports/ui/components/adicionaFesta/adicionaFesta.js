@@ -1,20 +1,20 @@
 /** ***************************************************************************
 
-@name: home.js
-@description: Modulo controller da pagina home
+@name: adicionaFesta.js
+@description: Componente para adicionar uma Festa na coleção
 @author: Gustavo Kluwe Saudade (https://github.com/GustavoSaudade)
-@since: 17/10/2016
+@since: 19/10/2016
 
 **************************************************************************** **/
 
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
-import { name as ListaFestas } from '../listaFestas/listaFestas';
+import { Festas } from '../../../api/festas/collection';
 
-import './home.html';
+import './adicionaFesta.html';
 
-class Home {
+class AdicionaFesta {
   constructor($scope, $reactive) {
     'ngInject';
 
@@ -22,6 +22,7 @@ class Home {
 
 //============================= SUBSCRIBES =====================================
     this.subscribe('users');
+    this.subscribe('festas');
 //============================= SUBSCRIBES =END=================================
 
 //============================= HELPERS ========================================
@@ -29,23 +30,24 @@ class Home {
 //============================= HELPERS =END====================================
 
 //============================= METHODS ========================================
-
+    this.submit = function() {
+      console.log('submit:', this.party);
+    }
 //============================= METHODS =END====================================
   }
 }
 
-const name = 'home';
+const name = 'adicionaFesta';
 
 //============================ MODULE ==========================================
 export default angular.module(name, [
   angularMeteor,
-  uiRouter,
-  ListaFestas
+  uiRouter
 ])
 .component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,
   controllerAs: name,
-  controller: Home
+  controller: AdicionaFesta
 })
   .config(config);
 //============================ MODULE =END======================================
@@ -53,9 +55,9 @@ export default angular.module(name, [
 function config($stateProvider) {
   'ngInject';
 
-  $stateProvider.state('home', {
-    url: '/home',
-    template: '<home></home>'
+  $stateProvider.state('adicionaFesta', {
+    url: '/adicionaFesta',
+    template: '<adiciona-festa></adiciona-festa>'
   });
 }
 //============================ CONFIG MODULE =END===============================
