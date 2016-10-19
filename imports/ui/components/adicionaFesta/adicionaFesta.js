@@ -31,6 +31,7 @@ class AdicionaFesta {
 
 //============================= METHODS ========================================
     this.submit = function() {
+      this.party.owner = Meteor.user()._id;
       Festas.insert(this.party);
       this.reset();
     }
