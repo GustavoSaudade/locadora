@@ -12,6 +12,7 @@ class DetalhesFesta {
 
     $reactive(this).attach($scope);
     this.subscribe('festas');
+    this.subscribe('users');
 
     this.festaId = $stateParams.festaId;
 
@@ -20,6 +21,9 @@ class DetalhesFesta {
         return Festas.findOne({
           _id: $stateParams.festaId
         });
+      },
+      users() {
+        return Meteor.users.find({});
       }
     });
 

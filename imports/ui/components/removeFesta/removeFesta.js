@@ -32,7 +32,13 @@ class RemoveFesta {
 //============================= METHODS ========================================
     this.remove = function() {
       if (this.festa) {
-        Festas.remove(this.festa._id);
+        Festas.remove(this.festa._id, (error) => {
+          if (error) {
+            alert('Oops, apenas o proprietário pode excluir, se você for o proprietário, certifique-se que está logado corretamente...');
+          } else {
+            alert('Festa excluída com sucesso!');
+          }
+        });
       }
     }
 //============================= METHODS =END====================================

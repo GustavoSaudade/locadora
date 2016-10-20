@@ -7,3 +7,10 @@ A festa que você selecionou foi:
 </form>
 
 <button ui-sref="home">Back</button>
+
+<ul>
+  Users:
+  <li ng-repeat="user in partyDetails.users">
+    <div>{{ user.emails[0].address }}</div>
+  </li>
+</ul>
