@@ -10,7 +10,9 @@ A festa que você selecionou foi:
 
 <ul>
   Users:
-  <li ng-repeat="user in partyDetails.users">
+  <li ng-repeat="user in detalhesFesta.users">
     <div>{{ user.emails[0].address }}</div>
   </li>
 </ul>
+
+<festa-nao-convidados festa="detalhesFesta.festa"></festa-nao-convidados>
