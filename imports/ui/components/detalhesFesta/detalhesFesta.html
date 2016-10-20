@@ -2,7 +2,8 @@ A festa que você selecionou foi:
 <form>
   Nome da festa: <input type="text" ng-model="detalhesFesta.festa.name" />
   Descrição da festa: <input type="text" ng-model="detalhesFesta.festa.description" />
+  Public Party? <input type="checkbox" ng-model="detalhesFesta.festa.public">
   <button ng-click="detalhesFesta.save()">Save</button>
 </form>
 
-<button ui-sref="listaFestas(detalhesFesta.festaId)">Back</button>
+<button ui-sref="home">Back</button>

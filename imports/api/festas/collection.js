@@ -3,13 +3,13 @@ import { Mongo } from 'meteor/mongo';
 export const Festas = new Mongo.Collection('festas');
 
 Festas.allow({
-  insert(userId, party) {
-    return userId && party.owner === userId;
+  insert(userId, festa) {
+    return userId && festa.owner === userId;
   },
-  update(userId, party, fields, modifier) {
-    return userId && party.owner === userId;
+  update(userId, festa, fields, modifier) {
+    return userId && festa.owner === userId;
   },
-  remove(userId, party) {
-    return userId && party.owner === userId;
+  remove(userId, festa) {
+    return userId && festa.owner === userId;
   }
 });

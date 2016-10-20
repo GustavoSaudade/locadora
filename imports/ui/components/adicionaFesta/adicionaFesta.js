@@ -7,6 +7,7 @@
 
 **************************************************************************** **/
 
+import { Meteor } from 'meteor/meteor';
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';

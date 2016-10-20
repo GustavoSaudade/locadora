@@ -25,7 +25,13 @@ class DetalhesFesta {
 
     this.save = function() {
       Festas.update({_id: this.festa._id},
-        {$set: {name: this.festa.name, description: this.festa.description}},
+        {
+          $set: {
+            name: this.festa.name,
+            description: this.festa.description,
+            public: this.festa.public
+            }
+          },
         (error) => {
           if (error) {
             console.log('Oops, unable to update the party...');
