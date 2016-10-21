@@ -117,7 +117,6 @@
 
 #conteudoDoForm {
   position: absolute;
-  border: solid 3px pink;
   width: 70%;
   height: 50%;
   top: 15%;
@@ -192,4 +191,14 @@
   background-color: rgba(53, 52, 52, 1);
   transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1);
   margin-left: 0px;
+}
+
+#conteudoDaLista {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  color: #DDD;
+  border: solid 3px pink;
 }

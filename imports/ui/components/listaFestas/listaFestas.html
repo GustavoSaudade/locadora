@@ -1,13 +1,15 @@
 <div id="conteudoHome">
-  <ul>
-    <li ng-repeat="festa in listaFestas.festas">
-      <a ui-sref="detalhesFesta({ festaId: festa._id })">
-        {{festa.name}}
-      </a>
+  <div id="conteudoDaLista">
+    <ul>
+      <li ng-repeat="festa in listaFestas.festas">
+        <a ui-sref="detalhesFesta({ festaId: festa._id })">
+          {{festa.name}}
+        </a>
 
-      <p>{{festa.description}}</p>
-      <remove-festa festa="festa"></remove-festa>
-      <autor-festa festa="festa"></autor-festa>
-    </li>
-  </ul>
+        <p>{{festa.description}}</p>
+        <remove-festa festa="festa"></remove-festa>
+        <autor-festa festa="festa"></autor-festa>
+      </li>
+    </ul>
+  </div>
 </div>
