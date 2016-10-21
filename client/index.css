@@ -114,6 +114,15 @@
   text-align: center;
   color: #CCC;
 }
+
+#conteudoDoForm {
+  position: absolute;
+  border: solid 3px pink;
+  width: 70%;
+  height: 50%;
+  top: 15%;
+  left: 15%;
+}
 .linha1 {
   position: relative;
   width: 100%;
@@ -143,6 +152,7 @@
 #publicStyle {
   height: 50px;
   font-size: 20px;
+  color: #DDD;
 }
 #buttonStyle {
   height: 50px;

@@ -1,26 +1,31 @@
-<form name='formAddFesta' ng-submit='adicionaFesta.submit()'>
-  <div class="linha1">
-    <div class="conteudoDelinha" id="detalhesStyle">
-      <label>
-        Adicionar uma Festa:
-      </label>
-    </div>
+<div id="conteudoHome">
+
+  <div id="conteudoDoForm">
+    <form name='formAddFesta' ng-submit='adicionaFesta.submit()'>
+      <div class="linha1">
+        <div class="conteudoDelinha" id="detalhesStyle">
+          <label>
+            Adicionar uma Festa:
+          </label>
+        </div>
+      </div>
+      <div class="linha1">
+          <input type="text" ng-model="adicionaFesta.party.name" placeholder="Nome da Festa" required class="conteudoDelinha" id="nomeStyle"/>
+      </div><br>
+      <div class="linha1">
+          <input type="text" ng-model="adicionaFesta.party.description" placeholder="Descrição" required class="conteudoDelinha" id="descricaoStyle"/>
+      </div>
+      <div class="linha1">
+        <div class="conteudoDelinha" id="publicStyle">
+          <label>
+            Festa Publica ?
+          </label>
+          <input type="checkbox" ng-model="adicionaFesta.party.public">
+        </div>
+      </div>
+      <div class="linha1">
+        <button type="submit" ng-disable='formAddFesta.$error' class="conteudoDelinha" id="buttonStyle">Add Festa!</button>
+      </div>
+    </form>
   </div>
-  <div class="linha1">
-      <input type="text" ng-model="adicionaFesta.party.name" placeholder="Nome da Festa" required class="conteudoDelinha" id="nomeStyle"/>
-  </div>
-  <div class="linha1">
-      <input type="text" ng-model="adicionaFesta.party.description" placeholder="Descrição" required class="conteudoDelinha" id="descricaoStyle"/>
-  </div>
-  <div class="linha1">
-    <div class="conteudoDelinha" id="publicStyle">
-      <label>
-        Public ?
-      </label>
-      <input type="checkbox" ng-model="adicionaFesta.party.public">
-    </div>
-  </div>
-  <div class="linha1">
-    <button type="submit" ng-disable='formAddFesta.$error' class="conteudoDelinha" id="buttonStyle">Add Festa!</button>
-  </div>
-</form>
+</div>
