@@ -4,6 +4,7 @@ import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 import { Festas } from '../../../api/festas';
 import { name as FestaNaoConvidados } from '../festaNaoConvidados/festaNaoConvidados';
+import { name as DisplayNameFilter } from '../../filters/displayNameFilter';
 
 import './detalhesFesta.html';
 
@@ -53,7 +54,8 @@ const name = 'detalhesFesta';
 export default angular.module(name, [
   angularMeteor,
   uiRouter,
-  FestaNaoConvidados
+  FestaNaoConvidados,
+  DisplayNameFilter
 ]).component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,
   controllerAs: name,

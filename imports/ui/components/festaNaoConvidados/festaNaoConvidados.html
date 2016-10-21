@@ -1,6 +1,6 @@
 <ul>
   Usuário não-convidados:
   <li ng-repeat="user in festaNaoConvidados.users | uninvitedFilter:festaNaoConvidados.festa">
-    <div>{{ user.emails[0].address }}</div>
+    <div>{{ user | displayNameFilter }}</div>
   </li>
 </ul>

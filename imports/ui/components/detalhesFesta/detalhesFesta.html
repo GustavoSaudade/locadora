@@ -11,7 +11,7 @@ A festa que você selecionou foi:
 <ul>
   Todos os usuários:
   <li ng-repeat="user in detalhesFesta.users">
-    <div>{{ user.emails[0].address }}</div>
+    <div>{{ user | displayNameFilter }}</div>
   </li>
 </ul>
 

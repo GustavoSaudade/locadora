@@ -1,21 +1,20 @@
 /** ***************************************************************************
 
-@name: festaNaoConvidados.js
-@description: Componente para listar usuários ainda não convidados
+@name: autorFesta.js
+@description: Componente para listar o autor da Festa
 @author: Gustavo Kluwe Saudade (https://github.com/GustavoSaudade)
-@since: 20/10/2016
+@since: 21/10/2016
 
 **************************************************************************** **/
 
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import { Meteor } from 'meteor/meteor';
-import { name as UninvitedFilter } from '../../filters/uninvitedFilter';
 import { name as DisplayNameFilter } from '../../filters/displayNameFilter';
 
-import './festaNaoConvidados.html';
+import './autorFesta.html';
 
-class FestaNaoConvidados {
+class AutorFesta {
   constructor($scope, $reactive) {
     'ngInject';
 
@@ -27,8 +26,18 @@ class FestaNaoConvidados {
 
 //============================= HELPERS ========================================
     this.helpers({
-      users() {
-        return Meteor.users.find({});
+      creator() {
+        if (!this.party) {
+          return '';
+        }
+
+        const owner = this.party.owner;
+
+        if (Meteor.userId() !== null && owner === Meteor.userId()) {
+          return 'Me';
+        }
+
+        return Meteor.users.findOne(owner) || 'Nobody';
       }
     });
 //============================= HELPERS =END====================================
@@ -39,12 +48,11 @@ class FestaNaoConvidados {
   }
 }
 
-const name = 'festaNaoConvidados';
+const name = 'autorFesta';
 
 //============================ MODULE ==========================================
 export default angular.module(name, [
   angularMeteor,
-  UninvitedFilter,
   DisplayNameFilter
 ])
 .component(name, {
@@ -53,7 +61,7 @@ export default angular.module(name, [
    festa: '<'
  },
   controllerAs: name,
-  controller: FestaNaoConvidados
+  controller: AutorFesta
 });
 //============================ MODULE =END======================================
 //============================ CONFIG MODULE ===================================
