@@ -10,7 +10,7 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import { Meteor } from 'meteor/meteor';
-import { name as UninvitedFilter } from '../filters/uninvitedFilter';
+import { name as UninvitedFilter } from '../../filters/uninvitedFilter';
 
 import './festaNaoConvidados.html';
 
