@@ -1,3 +1,12 @@
+/** ***************************************************************************
+
+@name: detalhesFesta.js
+@description: Componente que exibe os detalhes da festa e permite sua edição
+@author: Gustavo Kluwe Saudade (https://github.com/GustavoSaudade)
+@since: 21/10/2016
+
+**************************************************************************** **/
+
 import { Meteor } from 'meteor/meteor';
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
@@ -13,9 +22,13 @@ class DetalhesFesta {
     'ngInject';
 
     $reactive(this).attach($scope);
+
+    //============================= SUBSCRIBES =================================
     this.subscribe('festas');
     this.subscribe('users');
+    //============================= SUBSCRIBES =END=============================
 
+    //============================= HELPERS ====================================
     this.festaId = $stateParams.festaId;
 
     this.helpers({
@@ -28,7 +41,9 @@ class DetalhesFesta {
         return Meteor.users.find({});
       }
     });
+    //============================= HELPERS =END================================
 
+    //============================= METHODS ====================================
     this.save = function() {
       Festas.update({_id: this.festa._id},
         {
@@ -45,12 +60,13 @@ class DetalhesFesta {
             console.log('Festa sofreu update com sucesso!');
           }
         });
-      }
+    }
+    //============================= METHODS =END================================
     }
 }
 const name = 'detalhesFesta';
 
-// create a module
+//============================ MODULE ==========================================
 export default angular.module(name, [
   angularMeteor,
   uiRouter,
@@ -62,7 +78,9 @@ export default angular.module(name, [
   controller: DetalhesFesta
 })
   .config(config);
+//============================ MODULE =END======================================
 
+//============================ CONFIG MODULE ===================================
 function config($stateProvider) {
   'ngInject';
 
@@ -80,3 +98,4 @@ function config($stateProvider) {
     }
   });
 }
+//============================ CONFIG MODULE =END===============================

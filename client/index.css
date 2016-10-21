@@ -7,21 +7,26 @@
   background-color: rgba(53, 52, 52, 1);
 }
 #botao {
-  position: relative;
+  position: absolute;
   width: 8%;
   height: 100%;
-  background-color: rgba(17, 15, 15, 1);
+  background-image: url(hamburguer.jpg);
+  background-size: cover;
 }
-.linha {
-  position: relative;
-  width: 70%;
-  height: 2%;
-  left: 15%;
-  top: 20%;
-  background-color: #ccc;
-  border: solid 1px #CCC;
-  border-radius: 100px;
+#menuLateral {
+  position: absolute;
+  width: 40%;
+  height: 91%;
+  top: 9%;
+  left: -42%;
+  z-index: 99;
+  border: solid 1px #ccc;
+  background-color: rgba(53, 52, 52, 1);
+  position: fixed;
+  -webkit-transition: left 1s, -webkit-transform 1s;
+  transition: left 1s, -webkit-transform 1s;
 }
+
 #nomeDojo {
   position: absolute;
   width: 50%;

@@ -34,7 +34,16 @@ class FestaNaoConvidados {
 //============================= HELPERS =END====================================
 
 //============================= METHODS ========================================
-
+    this.invite = function(user) {
+    Meteor.call('invite', this.festa._id, user._id,
+      (error) => {
+        if (error) {
+          console.log('Oops, unable to invite!');
+        } else {
+          console.log('Invited!');
+        }
+      });
+    }
 //============================= METHODS =END====================================
   }
 }

@@ -17,7 +17,26 @@ import { name as Home } from '../home/home';
 import { name as ListaFestas } from '../listaFestas/listaFestas';
 import { name as DetalhesFesta } from '../detalhesFesta/detalhesFesta';
 
-class Dojo {}
+class Dojo {
+
+  constructor($scope, $reactive){
+    'ngInject';
+
+    $reactive(this).attach($scope);
+
+    this.menuOpened = false;
+
+    this.openMenu = function() {
+      if(this.menuOpened === false){
+        $('#menuLateral').css("left", "0%");
+        this.menuOpened = true;
+      }else if (this.menuOpened === true) {
+        $('#menuLateral').css("left", "-42%");
+        this.menuOpened = false;
+      }
+    }
+  }
+}
 
 const name = 'dojo';
 

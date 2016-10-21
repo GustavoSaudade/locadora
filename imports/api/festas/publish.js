@@ -4,7 +4,7 @@ import { Festas } from './collection';
 
 
 if(Meteor.isServer) {
-  Meteor.publish('festas', function () {  
+  Meteor.publish('festas', function () {
     const selector = {
       $or: [{
         // the public parties
@@ -21,6 +21,15 @@ if(Meteor.isServer) {
           owner: this.userId
         }, {
           owner: {
+            $exists: true
+          }
+        }]
+      }, {
+        // when logged in user is one of invited
+        $and: [{
+          invited: this.userId
+        }, {
+          invited: {
             $exists: true
           }
         }]

@@ -54,8 +54,8 @@ export function invite(partyId, userId) {
         from: 'noreply@socially.com',
         subject: `PARTY: ${party.title}`,
         text: `
-          Hey, I just invited you to ${party.title} on Socially.
-          Come check it out: ${Meteor.absoluteUrl()}
+          Olá, Eu gostaria de convidar você para a ${party.title} do grupo.
+          Confira o convite no link: ${Meteor.absoluteUrl()}
         `
       });
     }
