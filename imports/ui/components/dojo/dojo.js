@@ -19,7 +19,7 @@ import { name as DetalhesFesta } from '../detalhesFesta/detalhesFesta';
 
 class Dojo {
 
-  constructor($scope, $reactive){
+  constructor($scope, $reactive, $state){
     'ngInject';
 
     $reactive(this).attach($scope);
@@ -34,6 +34,11 @@ class Dojo {
         $('#menuLateral').css("left", "-42%");
         this.menuOpened = false;
       }
+    }
+
+    this.clicaHome = function() {
+      $state.go('listaFestas');
+      this.openMenu();
     }
   }
 }
@@ -70,7 +75,7 @@ export default angular.module(name, [
       $rootScope.$on('$stateChangeError',
         (event, toState, toParams, fromState, fromParams, error) => {
           if (error === 'AUTH_REQUIRED') {
-            alert('Você precisa logar no sistema para visualizar as Rotas');
+            alert('Você precisa logar no sistema para esse super Sistema');
             $state.go('home');
           }
         });
