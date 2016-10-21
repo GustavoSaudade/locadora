@@ -16,6 +16,7 @@ import './dojo.html';
 import { name as Home } from '../home/home';
 import { name as ListaFestas } from '../listaFestas/listaFestas';
 import { name as DetalhesFesta } from '../detalhesFesta/detalhesFesta';
+import { name as AdicionaFesta } from '../adicionaFesta/adicionaFesta';
 
 class Dojo {
 
@@ -37,7 +38,17 @@ class Dojo {
     }
 
     this.clicaHome = function() {
+      $state.go('home');
+      this.openMenu();
+    }
+
+    this.clicaListaFestas = function() {
       $state.go('listaFestas');
+      this.openMenu();
+    }
+
+    this.clicaAdicionaFesta = function() {
+      $state.go('adicionaFesta');
       this.openMenu();
     }
   }
@@ -52,6 +63,7 @@ export default angular.module(name, [
   Home,
   ListaFestas,
   DetalhesFesta,
+  AdicionaFesta,
   'accounts.ui'
 ])
   .component(name, {
