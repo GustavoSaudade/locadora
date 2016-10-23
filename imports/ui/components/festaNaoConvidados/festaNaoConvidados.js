@@ -12,6 +12,7 @@ import angularMeteor from 'angular-meteor';
 import { Meteor } from 'meteor/meteor';
 import { name as UninvitedFilter } from '../../filters/uninvitedFilter';
 import { name as DisplayNameFilter } from '../../filters/displayNameFilter';
+import { Festas } from '../../../api/festas/collection';
 
 import './festaNaoConvidados.html';
 
@@ -38,7 +39,7 @@ class FestaNaoConvidados {
     Meteor.call('invite', this.festa._id, user._id,
       (error) => {
         if (error) {
-          console.log('Oops, unable to invite!');
+          console.log(error);
         } else {
           console.log('Invited!');
         }
