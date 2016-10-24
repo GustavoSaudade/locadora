@@ -1,8 +1,13 @@
 <div id="conteudoHome" ng-init="listaFestas.init()">
+  <login-buttons id="botaoLogin"></login-buttons>
   <div class="conteudoDaPagina">
     <button id ="btnAddFesta" type="button" name="button" ng-click="listaFestas.adicionarFesta()" ng-hide="listaFestas.listaVazia">+</button>
-    <div color="#FFF" ng-show="listaFestas.listaVazia">
-      LISTA VAZIA!!!!!
+    <div ng-show="listaFestas.listaVazia" id="listaVazia">
+      <div id="listaVaziaTexto">
+        LISTA VAZIA!!!!! <br><br>
+        Ninguém convidou você pra nenhuma festa! <br><br>
+        Crie uma festa agora mesmo e convide os seus amigos.
+      </div>
     </div>
     <div id="lista">
       <ul>

@@ -418,6 +418,26 @@
   color: #DDD;
   transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1);
 }
+#listaVazia {
+  margin-top: 10%;
+  height: 80%;
+  background-image: url(sad.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #CCC;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+#listaVaziaTexto {
+  width: 70%;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 15%;
+  text-align: center;
+  color: #DDD;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
 /** LISTA **/
 
 /** LOGIN **/
