@@ -1,5 +1,5 @@
 <ul>
-  Usuário não-convidados:
+  Usuários ainda não Convidados:
   <li ng-repeat="user in festaNaoConvidados.users | uninvitedFilter:festaNaoConvidados.festa">
     <div>{{ user | displayNameFilter }}</div>
     <button id="btnConvidar" ng-click="festaNaoConvidados.invite(user)">Convidar</button>
