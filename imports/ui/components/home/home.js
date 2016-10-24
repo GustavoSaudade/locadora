@@ -34,6 +34,11 @@ class Home {
         $('#textoBoasVindas').css("opacity","1");
       }, 100);
     }
+
+    this.mais = function() {
+      $('#textoBoasVindas').css("opacity","0");
+      $('#textoBoasVindas2').css("opacity","1");
+    }
 //============================= METHODS =END====================================
   }
 }
