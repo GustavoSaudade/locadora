@@ -1,5 +1,9 @@
-<div id="conteudoHome">
+<div id="conteudoHome" ng-init="listaFestas.init()">
   <div class="conteudoDaPagina">
+    <button id ="btnAddFesta" type="button" name="button" ng-click="listaFestas.adicionarFesta()" ng-hide="listaFestas.listaVazia">+</button>
+    <div color="#FFF" ng-show="listaFestas.listaVazia">
+      LISTA VAZIA!!!!!
+    </div>
     <div id="lista">
       <ul>
         <li ng-repeat="festa in listaFestas.festas">

@@ -16,7 +16,7 @@ import { Festas } from '../../../api/festas/collection';
 import './adicionaFesta.html';
 
 class AdicionaFesta {
-  constructor($scope, $reactive) {
+  constructor($scope, $reactive, $state) {
     'ngInject';
 
     $reactive(this).attach($scope);
@@ -35,6 +35,8 @@ class AdicionaFesta {
       if(Meteor.user()){
         this.party.owner = Meteor.user()._id;
         Festas.insert(this.party);
+        alert("Festa cadastrada com sucesso!");
+        $state.go('listaFestas');
         this.reset();
       } else {
         alert("Você precisa estar logado para cadastrar festas!");

@@ -17,7 +17,7 @@ import { name as RemoveFesta } from '../removeFesta/removeFesta';
 import './listaFestas.html';
 
 class ListaFestas {
-  constructor($scope, $reactive) {
+  constructor($scope, $reactive, $state) {
     'ngInject';
 
     $reactive(this).attach($scope);
@@ -36,7 +36,14 @@ class ListaFestas {
 //============================= HELPERS =END====================================
 
 //============================= METHODS ========================================
+    this.adicionarFesta = function() {
+      $state.go('adicionaFesta');
+    }
 
+    this.init = function() {
+      if(this.festas.length === 0)
+        this.listaVazia = true;
+    }
 //============================= METHODS =END====================================
   }
 }
