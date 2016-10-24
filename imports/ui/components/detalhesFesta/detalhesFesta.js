@@ -14,6 +14,7 @@ import uiRouter from 'angular-ui-router';
 import { Festas } from '../../../api/festas';
 import { name as FestaNaoConvidados } from '../festaNaoConvidados/festaNaoConvidados';
 import { name as DisplayNameFilter } from '../../filters/displayNameFilter';
+import { name as InvitedFilter } from '../../filters/invitedFilter';
 
 import './detalhesFesta.html';
 
@@ -50,7 +51,8 @@ class DetalhesFesta {
           $set: {
             name: this.festa.name,
             description: this.festa.description,
-            public: this.festa.public
+            public: this.festa.public,
+            invited: this.festa.public ? [] : this.festa.invited
             }
           },
         (error) => {
@@ -74,7 +76,8 @@ export default angular.module(name, [
   angularMeteor,
   uiRouter,
   FestaNaoConvidados,
-  DisplayNameFilter
+  DisplayNameFilter,
+  InvitedFilter
 ]).component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,
   controllerAs: name,

@@ -13,15 +13,19 @@
       </form>
     </div>
 
-      <div id="usuariosDetalhes">
-          <!--
-          Todos os usuários:
+      <div id="festaPublica" ng-show="detalhesFesta.festa.public">
+        Essa festa é pública! Todos estão convidados!
+      </div>
+      <div id="usuariosDetalhes" ng-hide="detalhesFesta.festa.public">
+          <div id="usuariosConvidados">
+            Usuários convidados:
+          </div>
           <ul>
-            <li ng-repeat="user in detalhesFesta.users">
-              <div>{{ user | displayNameFilter }}</div>
+            <li ng-repeat="user in detalhesFesta.users | invitedFilter:detalhesFesta.festa">
+              <div class="nomeDosUsuariosConvidados">{{ user | displayNameFilter }}</div>
             </li>
           </ul>
-        -->
+
         <festa-nao-convidados festa="detalhesFesta.festa"></festa-nao-convidados>
         <button id="btnBackDetalhes" ui-sref="home">Back</button>
       </div>

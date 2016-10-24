@@ -319,8 +319,32 @@
   opacity: 0.9;
   left: 0%;
 }
+#festaPublica {
+  position: relative;
+  background-color: #2b2b2b;
+  opacity: 0.9;
+  left: 0%;
+  text-align: center;
+  text-transform: uppercase;
+}
+#usuariosConvidados {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 /** DETALHES FESTA **/
 
+#usuariosNaoConvidados {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.nomeDosUsuariosNaoConvidados {
+  color: red;
+}
+.nomeDosUsuariosConvidados {
+  color: green;
+}
 /** LISTA **/
 #lista {
   background-color: #2b2b2b;
