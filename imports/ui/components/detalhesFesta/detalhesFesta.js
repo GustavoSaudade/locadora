@@ -18,7 +18,7 @@ import { name as DisplayNameFilter } from '../../filters/displayNameFilter';
 import './detalhesFesta.html';
 
 class DetalhesFesta {
-  constructor($scope, $reactive, $stateParams) {
+  constructor($scope, $reactive, $stateParams, $state) {
     'ngInject';
 
     $reactive(this).attach($scope);
@@ -55,8 +55,11 @@ class DetalhesFesta {
           },
         (error) => {
           if (error) {
-            console.log('Oops, unable to update the party...');
+            alert("Apenas o proprietário da festa pode editar as informações.");
+            console.log(error);
           } else {
+            alert("Informações alteradas!");
+            $state.go('listaFestas');
             console.log('Festa sofreu update com sucesso!');
           }
         });
