@@ -33,6 +33,8 @@ class ListaFestas {
         return Festas.find().fetch();
       }
     });
+
+    this.listaVazia = this.festas.length == 0 ? true : false;
 //============================= HELPERS =END====================================
 
 //============================= METHODS ========================================
@@ -40,10 +42,6 @@ class ListaFestas {
       $state.go('adicionaFesta');
     }
 
-    this.init = function() {
-      if(this.festas.length === 0)
-        this.listaVazia = true;
-    }
 //============================= METHODS =END====================================
   }
 }
