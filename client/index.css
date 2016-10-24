@@ -141,32 +141,35 @@
   height: 60px;
   font-size: 40px;
   background-color: #2b2b2b;
-  opacity: 0.5;
-  color: #FFF;
+  opacity: 0.9;
+  color: #DDD;
 }
 #nomeStyle {
   height: 50px;
+  width: 99%;
   font-size: 20px;
   background-color: #CCC;
 }
 #descricaoStyle {
   height: 100px;
   font-size: 20px;
+  width: 99%;
   background-color: #CCC;
 }
 #publicStyle {
   height: 50px;
   font-size: 20px;
+  background-color: #2b2b2b;
+  opacity: 0.9;
   color: #DDD;
 }
 #buttonStyle {
   height: 50px;
   font-size: 20px;
-  background-color: #CCC;
   width: 100%;
   border-radius: 3px;
   box-sizing: border-box;
-  color: #CCC;
+  color: #DDD;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -194,9 +197,13 @@
   text-decoration: none;
   cursor: pointer;
   overflow: hidden;
-  background-color: rgba(53, 52, 52, 1);
+  background-color: green;
   transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1);
   margin-left: 0px;
+}
+#checkBoxPublic:checked::after {
+  color: blue;
+  border: 3px solid blue;
 }
 
 .conteudoDaPagina {
@@ -370,3 +377,71 @@
   font-size: 25px;
 }
 /** LISTA **/
+
+/** LOGIN **/
+#login-buttons-open-change-password {
+  background-color: darkgoldenrod!important;
+  border-radius: 5px!important;
+}
+#login-buttons-logout {
+    background-color: brown!important;
+    border-radius: 5px!important;
+}
+#login-close-text {
+  color: brown;
+  font-weight: bold;
+}
+.login-close-text {
+  color: brown;
+  font-weight: bold;
+}
+#login-buttons-facebook {
+  background-color: #4b67a1;
+  border-radius: 5px;
+}
+#login-buttons-password {
+  background-color: darkgreen;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.additional-link-container {
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+#login-email {
+  width: 99%;
+  text-align: center;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 19px;
+}
+#login-email-label:after{content:""; display:block; clear:both}
+#login-password {
+  width: 99%;
+  text-align: center;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+#login-password-label:after{content:""; display:block; clear:both}
+/** LOGIN **/
+
+/** ========================== MEDIAS QUERY ================================ **/
+@media (min-width: 950px) and (max-width: 1000px)
+{
+  #textoBoasVindas
+   {
+    height: 62%;
+   }
+}
+
+@media (min-width: 1000px) and (max-width: 1500px)
+{
+  #textoBoasVindas
+   {
+    height: 65%;
+   }
+}
+/** ========================== MEDIAS QUERY ================================ **/
