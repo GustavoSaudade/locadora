@@ -1,21 +1,27 @@
 <div id="conteudoHome">
-  A festa que você selecionou foi:
-  <form>
-    Nome da festa: <input type="text" ng-model="detalhesFesta.festa.name" />
-    Descrição da festa: <input type="text" ng-model="detalhesFesta.festa.description" />
-    Public Party? <input type="checkbox" ng-model="detalhesFesta.festa.public">
-    <button ng-click="detalhesFesta.save()">Save</button>
-  </form>
 
-  <button ui-sref="home">Back</button>
+  <div class="conteudoDaPagina">
+    <div id="tituloDetalhes">
+      DETALHES DA FESTA:
+    </div>
+    <div id="formEdicaoDeFesta">
+      <form>
+        Nome da festa: <input class="inputDetalhes" type="text" ng-model="detalhesFesta.festa.name" /><br>
+        Descrição da festa: <textarea class="inputDetalhes" id="descricaoDetalhes" ng-model="detalhesFesta.festa.description"></textarea><br>
+        Festa pública? <input type="checkbox" ng-model="detalhesFesta.festa.public"><br>
+        <button id="btnSaveDetalhes"ng-click="detalhesFesta.save()">Salvar alterações</button>
+      </form>
+    </div>
 
-  <ul>
-    Todos os usuários:
-    <li ng-repeat="user in detalhesFesta.users">
-      <div>{{ user | displayNameFilter }}</div>
-    </li>
-  </ul>
+    <ul>
+      Todos os usuários:
+      <li ng-repeat="user in detalhesFesta.users">
+        <div>{{ user | displayNameFilter }}</div>
+      </li>
+    </ul>
 
-  <festa-nao-convidados festa="detalhesFesta.festa"></festa-nao-convidados>
+    <festa-nao-convidados festa="detalhesFesta.festa"></festa-nao-convidados>
+    <button id="btnBackDetalhes" ui-sref="home">Back</button>
+  </div>
 
 </div>
