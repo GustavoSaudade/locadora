@@ -544,6 +544,9 @@
 #btnTalvez{
   background-color: orange;
 }
+.tituloDaLista {
+  border-bottom: solid 1px #CCC;
+}
 /** LISTA **/
 
 /** LOGIN **/

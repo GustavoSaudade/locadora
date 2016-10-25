@@ -1,11 +1,14 @@
 <br>
 <br>
-Quem está vindo: Yes -
+<div class="tituloDaLista">
+  QUEM ESTÁ VINDO:
+</div>
+Yes -
 {{ (partyRsvpsList.rsvps | filter:{rsvp:'yes'}).length }}
 Maybe -
 {{ (partyRsvpsList.rsvps | filter:{rsvp:'maybe'}).length }}
 No -
-{{ (partyRsvpsList.rsvps | filter:{rsvp:'no'}).length }}<br><br>
+{{ (partyRsvpsList.rsvps | filter:{rsvp:'no'}).length }}<br>
 
 <party-rsvp-users rsvps="partyRsvpsList.rsvps" type="yes"></party-rsvp-users>
 <party-rsvp-users rsvps="partyRsvpsList.rsvps" type="maybe"></party-rsvp-users>
