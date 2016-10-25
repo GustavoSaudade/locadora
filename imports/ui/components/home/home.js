@@ -25,7 +25,7 @@ class Home {
 //============================= SUBSCRIBES =END=================================
 
 //============================= HELPERS ========================================
-
+    this.isOpen = false;
 //============================= HELPERS =END====================================
 
 //============================= METHODS ========================================
@@ -38,6 +38,14 @@ class Home {
     this.mais = function() {
       $('#textoBoasVindas').css("opacity","0");
       $('#textoBoasVindas2').css("opacity","1");
+    }
+
+    this.clickTest = function(){
+      if(this.isOpen === false){
+          this.isOpen = true;
+      } else {
+        this.isOpen = false;
+      }
     }
 //============================= METHODS =END====================================
   }

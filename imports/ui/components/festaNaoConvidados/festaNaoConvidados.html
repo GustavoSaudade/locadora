@@ -5,6 +5,9 @@
 
   <li ng-repeat="user in festaNaoConvidados.users | uninvitedFilter:festaNaoConvidados.festa">
     <div class="nomeDosUsuariosNaoConvidados">{{ user | displayNameFilter }}</div>
-    <button id="btnConvidar" ng-click="festaNaoConvidados.invite(user)">Convidar</button>
+    <button id="btnConvidar" ng-click="festaNaoConvidados.invite(user)">
+      <md-icon class="icon-light"><i class="material-icons">person_add</i></md-icon>
+      Convidar
+    </button>
   </li>
 </ul>
