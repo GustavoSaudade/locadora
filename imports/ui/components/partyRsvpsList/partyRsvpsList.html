@@ -1,11 +1,11 @@
 <br>
 <br>
-Who is coming: Yes -
+Quem está vindo: Yes -
 {{ (partyRsvpsList.rsvps | filter:{rsvp:'yes'}).length }}
 Maybe -
 {{ (partyRsvpsList.rsvps | filter:{rsvp:'maybe'}).length }}
 No -
-{{ (partyRsvpsList.rsvps | filter:{rsvp:'no'}).length }}
+{{ (partyRsvpsList.rsvps | filter:{rsvp:'no'}).length }}<br><br>
 
 <party-rsvp-users rsvps="partyRsvpsList.rsvps" type="yes"></party-rsvp-users>
 <party-rsvp-users rsvps="partyRsvpsList.rsvps" type="maybe"></party-rsvp-users>

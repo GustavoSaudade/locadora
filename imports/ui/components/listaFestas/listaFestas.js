@@ -16,6 +16,7 @@ import { name as RemoveFesta } from '../removeFesta/removeFesta';
 import { name as AutorFesta } from '../autorFesta/autorFesta';
 import { name as PartyRsvp } from '../partyRsvp/partyRsvp';
 import { name as PartyRsvpsList } from '../partyRsvpsList/partyRsvpsList';
+import { name as PartyUnanswered } from '../partyUnanswered/partyUnanswered';
 
 
 import './listaFestas.html';
@@ -60,7 +61,8 @@ export default angular.module(name, [
   RemoveFesta,
   AutorFesta,
   PartyRsvp,
-  PartyRsvpsList
+  PartyRsvpsList,
+  PartyUnanswered
 ])
 .component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,
