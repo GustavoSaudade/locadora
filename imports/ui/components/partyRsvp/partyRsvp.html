@@ -1,3 +1,19 @@
-<input type="button" value="I'm going!" ng-click="partyRsvp.yes()"/>
-<input type="button" value="Maybe" ng-click="partyRsvp.maybe()"/>
-<input type="button" value="No" ng-click="partyRsvp.no()"/>
+SUA RESPOSTA:<br>
+<md-button id="btnEuVou" class="md-warn md-raised md-hue-2" value="I'm going!" ng-click="partyRsvp.yes()">
+  <md-icon>
+    <i class="material-icons">thumb_up</i>
+  </md-icon>  EU VOU
+</md-button>
+
+<md-button id="btnTalvez" class="md-warn md-raised md-hue-2" value="Maybe" ng-click="partyRsvp.maybe()">
+  <md-icon>
+    <i class="material-icons">thumbs_up_down</i>
+  </md-icon>  TALVEZ
+</md-button>
+
+
+<md-button id="btnNaoVou" class="md-warn md-raised md-hue-2" value="No" ng-click="partyRsvp.no()">
+  <md-icon>
+    <i class="material-icons">thumb_down</i>
+  </md-icon>  NÃO VOU
+</md-button>

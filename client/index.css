@@ -538,6 +538,12 @@
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
 }
+#btnEuVou {
+  background-color: green;
+}
+#btnTalvez{
+  background-color: orange;
+}
 /** LISTA **/
 
 /** LOGIN **/
