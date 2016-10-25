@@ -547,6 +547,9 @@
 .tituloDaLista {
   border-bottom: solid 1px #CCC;
 }
+#btnDetalhesDaFesta {
+  background-color: blue;
+}
 /** LISTA **/
 
 /** LOGIN **/
