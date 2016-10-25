@@ -1,0 +1,8 @@
+<br>
+<br>
+Who is coming: Yes -
+{{ (partyRsvpsList.rsvps | filter:{rsvp:'yes'}).length }}
+Maybe -
+{{ (partyRsvpsList.rsvps | filter:{rsvp:'maybe'}).length }}
+No -
+{{ (partyRsvpsList.rsvps | filter:{rsvp:'no'}).length }}

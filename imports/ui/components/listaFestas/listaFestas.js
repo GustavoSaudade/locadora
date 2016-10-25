@@ -13,6 +13,10 @@ import uiRouter from 'angular-ui-router';
 import { Festas } from '../../../api/festas/collection';
 import { name as AdicionaFesta } from '../adicionaFesta/adicionaFesta';
 import { name as RemoveFesta } from '../removeFesta/removeFesta';
+import { name as AutorFesta } from '../autorFesta/autorFesta';
+import { name as PartyRsvp } from '../partyRsvp/partyRsvp';
+import { name as PartyRsvpsList } from '../partyRsvpsList/partyRsvpsList';
+
 
 import './listaFestas.html';
 
@@ -53,7 +57,10 @@ export default angular.module(name, [
   angularMeteor,
   uiRouter,
   AdicionaFesta,
-  RemoveFesta
+  RemoveFesta,
+  AutorFesta,
+  PartyRsvp,
+  PartyRsvpsList
 ])
 .component(name, {
   templateUrl: `imports/ui/components/${name}/${name}.html`,

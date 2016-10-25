@@ -27,11 +27,11 @@ class AutorFesta {
 //============================= HELPERS ========================================
     this.helpers({
       creator() {
-        if (!this.party) {
+        if (!this.festa) {
           return '';
         }
 
-        const owner = this.party.owner;
+        const owner = this.festa.owner;
 
         if (Meteor.userId() !== null && owner === Meteor.userId()) {
           return 'Me';
