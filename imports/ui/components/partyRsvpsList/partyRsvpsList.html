@@ -1,14 +1,27 @@
 <br>
 <br>
+
 <div class="tituloDaLista">
   QUEM ESTÁ VINDO:
 </div>
-Yes -
-{{ (partyRsvpsList.rsvps | filter:{rsvp:'yes'}).length }}
-Maybe -
-{{ (partyRsvpsList.rsvps | filter:{rsvp:'maybe'}).length }}
-No -
-{{ (partyRsvpsList.rsvps | filter:{rsvp:'no'}).length }}<br>
+
+<div id="respostasContadorDiv">
+  <div id="yesDiv" class="tercoContadorDiv">
+    Sim -
+    {{ (partyRsvpsList.rsvps | filter:{rsvp:'yes'}).length }}
+  </div>
+
+  <div id="maybeDiv" class="tercoContadorDiv">
+    Talvez -
+    {{ (partyRsvpsList.rsvps | filter:{rsvp:'maybe'}).length }}
+  </div>
+
+  <div id="noDiv" class="tercoContadorDiv">
+    Não -
+    {{ (partyRsvpsList.rsvps | filter:{rsvp:'no'}).length }}
+  </div>
+
+</div>
 
 <party-rsvp-users rsvps="partyRsvpsList.rsvps" type="yes"></party-rsvp-users>
 <party-rsvp-users rsvps="partyRsvpsList.rsvps" type="maybe"></party-rsvp-users>

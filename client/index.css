@@ -539,17 +539,87 @@
   border-radius: 10px;
 }
 #btnEuVou {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100%;
   background-color: green;
 }
 #btnTalvez{
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100%;
   background-color: orange;
+}
+#btnNaoVou {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 .tituloDaLista {
   border-bottom: solid 1px #CCC;
 }
+#respostasContadorDiv {
+  width: 100%;
+  display: inline-flex;
+}
+.tercoContadorDiv {
+  display:inline;
+  width: 30%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+  text-align: center;
+  border-radius: 5px;
+}
+#yesDiv {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+#maybeDiv {
+  background-color: rgba(255, 255, 0, 0.5);
+}
+#noDiv {
+  background-color: rgba(255, 0, 0, 0.5);
+}
 #btnDetalhesDaFesta {
   background-color: blue;
 }
+#linhaQuemEstaVindo {
+}
+#conteudoRsvp {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+}
+/** TODO: criar uma classe para esses botoes **/
+#euVouDiv {
+  display:inline;
+  width: 30%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+  text-align: center;
+}
+#talvezDiv {
+  display:inline;
+  width: 30%;
+  margin-left: 3%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  text-align: center;
+}
+#naoVouDiv {
+  display:inline;
+  width: 30%;
+  margin-left: 3%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  text-align: center;
+}
+
+
 /** LISTA **/
 
 /** LOGIN **/
