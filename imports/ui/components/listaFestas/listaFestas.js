@@ -17,6 +17,7 @@ import { name as AutorFesta } from '../autorFesta/autorFesta';
 import { name as PartyRsvp } from '../partyRsvp/partyRsvp';
 import { name as PartyRsvpsList } from '../partyRsvpsList/partyRsvpsList';
 import { name as PartyUnanswered } from '../partyUnanswered/partyUnanswered';
+import { Meteor } from 'meteor/meteor';
 
 
 import './listaFestas.html';
@@ -30,12 +31,23 @@ class ListaFestas {
 //============================= SUBSCRIBES =====================================
     this.subscribe('users');
     this.subscribe('festas');
+
+    this.showFestasNaoProprias = false;
+    this.showTodasFestas = true;
 //============================= SUBSCRIBES =END=================================
 
 //============================= HELPERS ========================================
+    var selectNaoProprias =
+    {
+        "owner": {$ne: Meteor.userId()}
+    };
+
     this.helpers({
       festas() {
         return Festas.find().fetch();
+      },
+      festasNaoProprias() {
+        return Festas.find(selectNaoProprias).fetch();
       }
     });
 
@@ -45,6 +57,16 @@ class ListaFestas {
 //============================= METHODS ========================================
     this.adicionarFesta = function() {
       $state.go('adicionaFesta');
+    }
+
+    this.minhas = function() {
+      this.showFestasNaoProprias = true;
+      this.showTodasFestas = false;
+    }
+
+    this.todas = function() {
+      this.showFestasNaoProprias = false;
+      this.showTodasFestas = true;
     }
 
 //============================= METHODS =END====================================

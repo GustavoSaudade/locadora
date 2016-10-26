@@ -1,6 +1,20 @@
 <div id="conteudoHome">
   <login-buttons id="botaoLogin"></login-buttons>
   <div class="conteudoDaPagina">
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <div class="btnNavLista">
+          <md-button class="btnListaNav" class="md-warn md-raised md-hue-2" aria-label="Settings" ng-click="listaFestas.minhas()">
+            <md-icon class="icon-light"><i class="material-icons">new_releases</i></md-icon>
+          </md-button>
+        </div>
+        <div class="btnNavLista">
+          <md-button class="btnListaNav" class="md-warn md-raised md-hue-2" aria-label="Settings" ng-click="listaFestas.todas()">
+            <md-icon class="icon-light"><i class="material-icons">new_releases</i></md-icon>
+          </md-button>
+        </div>
+      </div>
+    </md-toolbar>
     <button id ="btnAddFesta" type="button" name="button" ng-click="listaFestas.adicionarFesta()" ng-hide="listaFestas.festas.length == 0">+</button>
     <div ng-show="listaFestas.festas.length == 0" id="listaVazia">
       <div id="listaVaziaTexto">
@@ -9,9 +23,43 @@
         Crie uma festa agora mesmo e convide os seus amigos.
       </div>
     </div>
-    <div id="lista">
+
+    <div id="lista" ng-show="listaFestas.showTodasFestas">
       <ul>
         <li ng-repeat="festa in listaFestas.festas">
+          <div id="tituloFestaLista">
+            <a ui-sref="detalhesFesta({ festaId: festa._id })">
+              {{festa.name}}
+            </a>
+          </div>
+          <div id="descricaoDaFesta">
+            <div id="textoDescricao">
+              <p>Descrição:</p>
+              <p>{{festa.description}}</p>
+            </div>
+            <div id="botoesDescricao">
+              <md-button id="btnDetalhesDaFesta" class="md-warn md-raised md-hue-2" aria-label="Settings">
+                <md-icon class="icon-light"><i class="material-icons">new_releases</i></md-icon><br>
+                Detalhes da festa
+              </md-button>
+            </div>
+          </div>
+
+          <div id="linhaQuemEstaVindo">
+              <party-rsvp festa="festa"></party-rsvp>
+          </div>
+          <party-rsvps-list rsvps="festa.rsvps"></party-rsvps-list>
+          <party-unanswered festa="festa"></party-unanswered>
+          <br><br>
+          <remove-festa festa="festa"></remove-festa>
+          <autor-festa festa="festa"></autor-festa>
+        </li>
+      </ul>
+    </div>
+
+    <div id="lista" ng-show="listaFestas.showFestasNaoProprias">
+      <ul>
+        <li ng-repeat="festa in listaFestas.festasNaoProprias">
           <div id="tituloFestaLista">
             <a ui-sref="detalhesFesta({ festaId: festa._id })">
               {{festa.name}}
