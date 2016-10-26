@@ -434,6 +434,19 @@
   color: green;
 }
 
+#descricaoDaFesta {
+  width: 100%;
+  display: inline-flex;
+}
+#textoDescricao {
+  width: 70%;
+  height: 100%;
+}
+#botoesDescricao {
+  display:inline;
+  width: 30%;
+}
+
 #btnRemoveFesta {
   height: 40px;
   font-size: 20px;
@@ -514,7 +527,7 @@
   text-decoration: none;
   cursor: pointer;
   overflow: hidden;
-  background-color: #4286f4;
+  background-color: rgba(40, 53, 147, 1);
   color: #DDD;
   transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1);
 }
@@ -575,16 +588,22 @@
   border-radius: 5px;
 }
 #yesDiv {
-  background-color: rgba(0, 255, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: green;
 }
 #maybeDiv {
-  background-color: rgba(255, 255, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: orange;
 }
 #noDiv {
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: red;
 }
 #btnDetalhesDaFesta {
-  background-color: blue;
+  position: relative;
+  width: 90%;
+  height: 80%;
+  background-color: rgba(40, 53, 147, 1);
 }
 #linhaQuemEstaVindo {
 }

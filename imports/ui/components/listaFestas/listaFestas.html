@@ -17,17 +17,26 @@
               {{festa.name}}
             </a>
           </div>
-          <p>{{festa.description}}</p>
-          <md-button id="btnDetalhesDaFesta" class="md-warn md-raised md-hue-2" aria-label="Settings">
-            <md-icon class="icon-light"><i class="material-icons">new_releases</i></md-icon>
-          </md-button>
-          <remove-festa festa="festa"></remove-festa>
+          <div id="descricaoDaFesta">
+            <div id="textoDescricao">
+              <p>Descrição:</p>
+              <p>{{festa.description}}</p>
+            </div>
+            <div id="botoesDescricao">
+              <md-button id="btnDetalhesDaFesta" class="md-warn md-raised md-hue-2" aria-label="Settings">
+                <md-icon class="icon-light"><i class="material-icons">new_releases</i></md-icon><br>
+                Detalhes da festa
+              </md-button>
+            </div>
+          </div>
 
           <div id="linhaQuemEstaVindo">
               <party-rsvp festa="festa"></party-rsvp>
           </div>
           <party-rsvps-list rsvps="festa.rsvps"></party-rsvps-list>
           <party-unanswered festa="festa"></party-unanswered>
+          <br><br>
+          <remove-festa festa="festa"></remove-festa>
           <autor-festa festa="festa"></autor-festa>
         </li>
       </ul>
