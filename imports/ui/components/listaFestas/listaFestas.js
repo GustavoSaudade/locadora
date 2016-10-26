@@ -33,7 +33,7 @@ class ListaFestas {
     this.subscribe('festas');
 
     this.showFestasNaoProprias = false;
-    this.showTodasFestas = true;
+    this.minhasSelected = true;
 //============================= SUBSCRIBES =END=================================
 
 //============================= HELPERS ========================================
@@ -69,12 +69,12 @@ class ListaFestas {
 
     this.convites = function() {
       this.showFestasNaoProprias = true;
-      this.showTodasFestas = false;
+      this.minhasSelected = false;
     }
 
     this.todas = function() {
       this.showFestasNaoProprias = false;
-      this.showTodasFestas = true;
+      this.minhasSelected = true;
     }
 
 //============================= METHODS =END====================================
