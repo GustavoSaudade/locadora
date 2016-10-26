@@ -4,13 +4,15 @@
     <md-toolbar class="md-hue-2">
       <div class="md-toolbar-tools">
         <div class="btnNavLista">
-          <md-button class="btnListaNav" class="md-warn md-raised md-hue-2" aria-label="Settings" ng-click="listaFestas.minhas()">
+          <md-button class="btnListaNav" class="md-warn md-raised md-hue-2" aria-label="Settings" ng-click="listaFestas.todas()">
             <md-icon class="icon-light"><i class="material-icons">new_releases</i></md-icon>
+            MINHAS
           </md-button>
         </div>
         <div class="btnNavLista">
-          <md-button class="btnListaNav" class="md-warn md-raised md-hue-2" aria-label="Settings" ng-click="listaFestas.todas()">
+          <md-button class="btnListaNav" class="md-warn md-raised md-hue-2" aria-label="Settings" ng-click="listaFestas.convites()">
             <md-icon class="icon-light"><i class="material-icons">new_releases</i></md-icon>
+            CONVITES
           </md-button>
         </div>
       </div>
@@ -26,7 +28,7 @@
 
     <div id="lista" ng-show="listaFestas.showTodasFestas">
       <ul>
-        <li ng-repeat="festa in listaFestas.festas">
+        <li ng-repeat="festa in listaFestas.festasProprias">
           <div id="tituloFestaLista">
             <a ui-sref="detalhesFesta({ festaId: festa._id })">
               {{festa.name}}

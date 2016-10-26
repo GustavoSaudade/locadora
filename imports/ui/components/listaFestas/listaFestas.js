@@ -42,12 +42,20 @@ class ListaFestas {
         "owner": {$ne: Meteor.userId()}
     };
 
+    var selectProprias =
+    {
+        "owner": Meteor.userId()
+    };
+
     this.helpers({
       festas() {
         return Festas.find().fetch();
       },
       festasNaoProprias() {
         return Festas.find(selectNaoProprias).fetch();
+      },
+      festasProprias() {
+        return Festas.find(selectProprias).fetch();
       }
     });
 
@@ -59,7 +67,7 @@ class ListaFestas {
       $state.go('adicionaFesta');
     }
 
-    this.minhas = function() {
+    this.convites = function() {
       this.showFestasNaoProprias = true;
       this.showTodasFestas = false;
     }
