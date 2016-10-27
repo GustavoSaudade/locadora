@@ -478,6 +478,14 @@
   height: 100%;
   padding-left: 20px;
 }
+#textAreaLista {
+  height: 180px;
+  font-size: 20px;
+  width: 95%;
+  color: #DDD;
+  border: none;
+  background-color: transparent;
+}
 #botoesDescricao {
   display:inline;
   width: 30%;
@@ -650,6 +658,13 @@
 }
 
 #rsvpUsers {
+  padding-left: 20px;
+}
+
+#pessoasQueNaoResponderam {
+  list-style-type: none;
+}
+#pessoasQueNaoResponderam li {
   padding-left: 20px;
 }
 
