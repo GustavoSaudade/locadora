@@ -1,5 +1,5 @@
 <br>
-<div ng-repeat="rsvp in partyRsvpUsers.rsvps | filter:{ rsvp: partyRsvpUsers.type }">
+<div id="rsvpUsers" ng-repeat="rsvp in partyRsvpUsers.rsvps | filter:{ rsvp: partyRsvpUsers.type }">
   {{ partyRsvpUsers.getUserById(rsvp.user) | displayNameFilter }}
   -
   {{ partyRsvpUsers.type }}

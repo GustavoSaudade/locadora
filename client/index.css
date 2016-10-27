@@ -34,7 +34,7 @@
   color: #ccc;
   font-size: 25px;
   text-align: center;
-  border-bottom: solid 1px #ccc;
+  border-bottom: groove 1px rgb(40, 53, 147);
 }
 .textoMenuItem {
   position: relative;
@@ -435,6 +435,7 @@
   border-radius: 5px;
   width: 105%;
   margin-left: -5%;
+  margin-bottom: 10%;
 }
 #lista a {
   text-decoration: none;
@@ -498,7 +499,7 @@
   height: 48%;
 }
 #tituloFestaLista {
-  border-bottom: solid 1px #DDD;
+  border-bottom: groove 4px rgb(40, 53, 147);
   font-weight: bold;
   font-size: 30px;
   text-align: center;
@@ -586,7 +587,7 @@
   height: 100%;
 }
 .tituloDaLista {
-  border-bottom: solid 1px #CCC;
+  border-bottom: groove 3px rgb(40, 53, 147);
   text-align: center;
 }
 #respostasContadorDiv {
@@ -648,6 +649,9 @@
   text-align: center;
 }
 
+#rsvpUsers {
+  padding-left: 20px;
+}
 
 /** LISTA **/
 
