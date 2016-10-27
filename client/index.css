@@ -433,6 +433,8 @@
 #lista li {
   background-color: #2b2b2b;
   border-radius: 5px;
+  width: 105%;
+  margin-left: -5%;
 }
 #lista a {
   text-decoration: none;
