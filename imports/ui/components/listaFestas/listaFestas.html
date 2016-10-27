@@ -30,7 +30,7 @@
     </div>
 
     <div id="lista" ng-show="listaFestas.minhasSelected">
-      <ul>
+      <ul class="listaDeFestas">
         <li ng-repeat="festa in listaFestas.festasProprias">
           <div id="tituloFestaLista">
             <a ui-sref="detalhesFesta({ festaId: festa._id })">
@@ -39,28 +39,31 @@
           </div>
           <div id="descricaoDaFesta">
             <div id="textoDescricao">
-              <p>Descrição:</p>
+              <p><strong>DESCRIÇÃO:</strong></p>
               <p>{{festa.description}}</p>
             </div>
             <div id="botoesDescricao">
-              <md-button id="btnDetalhesDaFesta" class="md-warn md-raised md-hue-2" aria-label="Settings">
-                <md-icon class="icon-light"><i class="material-icons">settings</i></md-icon><br>
-                Editar festa
-              </md-button>
+              <div id="editarContent">
+                <md-button id="btnDetalhesDaFesta" class="md-warn md-raised md-hue-2" aria-label="Settings">
+                  <md-icon class="icon-light"><i class="material-icons">settings</i></md-icon><br>
+                  Editar
+                </md-button>
+              </div>
+              <div id="excluirDiv">
+                <remove-festa festa="festa"></remove-festa>
+              </div>
             </div>
           </div>
 
           <party-rsvps-list rsvps="festa.rsvps"></party-rsvps-list>
           <party-unanswered festa="festa"></party-unanswered>
-          <br><br>
-          <remove-festa festa="festa"></remove-festa>
           <autor-festa festa="festa"></autor-festa>
         </li>
       </ul>
     </div>
 
     <div id="lista" ng-show="listaFestas.showFestasNaoProprias">
-      <ul>
+      <ul class="listaDeFestas">
         <li ng-repeat="festa in listaFestas.festasNaoProprias">
           <div id="tituloFestaLista">
             <a ui-sref="detalhesFesta({ festaId: festa._id })">

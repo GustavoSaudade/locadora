@@ -294,7 +294,7 @@
   left: 10%;
   top: 10%;
   color: #DDD;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /** DETALHES FESTA **/
@@ -441,6 +441,9 @@
 #lista a:hover {
   color: green;
 }
+.listaDeFestas {
+  list-style-type: none;
+}
 .btnNavLista{
   width: 45%;
   padding: 0px;
@@ -453,6 +456,16 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+#btnRemoveFesta {
+  width: 95%;
+  height: 100%;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+#toolBarLista {
+  border-radius: 5px;
+  background-color: rgba(45, 45, 45, 0.5);
+}
 #descricaoDaFesta {
   width: 100%;
   display: inline-flex;
@@ -460,16 +473,33 @@
 #textoDescricao {
   width: 70%;
   height: 100%;
+  padding-left: 20px;
 }
 #botoesDescricao {
   display:inline;
   width: 30%;
+  margin-top: 5%;
 }
-
+#editarContent {
+  height: 48%;
+}
+#btnDetalhesDaFesta {
+  position: relative;
+  width: 95%;
+  height: 100%;
+  margin-left: 0px;
+  margin-top: 0px;
+  background-color: rgba(40, 53, 147, 1);
+}
+#excluirDiv {
+  margin-top: 7%;
+  height: 48%;
+}
 #tituloFestaLista {
   border-bottom: solid 1px #DDD;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 30px;
+  text-align: center;
   color: #CCC;
 }
 #btnAddFesta{
@@ -555,6 +585,7 @@
 }
 .tituloDaLista {
   border-bottom: solid 1px #CCC;
+  text-align: center;
 }
 #respostasContadorDiv {
   width: 100%;
@@ -581,12 +612,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   color: red;
 }
-#btnDetalhesDaFesta {
-  position: relative;
-  width: 90%;
-  height: 80%;
-  background-color: rgba(40, 53, 147, 1);
-}
+
 #linhaQuemEstaVindo {
 }
 #conteudoRsvp {
