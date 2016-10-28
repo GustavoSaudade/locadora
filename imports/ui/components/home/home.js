@@ -15,10 +15,21 @@ import { name as ListaFestas } from '../listaFestas/listaFestas';
 import './home.html';
 
 class Home {
-  constructor($scope, $reactive) {
+  constructor($scope, $reactive, $mdExpansionPanel) {
     'ngInject';
 
     $reactive(this).attach($scope);
+
+    $mdExpansionPanel().waitFor('panel').then(function (instance) {
+      instance.expand();
+      instance.collapse({animation: false});
+      instance.remove();
+      instance.isOpen();
+    });
+
+    // sync
+    $mdExpansionPanel('panel').expand();
+
 
 //============================= SUBSCRIBES =====================================
     this.subscribe('users');
@@ -74,5 +85,6 @@ function config($stateProvider) {
     url: '/home',
     template: '<home></home>'
   });
+
 }
 //============================ CONFIG MODULE =END===============================

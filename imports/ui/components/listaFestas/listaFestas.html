@@ -5,22 +5,30 @@
     <md-toolbar  id="toolBarLista" class="md-hue-2">
       <div class="md-toolbar-tools">
         <div class="btnNavLista">
-          <md-button class="btnListaNav" class="md-warn md-raised md-hue-2" aria-label="Settings" ng-click="listaFestas.todas()">
+          <md-button  id="btnMinhas" class="btnListaNav" class="md-warn md-raised md-hue-2" aria-label="Settings" ng-click="listaFestas.minhas()">
             <md-icon class="icon-light"><i class="material-icons">new_releases</i></md-icon>
             MINHAS
           </md-button>
         </div>
         <div class="btnNavLista">
-          <md-button class="btnListaNav" class="md-warn md-raised md-hue-2" aria-label="Settings" ng-click="listaFestas.convites()">
+          <md-button id="btnConvites" class="btnListaNav" class="md-warn md-raised md-hue-2" aria-label="Settings" ng-click="listaFestas.convites()">
             <md-icon class="icon-light"><i class="material-icons">email</i></md-icon>
             CONVITES
+          </md-button>
+        </div>
+        <div class="btnNavLista">
+          <md-button id="btnTodas" class="btnListaNav" class="md-warn md-raised md-hue-2" aria-label="Settings" ng-click="listaFestas.todasFestas()">
+            <md-icon class="icon-light"><i class="material-icons">email</i></md-icon>
+            TODAS
           </md-button>
         </div>
       </div>
     </md-toolbar>
 
     <!-- TODO: Arrumar a condicional do ng-hide(passar para um boolean dentro da controller. MOTIVO: Está causando um delay na página) -->
-    <button id ="btnAddFesta" type="button" name="button" ng-click="listaFestas.adicionarFesta()" ng-hide="listaFestas.festas.length == 0 || listaFestas.showFestasNaoProprias">+</button>
+    <div id="divBtnAdd" ng-show="listaFestas.minhasSelected || listaFestas.todasSelected">
+      <button id ="btnAddFesta" type="button" name="button" ng-click="listaFestas.adicionarFesta()" ng-hide="listaFestas.festas.length == 0">+</button>
+    </div>
     <div ng-show="listaFestas.festas.length == 0" id="listaVazia">
       <div id="listaVaziaTexto">
         LISTA VAZIA!!!!! <br><br>
@@ -66,24 +74,38 @@
       <ul class="listaDeFestas">
         <li ng-repeat="festa in listaFestas.festasNaoProprias">
           <div id="tituloFestaLista">
+            <div ng-click="listaFestas.clickTitulo()">
+              {{festa.name}}
+            </div>
+          </div>
+
+            <div id="descricaoDaFesta">
+              <div id="textoDescricaoConvites">
+                <p>Descrição:</p>
+                <textarea id="textAreaLista" disabled>{{festa.description}}</textarea>
+              </div>
+            </div>
+
+            <div id="linhaQuemEstaVindo">
+                <party-rsvp festa="festa"></party-rsvp>
+            </div>
+            <party-rsvps-list rsvps="festa.rsvps"></party-rsvps-list>
+            <party-unanswered festa="festa"></party-unanswered>
+            <br><br>
+            <autor-festa festa="festa"></autor-festa>
+
+        </li>
+      </ul>
+    </div>
+
+    <div id="lista" ng-show="listaFestas.todasSelected">
+      <ul class="listaDeFestas">
+        <li ng-repeat="festa in listaFestas.festas">
+          <div id="tituloFestaLista">
             <a ui-sref="detalhesFesta({ festaId: festa._id })">
               {{festa.name}}
             </a>
           </div>
-          <div id="descricaoDaFesta">
-            <div id="textoDescricao">
-              <p>Descrição:</p>
-              <p>{{festa.description}}</p>
-            </div>
-          </div>
-
-          <div id="linhaQuemEstaVindo">
-              <party-rsvp festa="festa"></party-rsvp>
-          </div>
-          <party-rsvps-list rsvps="festa.rsvps"></party-rsvps-list>
-          <party-unanswered festa="festa"></party-unanswered>
-          <br><br>
-          <autor-festa festa="festa"></autor-festa>
         </li>
       </ul>
     </div>

@@ -32,20 +32,16 @@ class ListaFestas {
     this.subscribe('users');
     this.subscribe('festas');
 
-    this.showFestasNaoProprias = false;
     this.minhasSelected = true;
+    this.showFestasNaoProprias = false;
+    this.todasSelected = false;
+    $('#btnMinhas').css('border-bottom', 'solid 3px #DDD');
 //============================= SUBSCRIBES =END=================================
 
 //============================= HELPERS ========================================
-    var selectNaoProprias =
-    {
-        "owner": {$ne: Meteor.userId()}
-    };
+    var selectNaoProprias = { "owner": {$ne: Meteor.userId()} };
 
-    var selectProprias =
-    {
-        "owner": Meteor.userId()
-    };
+    var selectProprias = { "owner": Meteor.userId() };
 
     this.helpers({
       festas() {
@@ -67,14 +63,35 @@ class ListaFestas {
       $state.go('adicionaFesta');
     }
 
-    this.convites = function() {
-      this.showFestasNaoProprias = true;
-      this.minhasSelected = false;
+    this.minhas = function() {
+      this.minhasSelected = true;
+      this.showFestasNaoProprias = false;
+      this.todasSelected = false;
+      $('#btnMinhas').css('border-bottom', 'solid 3px #DDD');
+      $('#btnConvites').css('border-bottom', '0');
+      $('#btnTodas').css('border-bottom', '0');
     }
 
-    this.todas = function() {
+    this.convites = function() {
+      this.minhasSelected = false;
+      this.showFestasNaoProprias = true;
+      this.todasSelected = false;
+      $('#btnMinhas').css('border-bottom', '0');
+      $('#btnConvites').css('border-bottom', 'solid 3px #DDD');
+      $('#btnTodas').css('border-bottom', '0');
+    }
+
+    this.todasFestas = function() {
+      this.minhasSelected = false;
       this.showFestasNaoProprias = false;
-      this.minhasSelected = true;
+      this.todasSelected = true;
+      $('#btnMinhas').css('border-bottom', '0');
+      $('#btnConvites').css('border-bottom', '0');
+      $('#btnTodas').css('border-bottom', 'solid 3px #DDD');
+    }
+
+    this.clickTitulo = function() {
+      
     }
 
 //============================= METHODS =END====================================

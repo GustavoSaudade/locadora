@@ -11,7 +11,7 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import ngMaterial from 'angular-material';
 import uiRouter from 'angular-ui-router';
-
+import angularMaterialExpansionPanel from 'angular-material-expansion-panel';
 
 import './dojo.html';
 import { name as Home } from '../home/home';
@@ -66,6 +66,7 @@ export default angular.module(name, [
   DetalhesFesta,
   AdicionaFesta,
   ngMaterial,
+  'material.components.expansionPanels',
   'accounts.ui'
 ])
   .component(name, {
