@@ -108,6 +108,11 @@
   overflow-y: auto;
   background-color: rgba(10, 10, 10, 0.8);
 }
+#Painel {
+  color: #FFF;
+  border: solid 3px pink;
+  margin-top: 10%;
+}
 #textoBoasVindas {
   position: absolute;
   border-radius: 10px;

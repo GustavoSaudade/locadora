@@ -10,26 +10,16 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
+import angularMaterialExpansionPanel from 'angular-material-expansion-panel';
 import { name as ListaFestas } from '../listaFestas/listaFestas';
 
 import './home.html';
 
 class Home {
-  constructor($scope, $reactive, $mdExpansionPanel) {
+  constructor($scope, $reactive) {
     'ngInject';
 
     $reactive(this).attach($scope);
-
-    $mdExpansionPanel().waitFor('panel').then(function (instance) {
-      instance.expand();
-      instance.collapse({animation: false});
-      instance.remove();
-      instance.isOpen();
-    });
-
-    // sync
-    $mdExpansionPanel('panel').expand();
-
 
 //============================= SUBSCRIBES =====================================
     this.subscribe('users');
@@ -58,6 +48,7 @@ class Home {
         this.isOpen = false;
       }
     }
+
 //============================= METHODS =END====================================
   }
 }
@@ -68,6 +59,7 @@ const name = 'home';
 export default angular.module(name, [
   angularMeteor,
   uiRouter,
+  'material.components.expansionPanels',
   ListaFestas
 ])
 .component(name, {
@@ -85,6 +77,7 @@ function config($stateProvider) {
     url: '/home',
     template: '<home></home>'
   });
+
 
 }
 //============================ CONFIG MODULE =END===============================
