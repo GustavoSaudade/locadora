@@ -52,10 +52,14 @@ class ListaFestas {
       },
       festasProprias() {
         return Festas.find(selectProprias).fetch();
+      },
+      userId() {
+        return Meteor.userId();
       }
     });
 
     this.listaVazia = this.festas.length == 0 ? true : false;
+
 //============================= HELPERS =END====================================
 
 //============================= METHODS ========================================
@@ -91,7 +95,7 @@ class ListaFestas {
     }
 
     this.clickTitulo = function() {
-      
+
     }
 
 //============================= METHODS =END====================================
