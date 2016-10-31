@@ -2,8 +2,6 @@
     <strong>AINDA NÃO RESPONDERAM:</strong>
 </div>
 
-<ul id="pessoasQueNaoResponderam">
-  <br><li ng-repeat="invitedUser in partyUnanswered.getUnanswered()">
+<div ng-repeat="invitedUser in partyUnanswered.getUnanswered()">
     {{ partyUnanswered.getUserById(invitedUser) | displayNameFilter }}
-  </li>
-</ul>
+</div>
