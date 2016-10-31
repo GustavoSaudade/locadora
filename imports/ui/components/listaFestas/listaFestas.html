@@ -54,7 +54,7 @@
               </div>
               <div id="botoesOutros">
                 <div id="editarContent">
-                  <md-button id="btnDetalhesDaFesta" class="md-warn md-raised md-hue-2" aria-label="Settings">
+                  <md-button ui-sref="detalhesFesta({ festaId: festa._id })" id="btnDetalhesDaFesta" class="md-warn md-raised md-hue-2" aria-label="Settings">
                     <md-icon class="icon-light"><i class="material-icons">settings</i></md-icon><br>
                     Editar
                   </md-button>
@@ -65,7 +65,7 @@
               </div>
             </div>
           </div>
-          <div class="linhaSuaResposta" ng-show="{{festa.owner === listaFestas.userId}}">
+          <div class="linhaSuaResposta" ng-show="{{festa.owner !== listaFestas.userId}}">
               <party-rsvp festa="festa"></party-rsvp>
           </div>
           <div class="quemEstaVindo">
@@ -98,7 +98,7 @@
               </div>
               <div id="botoesOutros">
                 <div id="editarContent">
-                  <md-button id="btnDetalhesDaFesta" class="md-warn md-raised md-hue-2" aria-label="Settings">
+                  <md-button ui-sref="detalhesFesta({ festaId: festa._id })" id="btnDetalhesDaFesta" class="md-warn md-raised md-hue-2" aria-label="Settings">
                     <md-icon class="icon-light"><i class="material-icons">settings</i></md-icon><br>
                     Editar
                   </md-button>
@@ -109,7 +109,7 @@
               </div>
             </div>
           </div>
-          <div class="linhaSuaResposta" ng-show="{{festa.owner === listaFestas.userId}}">
+          <div class="linhaSuaResposta" ng-show="{{festa.owner !== listaFestas.userId}}">
               <party-rsvp festa="festa"></party-rsvp>
           </div>
           <div class="quemEstaVindo">
@@ -142,7 +142,7 @@
               </div>
               <div id="botoesOutros">
                 <div id="editarContent">
-                  <md-button id="btnDetalhesDaFesta" class="md-warn md-raised md-hue-2" aria-label="Settings">
+                  <md-button ui-sref="detalhesFesta({ festaId: festa._id })" id="btnDetalhesDaFesta" class="md-warn md-raised md-hue-2" aria-label="Settings">
                     <md-icon class="icon-light"><i class="material-icons">settings</i></md-icon><br>
                     Editar
                   </md-button>
@@ -153,7 +153,7 @@
               </div>
             </div>
           </div>
-          <div class="linhaSuaResposta" ng-show="{{festa.owner === listaFestas.userId}}">
+          <div class="linhaSuaResposta" ng-show="{{festa.owner !== listaFestas.userId}}">
               <party-rsvp festa="festa"></party-rsvp>
           </div>
           <div class="quemEstaVindo">
