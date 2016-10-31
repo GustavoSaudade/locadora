@@ -38,80 +38,15 @@
     </div>
 
     <div id="lista" ng-show="listaFestas.minhasSelected">
-      <ul class="listaDeFestas">
-        <li ng-repeat="festa in listaFestas.festasProprias">
-          <div id="tituloFestaLista">
-            <a ui-sref="detalhesFesta({ festaId: festa._id })">
-              {{festa.name}}
-            </a>
-          </div>
-          <div id="descricaoDaFesta">
-            <div id="textoDescricao">
-              <p><strong>DESCRIÇÃO:</strong></p>
-              <textarea id="textAreaLista" disabled>{{festa.description}}</textarea>
-            </div>
-            <div id="botoesDescricao">
-              <div id="editarContent">
-                <md-button id="btnDetalhesDaFesta" class="md-warn md-raised md-hue-2" aria-label="Settings">
-                  <md-icon class="icon-light"><i class="material-icons">settings</i></md-icon><br>
-                  Editar
-                </md-button>
-              </div>
-              <div id="excluirDiv">
-                <remove-festa festa="festa"></remove-festa>
-              </div>
-            </div>
-          </div>
-
-          <party-rsvps-list rsvps="festa.rsvps"></party-rsvps-list>
-          <party-unanswered festa="festa"></party-unanswered>
-          <autor-festa festa="festa"></autor-festa>
-        </li>
-      </ul>
-    </div>
-
-    <div id="lista" ng-show="listaFestas.showFestasNaoProprias">
-      <ul class="listaDeFestas">
-        <li ng-repeat="festa in listaFestas.festasNaoProprias">
-          <div id="tituloFestaLista">
-            <div ng-click="listaFestas.clickTitulo()">
-              {{festa.name}}
-            </div>
-          </div>
-
-            <div id="descricaoDaFesta">
-              <div id="textoDescricaoConvites">
-                <p>Descrição:</p>
-                <textarea id="textAreaLista" disabled>{{festa.description}}</textarea>
-              </div>
-            </div>
-
-            <div id="linhaQuemEstaVindo">
-                <party-rsvp festa="festa"></party-rsvp>
-            </div>
-            <party-rsvps-list rsvps="festa.rsvps"></party-rsvps-list>
-            <party-unanswered festa="festa"></party-unanswered>
-            <br><br>
-            <autor-festa festa="festa"></autor-festa>
-
-        </li>
-      </ul>
-    </div>
-
-    <div id="lista" ng-show="listaFestas.todasSelected">
       <ang-accordion class="Accordion">
-        <collapsible-item item-title="{{festa.name}}" ng-repeat="festa in listaFestas.festas" id="AccordionTitle">
+        <collapsible-item item-title="{{festa.name}}" ng-repeat="festa in listaFestas.festasProprias" id="AccordionTitle">
           <div class="descricaoDaFesta">
-
-
             <div class="descricaoProprias" ng-hide="{{festa.owner === listaFestas.userId}}">
               <div>
                 <p>Descrição:</p>
                 <textarea id="textAreaProprias" disabled>{{festa.description}}</textarea>
               </div>
             </div>
-
-
             <div class="descricaoOutros" ng-show="{{festa.owner === listaFestas.userId}}">
               <div id="textoDescricao">
                 <p><strong>DESCRIÇÃO:</strong></p>
@@ -129,8 +64,6 @@
                 </div>
               </div>
             </div>
-
-
           </div>
           <div class="linhaSuaResposta" ng-show="{{festa.owner === listaFestas.userId}}">
               <party-rsvp festa="festa"></party-rsvp>
@@ -138,11 +71,97 @@
           <div class="quemEstaVindo">
             <party-rsvps-list rsvps="festa.rsvps"></party-rsvps-list>
           </div>
-
           <div class="aindaNaoResponderam">
             <party-unanswered festa="festa"></party-unanswered>
           </div>
+          <div class="autorFesta">
+            <autor-festa festa="festa"></autor-festa>
+          </div>
+        </collapsible-item>
+      </ang-accordion>
+    </div>
 
+    <div id="lista" ng-show="listaFestas.showFestasNaoProprias">
+      <ang-accordion class="Accordion">
+        <collapsible-item item-title="{{festa.name}}" ng-repeat="festa in listaFestas.festasNaoProprias" id="AccordionTitle">
+          <div class="descricaoDaFesta">
+            <div class="descricaoProprias" ng-hide="{{festa.owner === listaFestas.userId}}">
+              <div>
+                <p>Descrição:</p>
+                <textarea id="textAreaProprias" disabled>{{festa.description}}</textarea>
+              </div>
+            </div>
+            <div class="descricaoOutros" ng-show="{{festa.owner === listaFestas.userId}}">
+              <div id="textoDescricao">
+                <p><strong>DESCRIÇÃO:</strong></p>
+                <textarea id="textAreaLista" disabled>{{festa.description}}</textarea>
+              </div>
+              <div id="botoesOutros">
+                <div id="editarContent">
+                  <md-button id="btnDetalhesDaFesta" class="md-warn md-raised md-hue-2" aria-label="Settings">
+                    <md-icon class="icon-light"><i class="material-icons">settings</i></md-icon><br>
+                    Editar
+                  </md-button>
+                </div>
+                <div id="excluirDiv">
+                  <remove-festa festa="festa"></remove-festa>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="linhaSuaResposta" ng-show="{{festa.owner === listaFestas.userId}}">
+              <party-rsvp festa="festa"></party-rsvp>
+          </div>
+          <div class="quemEstaVindo">
+            <party-rsvps-list rsvps="festa.rsvps"></party-rsvps-list>
+          </div>
+          <div class="aindaNaoResponderam">
+            <party-unanswered festa="festa"></party-unanswered>
+          </div>
+          <div class="autorFesta">
+            <autor-festa festa="festa"></autor-festa>
+          </div>
+        </collapsible-item>
+      </ang-accordion>
+    </div>
+
+    <div id="lista" ng-show="listaFestas.todasSelected">
+      <ang-accordion class="Accordion">
+        <collapsible-item item-title="{{festa.name}}" ng-repeat="festa in listaFestas.festas" id="AccordionTitle">
+          <div class="descricaoDaFesta">
+            <div class="descricaoProprias" ng-hide="{{festa.owner === listaFestas.userId}}">
+              <div>
+                <p>Descrição:</p>
+                <textarea id="textAreaProprias" disabled>{{festa.description}}</textarea>
+              </div>
+            </div>
+            <div class="descricaoOutros" ng-show="{{festa.owner === listaFestas.userId}}">
+              <div id="textoDescricao">
+                <p><strong>DESCRIÇÃO:</strong></p>
+                <textarea id="textAreaLista" disabled>{{festa.description}}</textarea>
+              </div>
+              <div id="botoesOutros">
+                <div id="editarContent">
+                  <md-button id="btnDetalhesDaFesta" class="md-warn md-raised md-hue-2" aria-label="Settings">
+                    <md-icon class="icon-light"><i class="material-icons">settings</i></md-icon><br>
+                    Editar
+                  </md-button>
+                </div>
+                <div id="excluirDiv">
+                  <remove-festa festa="festa"></remove-festa>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="linhaSuaResposta" ng-show="{{festa.owner === listaFestas.userId}}">
+              <party-rsvp festa="festa"></party-rsvp>
+          </div>
+          <div class="quemEstaVindo">
+            <party-rsvps-list rsvps="festa.rsvps"></party-rsvps-list>
+          </div>
+          <div class="aindaNaoResponderam">
+            <party-unanswered festa="festa"></party-unanswered>
+          </div>
           <div class="autorFesta">
             <autor-festa festa="festa"></autor-festa>
           </div>
