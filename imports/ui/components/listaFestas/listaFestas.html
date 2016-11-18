@@ -6,19 +6,28 @@
       <div class="md-toolbar-tools">
         <div class="btnNavLista">
           <md-button  id="btnMinhas" class="btnListaNav" class="md-warn md-raised md-hue-2" aria-label="Settings" ng-click="listaFestas.minhas()">
-            <md-icon class="icon-light"><i class="material-icons">new_releases</i></md-icon>
+            <md-icon class="icon-light">
+              <img ng-show="listaFestas.isMobileDevice" src="ic_new_releases_white.png" class="material-icons"/>
+              <i ng-hide="listaFestas.isMobileDevice" class="material-icons">new_releases</i>
+            </md-icon>
             MEUS
           </md-button>
         </div>
         <div class="btnNavLista">
           <md-button id="btnConvites" class="btnListaNav" class="md-warn md-raised md-hue-2" aria-label="Settings" ng-click="listaFestas.convites()">
-            <md-icon class="icon-light"><i class="material-icons">email</i></md-icon>
+            <md-icon class="icon-light">
+              <img ng-show="listaFestas.isMobileDevice" src="ic_email_white.png" class="material-icons"/>
+              <i ng-hide="listaFestas.isMobileDevice" class="material-icons">email</i>
+            </md-icon>
             CONVITES
           </md-button>
         </div>
         <div class="btnNavLista">
           <md-button id="btnTodas" class="btnListaNav" class="md-warn md-raised md-hue-2" aria-label="Settings" ng-click="listaFestas.todasFestas()">
-            <md-icon class="icon-light"><i class="material-icons">email</i></md-icon>
+            <md-icon class="icon-light">
+              <img ng-show="listaFestas.isMobileDevice" src="ic_email_white.png" class="material-icons"/>
+              <i ng-hide="listaFestas.isMobileDevice" class="material-icons">email</i>
+            </md-icon>
             TODOS
           </md-button>
         </div>

@@ -5,7 +5,8 @@
   <div id="euVouDiv">
     <md-button id="btnEuVou" class="md-warn md-raised md-hue-2" value="I'm going!" ng-click="partyRsvp.yes()">
       <md-icon>
-        <i class="material-icons">thumb_up</i>
+        <i ng-hide="partyRsvp.isMobileDevice" class="material-icons">thumb_up</i>
+        <img ng-show="partyRsvp.isMobileDevice" src="ic_thumb_up_white.png" class="material-icons"/>
       </md-icon>  EU VOU
     </md-button>
   </div>
@@ -13,7 +14,8 @@
   <div id="talvezDiv">
     <md-button id="btnTalvez" class="md-warn md-raised md-hue-2" value="Maybe" ng-click="partyRsvp.maybe()">
       <md-icon>
-        <i class="material-icons">thumbs_up_down</i>
+        <i ng-hide="partyRsvp.isMobileDevice" class="material-icons">thumbs_up_down</i>
+        <img ng-show="partyRsvp.isMobileDevice" src="ic_thumbs_up_down_white.png" class="material-icons"/>
       </md-icon>  TALVEZ
     </md-button>
   </div>
@@ -21,7 +23,8 @@
   <div id="naoVouDiv">
     <md-button id="btnNaoVou" class="md-warn md-raised md-hue-2" value="No" ng-click="partyRsvp.no()">
       <md-icon>
-        <i class="material-icons">thumb_down</i>
+        <i ng-hide="partyRsvp.isMobileDevice" class="material-icons">thumb_down</i>
+        <img ng-show="partyRsvp.isMobileDevice" src="ic_thumb_down_white.png" class="material-icons"/>
       </md-icon>  NÃO VOU
     </md-button>
   </div>

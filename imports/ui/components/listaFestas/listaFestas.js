@@ -59,6 +59,7 @@ class ListaFestas {
     });
 
     this.listaVazia = this.festas.length == 0 ? true : false;
+    this.isMobileDevice = false;
 
 //============================= HELPERS =END====================================
 
@@ -97,6 +98,10 @@ class ListaFestas {
     this.clickTitulo = function() {
 
     }
+
+    if (Meteor.isCordova) {
+      this.isMobileDevice = true;
+    };
 
 //============================= METHODS =END====================================
   }

@@ -21,6 +21,8 @@ class PartyRsvp {
 
     $reactive(this).attach($scope);
 
+    this.isMobileDevice = false;
+
     this.yes = function() {
       this.answer('yes');
     }
@@ -43,10 +45,15 @@ class PartyRsvp {
       });
     }
 
+    if (Meteor.isCordova) {
+      this.isMobileDevice = true;
+    };
+
   }
 }
 
 const name = 'partyRsvp';
+
 
 //============================ MODULE ==========================================
 export default angular.module(name, [
