@@ -8,14 +8,17 @@
 <md-toolbar class="md-hue-2">
   <div class="md-toolbar-tools">
     <md-button ng-click="dojo.openMenu()" class="md-icon-button" aria-label="Settings">
-      <md-icon class="icon-light"><i class="material-icons">menu</i></md-icon>
+      <md-icon class="icon-light"><img src="ic_menu_white.png" class="material-icons"></img></md-icon>
     </md-button>
     <h2>
       <span>DOJO SAUDADE</span>
     </h2>
     <span flex></span>
     <md-button class="md-icon-button" aria-label="Favorite">
-      <md-icon style="color: greenyellow;"><i class="material-icons">adb</i></md-icon>
+      <md-icon style="color: greenyellow;">
+        <img ng-show="dojo.isMobileDevice" src="ic_adb_white.png" class="material-icons"/>
+        <i ng-hide="dojo.isMobileDevice" class="material-icons">adb</i>
+        </md-icon>
     </md-button>
     <md-button class="md-icon-button" aria-label="More">
       <md-icon class="icon-light"><i class="material-icons">more_vert</i></md-icon>

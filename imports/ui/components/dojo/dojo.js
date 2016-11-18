@@ -7,6 +7,7 @@
 
 **************************************************************************** **/
 
+import { Meteor } from 'meteor/meteor';
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import ngMaterial from 'angular-material';
@@ -28,6 +29,7 @@ class Dojo {
     $reactive(this).attach($scope);
 
     this.menuOpened = false;
+    this.isMobileDevice = false;
 
     this.openMenu = function() {
       if(this.menuOpened === false){
@@ -53,6 +55,10 @@ class Dojo {
       $state.go('adicionaFesta');
       this.openMenu();
     }
+
+    if (Meteor.isCordova) {
+      this.isMobileDevice = true;
+    };
   }
 }
 
