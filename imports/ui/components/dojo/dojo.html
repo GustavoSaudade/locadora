@@ -21,7 +21,10 @@
         </md-icon>
     </md-button>
     <md-button class="md-icon-button" aria-label="More">
-      <md-icon class="icon-light"><i class="material-icons">more_vert</i></md-icon>
+      <md-icon class="icon-light">
+        <img ng-show="dojo.isMobileDevice" src="ic_more_vert_white_16dp.png" class="material-icons"/>
+        <i ng-hide="dojo.isMobileDevice" class="material-icons">more_vert</i>
+      </md-icon>
     </md-button>
   </div>
 </md-toolbar>
